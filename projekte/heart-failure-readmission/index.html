@@ -1,0 +1,213 @@
+---
+layout: default
+title: "Herzinsuffizienz Wiedereinweisung & Ressourcenoptimierung"
+lang: de
+---
+<div class="row">
+  <div class="col-lg-8">
+    <h1 class="mb-3">Herzinsuffizienz: Wiedereinweisung & Ressourcenoptimierung</h1>
+    <p class="lead">Ressourcenoptimierung im Gesundheitswesen durch klinische ML‑Verfahren.</p>
+
+    <div class="mb-4">
+      <h5>Rolle &amp; Wirkung</h5>
+      <p>Ich entwickelte eine umfassende ML‑Lösung, die das Management von Herzinsuffizienz‑Patienten und die Personaleinsatzplanung transformiert. Durch Vorhersage des 30‑Tage‑Wiedereinweisungsrisikos und Modellierung des Pflegebedarfs <strong>senkt das System Wiedereinweisungen, optimiert Ressourcen und vermeidet Medicare‑Strafzahlungen</strong> – bei einer Indikation mit &gt;$30&nbsp;Mrd. jährlichen Kosten in den USA.</p>
+      <h6 class="mt-2">Wesentliche Führungsentscheidungen</h6>
+      <ul>
+        <li>Dual‑Prediction‑Architektur: Verknüpfung klinischer Risiken mit operativer Personalplanung</li>
+        <li>Speichereffiziente Datenpipeline für MIMIC‑IV im Produktionsmaßstab</li>
+        <li>Umfassender Modellvergleich über mehrere ML‑Ansätze</li>
+        <li>Integration von Gesundheitsökonomie zur ROI‑Quantifizierung</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Die adressierte Herausforderung</h5>
+      <p>Herzinsuffizienz betrifft 6,2&nbsp;Mio. Erwachsene in den USA; <strong>25&nbsp;% 30‑Tage‑Wiedereinweisungen</strong> und &gt;1&nbsp;Mio. Hospitalisierungen pro Jahr. Klinische Outcomes und finanzielle Strafmechanismen erzeugen erheblichen Druck.</p>
+      <p><strong>Strategisches Problem</strong>: Wiedereinweisungsprognose und Ressourcenzuteilung werden häufig getrennt betrachtet. Risikoscores führen selten zu konkreten Personalplänen – es bleibt reaktiv.</p>
+      <p><strong>Marktbedarf</strong>: Verknüpfung klinischer Vorhersagen mit operativer Optimierung für proaktive Interventionen mit quantifiziertem Ressourcenbedarf.</p>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Technischer Ansatz &amp; Architektur</h5>
+      <h6 class="mt-2">Entscheidung 1: Dual‑Prediction‑Architektur</h6>
+      <ul>
+        <li><strong>Klinische Vorhersage</strong>: Modelle für 30‑Tage‑Wiedereinweisungsrisiko</li>
+        <li><strong>Ressourcenprognose</strong>: Regression der Pflegestunden je Versorgungsstufe</li>
+        <li><strong>Integrationsschicht</strong>: Übersetzung von Risikoscores in Personaleinsatzempfehlungen</li>
+      </ul>
+      <p><strong>Warum</strong>: Verwaltung benötigt umsetzbare Personalkonzepte, nicht nur Risikowerte.</p>
+      <h6 class="mt-2">Entscheidung 2: Reale klinische Datenbasis</h6>
+      <ul>
+        <li>Umfangreiche Variablen: ICD, Vitalparameter, Labore, Medikation, Prozeduren</li>
+        <li>Operative Daten: Station, Aufenthaltsdauer, Personalmuster</li>
+        <li>De‑identifiziert, HIPAA‑konform – skalierbare Implementierung</li>
+      </ul>
+      <p><strong>Implementierung</strong>: Speichereffizientes Chunking für schnelle, robuste MIMIC‑IV‑Verarbeitung.</p>
+      <h6 class="mt-2">Entscheidung 3: Gesundheitsökonomie integriert</h6>
+      <ul>
+        <li>Kosten‑Nutzen‑Analyse verhinderter Wiedereinweisungen</li>
+        <li>ROI‑Berechnung für Interventionsprogramme</li>
+        <li>Ressourcenoptimierung (Nurse‑Ratios) aus Prognosen abgeleitet</li>
+        <li>Regulatorische Aspekte (Penalty‑Avoidance) berücksichtigt</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Technische Innovationen</h5>
+      <h6 class="mt-2">Klinisches Feature‑Engineering</h6>
+      <ul>
+        <li>Komorbiditäten (ICD‑10), zeitliche Vitalverläufe, Labor‑Normalisierung</li>
+        <li>Medikationsanalyse; literaturgestützt plus datengetriebene Muster</li>
+      </ul>
+      <h6 class="mt-2">Multi‑Modell‑Vergleich</h6>
+      <ul>
+        <li>Logistische Regression, Random Forest, XGBoost</li>
+        <li>Temporale CV; Präzision/Recall‑Balance; Interpretierbarkeit</li>
+      </ul>
+      <h6 class="mt-2">Ressourcennutzungs‑Prognose</h6>
+      <ul>
+        <li>Versorgungsstufen‑Klassifikation, Pflegestunden‑Schätzung</li>
+        <li>Staffing‑Optimierung und Kostenquantifizierung</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Systemdesign &amp; Architekturwirkung</h5>
+      <h6 class="mt-2">Klinisches Vorhersage‑Framework</h6>
+      <ul>
+        <li>Modellarchitektur‑Vergleich für deploybare Varianten</li>
+        <li>Risikostratifizierung für gezielte Interventionen</li>
+        <li>Validierung: literaturbasiert plus datengetriebene Erkenntnisse</li>
+      </ul>
+      <h6 class="mt-2">Gesundheitsökonomie‑Framework</h6>
+      <ul>
+        <li>Proaktive Personaleinsatzplanung aus Risikoprofil und Schweregrad</li>
+        <li>Kosten‑ und ROI‑Analysen für Programmentscheidungen</li>
+      </ul>
+      <h6 class="mt-2">Produktionsreife Bereitstellung</h6>
+      <ul>
+        <li>Speichereffiziente Pipeline für klinische Datenbanken</li>
+        <li>HIPAA/GDPR‑fähig; Integration mit KIS/EHR vorgesehen</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Domänenkompetenz &amp; Stakeholder</h5>
+      <h6 class="mt-2">Klinische Zusammenarbeit</h6>
+      <ul>
+        <li>Interpretierbare Vorhersagen zur Unterstützung klinischer Entscheidungen</li>
+        <li>Management‑taugliche ROI‑Kennzahlen und Ressourcenvorschläge</li>
+        <li>IT‑kompatible Architektur</li>
+      </ul>
+      <h6 class="mt-2">Regulatorik &amp; Ethik</h6>
+      <ul>
+        <li>Datenschutz entlang der gesamten Pipeline</li>
+        <li>Patientensicherheit, Bias‑Minderung</li>
+        <li>Beachtung von FDA AI/ML‑Leitlinien</li>
+      </ul>
+      <h6 class="mt-2">Verständnis der Gesundheitsökonomie</h6>
+      <ul>
+        <li>Vermeidung von CMS‑Strafzahlungen</li>
+        <li>Pflegekosten‑Modelle und Budgetierung</li>
+        <li>Unterstützung Value‑Based‑Care</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Strategische Implikationen</h5>
+      <h6 class="mt-2">Marktpositionierung</h6>
+      <ul>
+        <li>Integrierter klinisch‑operativer Ansatz statt rein prädiktiver Lösungen</li>
+        <li>Skalierbar über Klinikverbünde; Compliance ab Werk</li>
+      </ul>
+      <h6 class="mt-2">Technologie‑Transfer</h6>
+      <ul>
+        <li>Übertragbar auf DE/CH‑Systeme mit regulatorischer Adaption</li>
+        <li>Chancen in Pharma und Medizingeräte‑Integration</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Professionelle Entwicklung</h5>
+      <h6 class="mt-2">Aufgebaute Domänenkompetenz</h6>
+      <ul>
+        <li>Klinische Datenstrukturen, Workflows, Regularien</li>
+        <li>Gesundheitsökonomie und Klinikbetrieb</li>
+        <li>Übersetzung Technik → klinischer/administrativer Mehrwert</li>
+      </ul>
+      <h6 class="mt-2">Technische Führung in regulierten Branchen</h6>
+      <ul>
+        <li>Compliance‑First‑Design von ML‑Systemen</li>
+        <li>Stakeholder‑ und Risikomanagement</li>
+      </ul>
+      <h6 class="mt-2">Business‑Impact‑Quantifizierung</h6>
+      <ul>
+        <li>ROI‑Analysen im Gesundheitswesen; Ressourcenoptimierung</li>
+        <li>Adoptionsmuster und Deploy‑Herausforderungen</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Wesentliche Learnings</h5>
+      <ul>
+        <li>Produktionsreife Entscheidungen vor reiner Forschungs‑Optimierung</li>
+        <li>Klare Schnittstellen ermöglichten verteilte Entwicklung</li>
+        <li>Realistische Ziele stärkten Glaubwürdigkeit bei Klinik‑Stakeholdern</li>
+        <li>Ökonomische Validierung ist entscheidend für Adoption</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Analysen &amp; Ressourcen</h5>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-sm btn-primary" href="technisch.html">Technische Details</a>
+        <a class="btn btn-sm btn-outline-primary" href="projektfuehrung.html">Projektführung</a>
+        <a class="btn btn-sm btn-outline-primary" href="produktstrategie.html">Produktstrategie</a>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/heart_failure_readmission" target="_blank" rel="noopener">Repository</a>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Verwandte Artikel</h5>
+      <ul>
+        <li><a href="/blog/2025-09-03-herzinsuffizienz-zusammenfassung">Projektzusammenfassung: Herzinsuffizienz</a></li>
+      </ul>
+    </div>
+    
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Schnellzugriff</h5>
+        <div class="d-grid gap-2">
+          <a href="/projects/heart-failure-readmission/" class="btn btn-outline-secondary">EN Overview</a>
+          <a href="https://github.com/cyranothebard/heart_failure_readmission" class="btn btn-outline-primary">Repository</a>
+          <a href="https://docs.google.com/presentation/d/1_dl7fGjbTNhiWKFbtGORN2V61KJQjh87kfE1NttkUAw/edit?slide=id.gcb9a0b074_1_0#slide=id.gcb9a0b074_1_0" class="btn btn-outline-primary">Präsentation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

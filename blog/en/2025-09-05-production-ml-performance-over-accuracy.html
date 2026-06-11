@@ -1,0 +1,43 @@
+---
+layout: english
+title: "Production ML: When Performance Requirements Beat Accuracy"
+lang: en
+---
+<h1>Production ML: When Performance Requirements Beat Accuracy</h1>
+
+<p><em>From the Energy Recommendation System</em></p>
+
+<h2>The Production Reality</h2>
+<p>In production ML, we optimize for <strong>latency, memory, reliability</strong>—not just accuracy. Building a grid-scale energy recommendation system, I replaced an end-to-end ensemble stack with a <strong>modular, three-stage pipeline</strong> that processes 8,000+ buildings in under 30 seconds with &lt;50MB memory usage.</p>
+
+<h2>Architecture</h2>
+<ul>
+  <li><strong>Stage 1: Multi-Cohort Forecasting</strong> — LSTM forecasting for 15 building types</li>
+  <li><strong>Stage 2: Compliance Prediction</strong> — Realistic 36.3% compliance modeling</li>
+  <li><strong>Stage 3: Portfolio Optimization</strong> — Constraint-based selection for grid impact</li>
+</ul>
+
+<h2>Results</h2>
+<ul>
+  <li>Processing speed: &lt;30s for 8,111 buildings</li>
+  <li>Memory usage: &lt;50MB</li>
+  <li>Grid reduction: 5.4% aggregate during extreme weather (within 2–7% benchmarks)</li>
+</ul>
+
+<h2>Why Modularity Wins</h2>
+<ul>
+  <li>Enables <strong>error isolation</strong> and <strong>fallback</strong> behavior</li>
+  <li>Supports <strong>parallel development</strong> and clear interfaces</li>
+  <li>Improves <strong>operational reliability</strong> under load</li>
+</ul>
+
+<h2>Leadership Lessons</h2>
+<ul>
+  <li>Performance constraints often determine architecture more than pure accuracy</li>
+  <li>Realistic assumptions (e.g., compliance rates) build stakeholder credibility</li>
+  <li>Monitoring and observability are first-class features in production</li>
+</ul>
+
+<hr/>
+<p>Explore the full implementation: <a href="https://github.com/cyranothebard/energy-recommendation-engine">energy-recommendation-engine</a>.</p>
+<p><a href="/blog/2025-09-05-produktions-ml-performance-statt-genauigkeit">Deutsche Version</a></p>

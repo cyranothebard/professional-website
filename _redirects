@@ -1,0 +1,7 @@
+https://www.bridgeops.ai/* https://bridgeops.ai/:splat 301
+/index.html / 301
+/en/index.html /en/ 301
+/projects/index.html /projects/ 301
+/projekte/index.html /projekte/ 301
+/blog/index.html /blog/ 301
+/blog/en/index.html /blog/en/ 301

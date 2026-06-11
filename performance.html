@@ -1,0 +1,177 @@
+---
+layout: default
+title: "Performance Monitoring - Portfolio Site"
+description: "Real-time performance metrics and optimization insights for the portfolio website"
+---
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="section-title">Performance Monitoring</h1>
+    <p class="lead text-center mb-5">Real-time performance metrics and optimization insights</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Page Load Performance</h5>
+        <div id="performance-metrics">
+          <div class="row">
+            <div class="col-6">
+              <div class="text-center">
+                <h3 id="load-time">--</h3>
+                <small class="text-muted">Load Time (ms)</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="text-center">
+                <h3 id="dom-ready">--</h3>
+                <small class="text-muted">DOM Ready (ms)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-6">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Resource Loading</h5>
+        <div id="resource-metrics">
+          <div class="row">
+            <div class="col-6">
+              <div class="text-center">
+                <h3 id="total-resources">--</h3>
+                <small class="text-muted">Total Resources</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="text-center">
+                <h3 id="total-size">--</h3>
+                <small class="text-muted">Total Size (KB)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Performance Recommendations</h5>
+        <div id="recommendations">
+          <div class="alert alert-info">
+            <strong>Loading...</strong> Analyzing performance data...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Performance monitoring script
+document.addEventListener('DOMContentLoaded', function() {
+  const performanceMonitor = {
+    init() {
+      this.monitorPerformance();
+      this.analyzeResources();
+      this.generateRecommendations();
+    },
+    
+    monitorPerformance() {
+      if ('performance' in window) {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+          document.getElementById('load-time').textContent = 
+            Math.round(perfData.loadEventEnd - perfData.loadEventStart);
+          document.getElementById('dom-ready').textContent = 
+            Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart);
+        }
+      }
+    },
+    
+    analyzeResources() {
+      const resources = performance.getEntriesByType('resource');
+      const totalSize = resources.reduce((sum, resource) => {
+        return sum + (resource.transferSize || 0);
+      }, 0);
+      
+      document.getElementById('total-resources').textContent = resources.length;
+      document.getElementById('total-size').textContent = Math.round(totalSize / 1024);
+    },
+    
+    generateRecommendations() {
+      const recommendations = [];
+      
+      // Check page load time
+      const loadTime = performance.getEntriesByType('navigation')[0]?.loadEventEnd - 
+                      performance.getEntriesByType('navigation')[0]?.loadEventStart;
+      
+      if (loadTime > 3000) {
+        recommendations.push({
+          type: 'warning',
+          message: 'Page load time exceeds 3 seconds. Consider optimizing images and reducing JavaScript bundle size.'
+        });
+      }
+      
+      // Check resource count
+      const resourceCount = performance.getEntriesByType('resource').length;
+      if (resourceCount > 50) {
+        recommendations.push({
+          type: 'warning',
+          message: 'High number of resources detected. Consider combining CSS/JS files and using CDNs.'
+        });
+      }
+      
+      // Check for large resources
+      const largeResources = performance.getEntriesByType('resource').filter(r => 
+        (r.transferSize || 0) > 500 * 1024
+      );
+      
+      if (largeResources.length > 0) {
+        recommendations.push({
+          type: 'warning',
+          message: `${largeResources.length} large resources detected. Consider compressing images and optimizing assets.`
+        });
+      }
+      
+      // Display recommendations
+      this.displayRecommendations(recommendations);
+    },
+    
+    displayRecommendations(recommendations) {
+      const container = document.getElementById('recommendations');
+      
+      if (recommendations.length === 0) {
+        container.innerHTML = `
+          <div class="alert alert-success">
+            <strong>Excellent!</strong> Your site is performing well within recommended thresholds.
+          </div>
+        `;
+        return;
+      }
+      
+      let html = '';
+      recommendations.forEach(rec => {
+        const alertClass = rec.type === 'warning' ? 'alert-warning' : 'alert-info';
+        html += `
+          <div class="alert ${alertClass}">
+            <strong>Recommendation:</strong> ${rec.message}
+          </div>
+        `;
+      });
+      
+      container.innerHTML = html;
+    }
+  };
+  
+  performanceMonitor.init();
+});
+</script>

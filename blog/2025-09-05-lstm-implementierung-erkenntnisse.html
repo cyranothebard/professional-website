@@ -1,0 +1,33 @@
+---
+layout: default
+title: "LSTM-Implementierung: Erkenntnisse aus Zeitreihenprognosen"
+lang: de
+---
+<h1>LSTM-Implementierung: Erkenntnisse aus Zeitreihenprognosen</h1>
+<p class="lead">Praxisnahe Herausforderungen einer Multi‑Output‑LSTM‑Architektur für Energiebedarfsvorhersagen.</p>
+
+<p>Ein LSTM für die Prognose des Energiebedarfs über >8.000 Gebäude klingt theoretisch einfach. In der Praxis sind zwei Punkte entscheidend: sinnvolle <strong>Kohortenbildung</strong> (Performance vs. Domänen‑Interpretierbarkeit) und die Vermeidung der <strong>zeitlichen Validierungsfalle</strong> (Leckage durch Random Splits).</p>
+
+<h2>Herausforderung 1: Kohorten richtig schneiden</h2>
+<p>Statt je‑Gebäude‑Modellen oder einem Einheitsmodell nutzte ich eine <strong>Multi‑Output‑LSTM</strong> mit 15 Kohorten. Der Zuschnitt balanciert Granularität und Stichprobengröße; >90% der Gebäude sind abgedeckt, damit Resultate generalisieren.</p>
+
+<h2>Herausforderung 2: Zeitliche Validierung statt Random Splits</h2>
+<p>Zu gute Metriken deckten eine <strong>Datenleckage</strong> auf: Random Splits mischen Zukunft und Vergangenheit. Die Lösung: <strong>chronologische Splits</strong> (z. B. letzte 20% als Val‑Set). Die Metriken wurden realistischer – und damit produktionsrelevant.</p>
+
+<h2>Systemintegration und Constraints</h2>
+<ul>
+  <li><strong>Kohorten‑Forecasts</strong> ermöglichen realistische Compliance‑Modelle downstream.</li>
+  <li><strong>&lt;30s / &lt;50MB</strong> Vorgaben prägen Architekturentscheidungen stärker als reine Accuracy.</li>
+</ul>
+
+<h2>Lehren</h2>
+<ul>
+  <li>Domänenwissen treibt Architektur – nicht nur Metriken.</li>
+  <li>Validierungsmethode entscheidet über Produktreife.</li>
+  <li>Constraints fördern robuste, deploybare Lösungen.</li>
+</ul>
+
+<hr/>
+<p>EN: <a href="/blog/en/2025-09-05-lstm-implementation-lessons">LSTM Implementation Lessons</a></p>
+<p>Projekt: <a href="https://github.com/cyranothebard/energy-recommendation-engine">energy-recommendation-engine</a></p>
+

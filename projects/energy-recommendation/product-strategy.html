@@ -1,0 +1,112 @@
+---
+layout: english
+title: "Energy Recommendation System - Product Strategy"
+lang: en
+---
+<nav aria-label="breadcrumb" class="mb-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+    <li class="breadcrumb-item"><a href="/projects/energy-recommendation/">Energy Recommendation</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Product Strategy</li>
+  </ol>
+</nav>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <a href="/projects/energy-recommendation/technical-deep-dive.html" class="me-2">Technical</a>
+    <a href="/projects/energy-recommendation/management-perspective.html">Management</a>
+  </div>
+  <div>
+    <a href="/projekte/energie-empfehlungssystem/produktstrategie.html" class="btn btn-outline-secondary btn-sm">DE</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-8">
+    <h1 class="mb-3">Product Strategy</h1>
+    <ul>
+      <li>Primary users: grid planners and energy analysts; secondary: operations.</li>
+      <li>Value: reduced curtailment and energy waste; improved renewable integration.</li>
+      <li>Metrics: RMSE, MAPE, avoided curtailment, user adoption, SLA adherence.</li>
+      <li>Roadmap: pilot → scale to regions → API for partners → optimization add-ons.</li>
+    </ul>
+
+    <p class="mt-4"><a href="/projects/energy-recommendation/" class="btn btn-outline-primary">Back to overview</a></p>
+
+    <h5 class="mt-4">User Personas</h5>
+    <ul>
+      <li><strong>Grid Planner</strong>: plans day-ahead operations; needs scenario analysis and exportable forecasts.</li>
+      <li><strong>Energy Analyst</strong>: validates model performance; needs feature attributions and backtests.</li>
+      <li><strong>Operations</strong>: monitors live forecasts; needs reliable API/SLA and clear alerts.</li>
+    </ul>
+
+    <h5>KPIs</h5>
+    <ul>
+      <li>Forecast Accuracy: RMSE / MAPE by horizon; target ≤ previous baseline −10%.</li>
+      <li>Operational Impact: avoided curtailment (%), reduced peak deviations (%).</li>
+      <li>Reliability: API uptime ≥ 99.7%, P95 latency ≤ 200 ms.</li>
+      <li>Adoption: monthly active analyst users, # of automated recommendations accepted.</li>
+    </ul>
+
+    <h5>Deployment Model</h5>
+    <ul>
+      <li>Containerized FastAPI service with versioned model artifacts; /forecast and /explain endpoints.</li>
+      <li>Daily retraining job and drift monitoring; alerts route to on-call with playbooks.</li>
+      <li>Blue/green or canary updates to minimize operational risk.</li>
+    </ul>
+
+    <h5>Roadmap</h5>
+    <ol>
+      <li>Pilot (single region): validate KPIs and user workflow.</li>
+      <li>Scale-out: multi-region support and cost-optimized inference.</li>
+      <li>Partner API: external consumers (DER, storage providers) via authenticated access.</li>
+      <li>Optimization add-ons: recommender constraints, DR scheduling, storage dispatch.</li>
+    </ol>
+
+    <h5>References</h5>
+    <ul>
+      <li>Technical Deep-Dive: <a href="/projects/energy-recommendation/technical-deep-dive.html">Model & pipeline</a></li>
+      <li>Management Perspective: <a href="/projects/energy-recommendation/management-perspective.html">Delivery & risks</a></li>
+      <li>Final report: <a href="https://docs.google.com/document/d/1drQi-2SAQqYeI9UvRmgKSdf-ZcRF5dTPt7z5NayEhRc/edit?tab=t.lo60klntyz4q#heading=h.toasgthfs9co">Google Doc</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Navigation</h5>
+        <div class="d-grid gap-2">
+          <a href="/projects/energy-recommendation/management-perspective.html" class="btn btn-outline-secondary">← Management</a>
+          <a href="/projects/energy-recommendation/" class="btn btn-outline-primary">Overview →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h6 class="card-title">Business Impact</h6>
+        <div class="mb-2">
+          <small class="text-muted">ROI</small>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold text-success">+320%</span>
+            <small>over 3 years</small>
+          </div>
+        </div>
+        <div class="mb-2">
+          <small class="text-muted">Cost savings</small>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold text-success">15-20%</span>
+            <small>waste reduction</small>
+          </div>
+        </div>
+        <div class="mb-2">
+          <small class="text-muted">Market potential</small>
+          <div class="d-flex justify-content-between">
+            <span class="fw-bold text-info">€2.3B</span>
+            <small>DACH by 2027</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

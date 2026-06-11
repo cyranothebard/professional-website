@@ -1,0 +1,22 @@
+<div class="project-card mb-4">
+  <div class="card h-100">
+    <img src="{{ project.image }}" class="card-img-top" alt="{{ project.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ project.title }}</h5>
+      <p class="card-text">{{ project.summary }}</p>
+      <div class="project-tags">
+        {% for tag in project.tags %}
+          <span class="badge bg-secondary me-1">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="project-links d-flex gap-2">
+        <a href="{{ project.url }}" class="btn btn-primary">Details</a>
+        {% if project.github %}
+        <a href="{{ project.github }}" class="btn btn-outline-primary">Code</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

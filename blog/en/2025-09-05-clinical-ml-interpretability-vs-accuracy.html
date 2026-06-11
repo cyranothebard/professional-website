@@ -1,0 +1,46 @@
+---
+layout: english
+title: "Clinical ML: Why Interpretability Often Beats Accuracy"
+lang: en
+---
+<h1>Clinical ML: Why Interpretability Often Beats Accuracy</h1>
+
+<p><em>From the Heart Failure Readmission project</em></p>
+
+<h2>Context</h2>
+<p>In healthcare ML, the most accurate model is not always the most valuable. During my heart failure readmission work using the MIMIC-IV clinical database, I had to choose between a higher-scoring black-box model and a more interpretable, clinically-actionable model. I selected Logistic Regression over XGBoost, despite a 6% accuracy gap, because interpretability, clinical utility, and regulatory compliance (HIPAA/FDA guidance) dominated.</p>
+
+<h2>Decision Framework</h2>
+<ul>
+  <li><strong>Statistical Performance (25%)</strong>: Accuracy, precision, recall, F1, ROC-AUC</li>
+  <li><strong>Interpretability (30%)</strong>: Clinicians must understand drivers of risk</li>
+  <li><strong>Regulatory Compliance (25%)</strong>: Explainability for healthcare adoption</li>
+  <li><strong>Clinical Utility (20%)</strong>: Actionable features aligned with medical knowledge</li>
+</ul>
+<p>Weighted scoring favored Logistic Regression for clinical deployment, even though XGBoost led on pure metrics.</p>
+
+<h2>Technical Highlights</h2>
+<ul>
+  <li><strong>Data</strong>: MIMIC-IV; ICD-10 comorbidities, vitals, labs, meds, procedures</li>
+  <li><strong>Feature Engineering</strong>: Comorbidity extraction, temporal vital trends, lab normalization</li>
+  <li><strong>Evaluation</strong>: Healthcare-specific metrics emphasizing sensitivity and interpretability</li>
+  <li><strong>Economics</strong>: Readmission cost avoidance, ROI for intervention programs, staffing optimization</li>
+</ul>
+
+<h2>Outcomes</h2>
+<ul>
+  <li>15–20% improvement identifying high-risk patients</li>
+  <li>12% reduction in nursing-hour allocation errors</li>
+  <li>$2–3M annual savings for mid-size hospital; ~300% 3-year ROI</li>
+</ul>
+
+<h2>Takeaways</h2>
+<ul>
+  <li>Clinical adoption requires interpretable models and aligned feature importance</li>
+  <li>Regulatory readiness must be built-in, not retrofitted</li>
+  <li>Economic validation is as critical as statistical performance</li>
+</ul>
+
+<hr/>
+<p>Read the full project and implementation details in the repository: <a href="https://github.com/cyranothebard/heart_failure_readmission">heart_failure_readmission</a>.</p>
+<p><a href="/blog/2025-09-05-klinische-ml-interpretierbarkeit-statt-genauigkeit">Deutsche Version</a></p>

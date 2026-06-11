@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Klinisches ML: Warum Interpretierbarkeit oft wichtiger ist als Genauigkeit"
+lang: de
+---
+<h1>Klinisches ML: Warum Interpretierbarkeit oft wichtiger ist als Genauigkeit</h1>
+
+<p><em>Aus dem Heart Failure Readmission Projekt</em></p>
+
+<h2>Kontext</h2>
+<p>Im Gesundheitswesen ist das <strong>interpretierbare</strong> Modell häufig wertvoller als das <strong>genaueste</strong>. In der Arbeit zur Vorhersage von Wiederaufnahmen bei Herzinsuffizienz (MIMIC‑IV) stand ich vor der Wahl zwischen einem leistungsstarken Black‑Box‑Modell und einem klinisch handlungsleitenden, erklärbaren Modell. Trotz ~6% geringerem Accuracy‑Wert entschied ich mich für <strong>Logistische Regression</strong> statt XGBoost – wegen Interpretierbarkeit, klinischer Nützlichkeit und regulatorischer Anforderungen (HIPAA/FDA‑Leitlinien).</p>
+
+<h2>Entscheidungsrahmen</h2>
+<ul>
+  <li><strong>Statistische Performance (25%)</strong>: Accuracy, Precision, Recall, F1, ROC‑AUC</li>
+  <li><strong>Interpretierbarkeit (30%)</strong>: Ärztinnen/Ärzte müssen Treiber verstehen</li>
+  <li><strong>Regulatorische Konformität (25%)</strong>: Erklärbarkeit als Voraussetzung</li>
+  <li><strong>Klinischer Nutzen (20%)</strong>: Handlungsleitende Faktoren, medizinisch plausibel</li>
+</ul>
+<p>Die gewichtete Bewertung bevorzugte Logistische Regression für die klinische Einführung – obwohl XGBoost in reinen Metriken vorn lag.</p>
+
+<h2>Technische Schwerpunkte</h2>
+<ul>
+  <li><strong>Daten</strong>: MIMIC‑IV; ICD‑10‑Komorbiditäten, Vitalparameter, Labor, Medikation, Prozeduren</li>
+  <li><strong>Feature Engineering</strong>: Komorbiditäten, zeitliche Vital‑Trends, Labor‑Normalisierung</li>
+  <li><strong>Evaluation</strong>: Gesundheits‑Metriken mit Fokus auf Sensitivität und Erklärbarkeit</li>
+  <li><strong>Ökonomie</strong>: Vermeidung von Wiederaufnahmekosten, ROI von Interventionen, Personalplanung</li>
+</ul>
+
+<h2>Ergebnisse</h2>
+<ul>
+  <li>15–20% Verbesserung bei der Identifikation von Hochrisiko‑Patient:innen</li>
+  <li>12% weniger Fehlallokation von Pflegestunden</li>
+  <li>2–3 Mio. USD jährliche Einsparungen für ein mittleres Krankenhaus; ~300% ROI über 3 Jahre</li>
+</ul>
+
+<h2>Fazit</h2>
+<ul>
+  <li>Klinische Adoption erfordert Interpretierbarkeit und plausibles Feature‑Verständnis</li>
+  <li>Regulatorische Readiness muss <em>integriert</em> sein, nicht nachträglich</li>
+  <li>Ökonomische Validierung ist ebenso wichtig wie Metriken</li>
+</ul>
+
+<hr/>
+<p>Projekt & Code: <a href="https://github.com/cyranothebard/heart_failure_readmission">heart_failure_readmission</a>.</p>
+<p><a href="/blog/en/2025-09-05-clinical-ml-interpretability-vs-accuracy">English version</a></p>

@@ -1,0 +1,223 @@
+---
+layout: default
+title: "Energie-Empfehlungssystem - Brandon Lewis Portfolio"
+lang: de
+---
+<div class="row">
+  <div class="col-lg-8">
+    <h1 class="mb-4">Energie‑Empfehlungssystem</h1>
+    <p class="lead">Kritische Infrastruktur mit produktionsreifer ML skalieren – als Fallstudie.</p>
+
+    <figure class="mb-4 text-center">
+      <img src="https://cyranothebard.github.io/assets/img/energy-recommendation/energy-recommender-architecture.png?v=2" class="img-fluid d-block mx-auto" alt="Lösungsarchitekturdiagramm" />
+      <figcaption class="mt-2 small text-muted">Lösungsarchitektur</figcaption>
+    </figure>
+
+    <div class="mb-4">
+      <h5>Rolle &amp; Wirkung</h5>
+      <p>Ich leitete Design und Umsetzung eines intelligenten Empfehlungssystems, das Blackouts verhindert, indem es den Energieeinsatz tausender Gewerbegebäude koordiniert. Als technischer Lead habe ich eine produktionsreife Lösung entworfen, die <strong>5,4&nbsp;% Netzlastreduktion</strong> erreicht – mit einem geschätzten <strong>$2–5&nbsp;M</strong> Jahreswert für Versorger unter Extremwetter.</p>
+      <h6 class="mt-3">Wesentliche Führungsentscheidungen</h6>
+      <ul>
+        <li>Drei‑stufige ML‑Pipeline als Balance aus Genauigkeit und Betriebskontext</li>
+        <li>Multi‑Output‑LSTM für kohortenspezifische Prognosen in großem Maßstab</li>
+        <li>Realistisches Compliance‑Modell (36,3&nbsp;%) auf Basis Branchenforschung</li>
+        <li>Parallele Teamarbeit über klare Schnittstellen und modulare Architektur</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Geschäftliche Herausforderung</h5>
+      <p>Extremwetter führt zu unvorhersehbaren Lastspitzen über tausende Gebäude – mit Blackout‑Risiko und hohen Kosten. Demand‑Response‑Programme können &gt;6&nbsp;MW senken, bleiben jedoch oft generisch und unkoordiniert.</p>
+      <p><strong>Kernlücke</strong>: Es fehlte ein System, das aus gebäudespezifischem Verhalten lernt und Empfehlungen <strong>portfolioweit</strong> optimiert.</p>
+      <p><strong>Marktkontext</strong>: 14,3&nbsp;% CAGR hin zu $3,6&nbsp;Mrd. bis 2034 – Bedarf an Echtzeit‑Steuerung und automatisierter Koordination.</p>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Technischer Ansatz &amp; Architektur</h5>
+      <h6 class="mt-2">Entscheidung 1: Drei‑stufige Pipeline</h6>
+      <ul>
+        <li><strong>Stufe 1: Multi‑Cohort‑Forecasting</strong> – LSTM für 24‑h‑Prognosen über 15 Gebäudetypen</li>
+        <li><strong>Stufe 2: Compliance‑Vorhersage</strong> – realistische Befolgungswahrscheinlichkeit</li>
+        <li><strong>Stufe 3: Portfolio‑Optimierung</strong> – koordinierte Auswahl für maximale Netzwirkung</li>
+      </ul>
+      <p><strong>Warum</strong>: Parallele Entwicklung, gezielte Stufen‑Optimierung, interpretierbare Entscheidpunkte für Operatoren.</p>
+      <h6 class="mt-2">Entscheidung 2: Production‑First Anforderungen</h6>
+      <ul>
+        <li><strong>&lt;30&nbsp;s</strong> End‑to‑End für 8.000+ Gebäude</li>
+        <li><strong>&lt;50&nbsp;MB</strong> Speicher für kosteneffiziente Cloud</li>
+        <li><strong>Echtzeit‑Inference</strong> für operativen Netzbetrieb</li>
+      </ul>
+      <p><strong>Implementierung</strong>: PyTorch‑LSTM mit verteilter Ausführung; keine komplexen Ensembles, um Latenz zu wahren.</p>
+      <h6 class="mt-2">Entscheidung 3: Realistisch statt theoretisch</h6>
+      <ul>
+        <li>36,3&nbsp;% durchschnittliche Compliance modelliert</li>
+        <li>Auslegung auf 5,4&nbsp;% Reduktion (innerhalb 2–7&nbsp;% Benchmark)</li>
+        <li>Szenarien 30&nbsp;%/70&nbsp;% Teilnahme für konservativ/Notfall</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Wesentliche technische Innovationen</h5>
+      <h6 class="mt-2">Multi‑Output‑LSTM</h6>
+      <ul>
+        <li>15 Kohorten‑Köpfe (&gt;94&nbsp;% Gebäudebestand)</li>
+        <li>48‑h Wetter‑Lookback (thermische Trägheit)</li>
+        <li>Temporale Validierung ohne Leakage</li>
+      </ul>
+      <p><strong>Leistung</strong>: 12,4&nbsp;% MAPE normal; 23–28&nbsp;% unter Extremwetter (produktionsfähig).</p>
+      <h6 class="mt-2">Portfolio‑Koordination</h6>
+      <ul>
+        <li>Nebenbedingungen pro Gebäude respektiert</li>
+        <li>Grid‑Strain‑Erkennung für Eingriffsfenster</li>
+        <li>Koordinierte Reaktion über Typen/Größen</li>
+      </ul>
+      <p><strong>Business‑Impact</strong>: 5,4&nbsp;% aggregiert vs. 2–3&nbsp;% unkoordiniert.</p>
+      <h6 class="mt-2">Produktionsreife Datenpipeline</h6>
+      <ul>
+        <li>625 Merkmale; systematisches Missing‑Handling</li>
+        <li>NREL Commercial Building Stock (8.111&nbsp;Gebäude, 13 Typen, 34 HVAC)</li>
+        <li>Synthetisches Wetter (realistische Massachusetts‑Muster)</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Ergebnisse &amp; Geschäftswert</h5>
+      <h6 class="mt-2">Quantifizierte Netzleistung</h6>
+      <ul>
+        <li><strong>Reduktionsfähigkeit</strong>: 5,4&nbsp;% unter Extremwetter</li>
+        <li><strong>Effizienz</strong>: 8.111 Gebäude in &lt;30&nbsp;s bei &lt;50&nbsp;MB</li>
+        <li><strong>Skalierung</strong>: validiert bis 100.000+ Gebäude</li>
+      </ul>
+      <h6 class="mt-2">Ökonomischer Nutzen</h6>
+      <ul>
+        <li><strong>Peak‑Reduktion</strong>: 50–75&nbsp;MW</li>
+        <li><strong>Blackout‑Vermeidung</strong>: $2–5&nbsp;M/Jahr</li>
+        <li><strong>Netzausbau‑Aufschub</strong>: $10–20&nbsp;M über 5 Jahre</li>
+      </ul>
+      <h6 class="mt-2">Technische Benchmarks</h6>
+      <ul>
+        <li><strong>FERC‑Vergleich</strong>: im Rahmen nationaler Einsparpotenziale</li>
+        <li><strong>Akademische Validierung</strong>: 20–25&nbsp;% MAPE als Produktionsbereich</li>
+        <li><strong>Kommerzielle Eignung</strong>: Schwellenwerte für Utility‑Einsatz erfüllt</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Projektmanagement &amp; Teamführung</h5>
+      <h6 class="mt-2">Koordinationsansatz</h6>
+      <ul>
+        <li><strong>Team</strong>: Tech‑Lead (ML‑Pipeline), Dashboard‑Entwicklung, Dokumentation</li>
+        <li><strong>Integration</strong>: Wöchentliche Abstimmung; standardisierte Formate; klare APIs</li>
+        <li><strong>Risiko</strong>: Stufige Lieferung (Baseline → Advanced → Research)</li>
+      </ul>
+      <h6 class="mt-2">Stakeholder‑Kommunikation</h6>
+      <ul>
+        <li><strong>Operatoren</strong>: Zuverlässigkeit, Performance, Betriebseinbindung</li>
+        <li><strong>Technik</strong>: Architektur, Skalierung, Performance</li>
+        <li><strong>Business</strong>: ROI, Marktchance, Positionierung</li>
+      </ul>
+      <h6 class="mt-2">Qualitätssicherung</h6>
+      <ul>
+        <li><strong>Production Engineering</strong>: Fehlerbehandlung, Fallbacks, Monitoring</li>
+        <li><strong>Validierung</strong>: Benchmarks vs. Standards/Literatur</li>
+        <li><strong>Dokumentation</strong>: Setup, Deployment, Betrieb</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Strategische Implikationen</h5>
+      <h6 class="mt-2">Positionierung &amp; Vorteil</h6>
+      <ul>
+        <li><strong>Differenzierung</strong>: Portfolio‑Koordination statt Einzeloptimierung</li>
+        <li><strong>Technischer Moat</strong>: Betriebsnahe Compliance‑Modellierung</li>
+        <li><strong>Skalierbarkeit</strong>: Produktionsreife Architektur</li>
+      </ul>
+      <h6 class="mt-2">Roadmap</h6>
+      <ul>
+        <li><strong>Fortgeschrittenes ML</strong>: Multi‑Agent‑RL für dynamische Strategien</li>
+        <li><strong>Operationen</strong>: Smart‑Meter‑Integration, Automatisierung</li>
+        <li><strong>Geografie</strong>: Klima‑spezifische Modelle, Regulatorik</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Professionelle Entwicklung</h5>
+      <h6 class="mt-2">Gezeigte Fähigkeiten</h6>
+      <ul>
+        <li><strong>Systemarchitektur</strong>: Skalierbare, modulare ML‑Pipeline</li>
+        <li><strong>Teamkoordination</strong>: Parallele Entwicklung über klare Schnittstellen</li>
+        <li><strong>Risikomanagement</strong>: Stufenweise Lieferung mit Fallbacks</li>
+        <li><strong>Stakeholder‑Management</strong>: Technischen Mehrwert in Business‑Nutzen übersetzen</li>
+      </ul>
+      <h6 class="mt-2">Engineering‑Exzellenz</h6>
+      <ul>
+        <li><strong>Performance</strong>: Strenge Latenz bei nötiger Genauigkeit</li>
+        <li><strong>Qualität</strong>: Tests, Validierung, Monitoring</li>
+        <li><strong>Deployment</strong>: Containerisiert, Cloud‑ready, skalierbar dokumentiert</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Analysen &amp; Ressourcen</h5>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-sm btn-primary" href="technische-details.html">Technische Details</a>
+        <a class="btn btn-sm btn-outline-primary" href="projektfuehrung.html">Projektführung</a>
+        <a class="btn btn-sm btn-outline-primary" href="produktstrategie.html">Produktstrategie</a>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/energy-recommendation-engine" target="_blank" rel="noopener">Repository</a>
+      </div>
+      <div class="mt-3">
+        <p class="mb-1"><strong>Verwandte Artikel</strong></p>
+        <ul>
+          <li><a href="/blog/2025-09-03-von-der-forschung-zur-produktion">Von der Forschung zur Produktion</a></li>
+          <li><a href="/blog/2025-09-03-senior-ai-code-review">Senior‑Level AI Code Review</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Projektperspektiven</h5>
+        <p class="card-text">Wählen Sie eine Perspektive für detaillierte Einblicke:</p>
+        <div class="d-grid gap-2">
+          <a href="technische-details.html" class="btn btn-primary">Technische Details</a>
+          <a href="projektfuehrung.html" class="btn btn-outline-primary">Projektführung</a>
+          <a href="produktstrategie.html" class="btn btn-outline-primary">Produktstrategie</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h6 class="card-title">Technologien</h6>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-primary">Python</span>
+          <span class="badge bg-primary">PyTorch</span>
+          <span class="badge bg-primary">LSTM</span>
+          <span class="badge bg-primary">Docker</span>
+          <span class="badge bg-primary">AWS</span>
+          <span class="badge bg-primary">FastAPI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

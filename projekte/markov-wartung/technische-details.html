@@ -1,0 +1,386 @@
+---
+layout: default
+title: "Technische Details: Markov-basierte Predictive Maintenance - Brandon Lewis Portfolio"
+lang: de
+---
+<div class="row">
+  <div class="col-lg-8">
+    <h1 class="mb-4">Technische Details: Markov‑basierte Predictive Maintenance</h1>
+    <p class="lead">Umfassende Analyse der Modellauswahl‑Philosophie, interpretierbarer KI‑Implementierung und produktionsreifer ML‑Technik für Flugzeugwartungssysteme.</p>
+
+    <div class="mb-4">
+      <h5>Modellauswahl‑Philosophie: Die Kern‑Technikentscheidung</h5>
+      <p>Der bedeutendste technische Beitrag dieses Projekts ist die Demonstration, wann Interpretierbarkeit über Performance in Production‑ML‑Systemen zu priorisieren ist. Die Entscheidung, Markov‑Chain‑Modelle über Random Forest trotz einer 15%‑Performance‑Lücke zu wählen, zeigt ein reifes Verständnis von Production‑ML‑Anforderungen.</p>
+      
+      <h6 class="mt-3">Die technische Trade‑off‑Analyse</h6>
+      <div class="table-responsive">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>Technischer Aspekt</th>
+              <th>Markov Chain</th>
+              <th>Random Forest</th>
+              <th>Business Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>RMSE Performance</strong></td>
+              <td>49 Zyklen</td>
+              <td>42 Zyklen</td>
+              <td>15% Performance‑Gap</td>
+            </tr>
+            <tr>
+              <td><strong>Interpretierbarkeit</strong></td>
+              <td>Zustandsbasierte Übergänge</td>
+              <td>Black‑Box‑Ensemble</td>
+              <td>Regulatorische Compliance</td>
+            </tr>
+            <tr>
+              <td><strong>Wartungsentscheidungsunterstützung</strong></td>
+              <td>Klare Gesundheitszustände</td>
+              <td>Nur Feature‑Wichtigkeit</td>
+              <td>Operative Planung</td>
+            </tr>
+            <tr>
+              <td><strong>Stakeholder‑Kommunikation</strong></td>
+              <td>Intuitive Zustandsprogression</td>
+              <td>Komplexe Baumstrukturen</td>
+              <td>Management‑Buy‑in</td>
+            </tr>
+            <tr>
+              <td><strong>Sicherheitszertifizierung</strong></td>
+              <td>Erklärbare Vorhersagen</td>
+              <td>Nur statistische Muster</td>
+              <td>Luftfahrt‑Compliance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Markov Chain Implementierungsarchitektur</h5>
+      <h6 class="mt-2">Zustandsbasierte Gesundheitsmodellierung</h6>
+      <p>Das Markov Chain Modell implementiert ein 4‑Zustands‑Gesundheitsprogressionssystem:</p>
+      <ul>
+        <li><strong>Gesunder Zustand</strong> – Normaler Betrieb mit niedrigen Degradationsindikatoren</li>
+        <li><strong>Warnzustand</strong> – Frühe Degradationszeichen, erhöhte Überwachung erforderlich</li>
+        <li><strong>Kritischer Zustand</strong> – Signifikante Degradation, Wartungsplanung erforderlich</li>
+        <li><strong>Ausfallzustand</strong> – Sofortige Wartung erforderlich, Sicherheitsrisiko</li>
+      </ul>
+      
+      <h6 class="mt-2">Übergangsmatrix‑Lernen</h6>
+      <p>Das Modell lernt Zustandsübergangswahrscheinlichkeiten aus historischen Daten:</p>
+      <pre><code>P = [[0.85, 0.12, 0.02, 0.01],  # Gesund → [G, W, K, A]
+     [0.00, 0.78, 0.18, 0.04],  # Warnung → [G, W, K, A]
+     [0.00, 0.00, 0.65, 0.35],  # Kritisch → [G, W, K, A]
+     [0.00, 0.00, 0.00, 1.00]]  # Ausfall → [G, W, K, A]</code></pre>
+      
+      <h6 class="mt-2">Emissionswahrscheinlichkeitsmodelle</h6>
+      <p>Jeder Gesundheitszustand ist durch Gaußsche Emissionswahrscheinlichkeiten für Sensormesswerte charakterisiert:</p>
+      <ul>
+        <li><strong>Temperatursensoren</strong> – Mittelwert und Varianz für jeden Gesundheitszustand</li>
+        <li><strong>Druckmesswerte</strong> – Zustandsspezifische Normalverteilungen</li>
+        <li><strong>Schwingungsmuster</strong> – Gesundheitszustand‑charakteristische Signaturen</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Hidden Markov Model (HMM) Implementierung</h5>
+      <h6 class="mt-2">Probabilistische Zustandsmodellierung</h6>
+      <p>Das HMM erweitert die Markov Chain mit probabilistischen Zustandsbeobachtungen:</p>
+      <ul>
+        <li><strong>Zustandssequenz‑Lernen</strong> – Viterbi‑Algorithmus für optimale Zustandspfade</li>
+        <li><strong>Forward‑Backward‑Algorithmus</strong> – Zustandswahrscheinlichkeitsschätzung</li>
+        <li><strong>Baum‑Welch‑Training</strong> – Expectation‑Maximization für Parameterlernen</li>
+      </ul>
+      
+      <h6 class="mt-2">Emissionsmodell‑Architektur</h6>
+      <p>Jeder Gesundheitszustand hat assoziierte Emissionswahrscheinlichkeiten für Sensorbeobachtungen:</p>
+      <pre><code># Zustandsemissionsmodelle (Gaußsche Verteilungen)
+state_emissions = {
+    'Gesund': {'mean': [0.1, 0.2, 0.05], 'cov': [[0.1, 0, 0], [0, 0.1, 0], [0, 0, 0.1]]},
+    'Warnung': {'mean': [0.3, 0.4, 0.15], 'cov': [[0.2, 0, 0], [0, 0.2, 0], [0, 0, 0.2]]},
+    'Kritisch': {'mean': [0.6, 0.7, 0.35], 'cov': [[0.3, 0, 0], [0, 0.3, 0], [0, 0, 0.3]]},
+    'Ausfall': {'mean': [0.9, 0.9, 0.8], 'cov': [[0.4, 0, 0], [0, 0.4, 0], [0, 0, 0.4]]}
+}</code></pre>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Baseline‑Modell‑Implementierung &amp; Vergleich</h5>
+      <h6 class="mt-2">Random Forest Implementierung</h6>
+      <p>Leistungsstarke Ensemble‑Methode für Vergleich:</p>
+      <ul>
+        <li><strong>100 Schätzer</strong> mit max_depth=10</li>
+        <li><strong>Feature‑Wichtigkeitsanalyse</strong> für Interpretierbarkeitsinsights</li>
+        <li><strong>Cross‑Validation</strong> mit 5‑fach temporalen Splits</li>
+        <li><strong>Performance</strong>: 42‑Zyklus RMSE (15% besser als Markov Chain)</li>
+      </ul>
+      
+      <h6 class="mt-2">LSTM Neural Network</h6>
+      <p>Deep Learning Baseline für Zeitreihenvorhersage:</p>
+      <ul>
+        <li><strong>Architektur</strong>: 2 LSTM‑Schichten (64, 32 Einheiten) + Dense Output</li>
+        <li><strong>Training</strong>: Adam Optimizer, Early Stopping, Dropout Regularisierung</li>
+        <li><strong>Performance</strong>: 45‑Zyklus RMSE (8% besser als Markov Chain)</li>
+        <li><strong>Limitierung</strong>: Black‑Box‑Vorhersagen, begrenzte Interpretierbarkeit</li>
+      </ul>
+      
+      <h6 class="mt-2">Linear Regression Baseline</h6>
+      <p>Einfaches lineares Modell für Performance‑Benchmarking:</p>
+      <ul>
+        <li><strong>Features</strong>: Rolling Window Statistiken, Degradationsindikatoren</li>
+        <li><strong>Performance</strong>: 58‑Zyklus RMSE (18% schlechter als Markov Chain)</li>
+        <li><strong>Interpretierbarkeit</strong>: Hoch (lineare Koeffizienten) aber begrenzte Genauigkeit</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Umfassendes Evaluationsframework</h5>
+      <h6 class="mt-2">Performance‑Metriken‑Implementierung</h6>
+      <p>Sieben Evaluationsmetriken bieten umfassende Modellbewertung:</p>
+      <ul>
+        <li><strong>RMSE</strong> – Root Mean Square Error für Vorhersagegenauigkeit</li>
+        <li><strong>MAE</strong> – Mean Absolute Error für robuste Fehlermessung</li>
+        <li><strong>MAPE</strong> – Mean Absolute Percentage Error für relative Genauigkeit</li>
+        <li><strong>R² Score</strong> – Bestimmtheitsmaß für Varianzerklärung</li>
+        <li><strong>Richtungsgenauigkeit</strong> – Korrekte Trendvorhersage‑Prozentsatz</li>
+        <li><strong>sMAPE</strong> – Symmetrischer Mean Absolute Percentage Error</li>
+        <li><strong>Späte Vorhersagestrafe</strong> – Sicherheitskritische Frühwarnungsbewertung</li>
+      </ul>
+      
+      <h6 class="mt-2">Business Impact Metriken</h6>
+      <p>Wirtschaftliches Evaluationsframework für Modellauswahl:</p>
+      <ul>
+        <li><strong>Kosteneinsparungsanalyse</strong> – $8,4M Jahresersparnis‑Berechnung</li>
+        <li><strong>ROI‑Berechnung</strong> – 1.200% Rendite über 5 Jahre</li>
+        <li><strong>Amortisationszeit</strong> – 1 Monat mit konservativen Annahmen</li>
+        <li><strong>Sensitivitätsanalyse</strong> – Robustheit über verschiedene Szenarien</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Produktionsreife ML‑Technik</h5>
+      <h6 class="mt-2">Modulare Architekturdesign</h6>
+      <p>Saubere Trennung der Verantwortlichkeiten für wartbaren Codebase:</p>
+      <ul>
+        <li><strong>Datenladungsmodul</strong> – CMAPSS‑Dataset‑Verarbeitung und Validierung</li>
+        <li><strong>Feature Engineering</strong> – Rolling Window Features, Degradationsindikatoren</li>
+        <li><strong>Modellierungspipeline</strong> – Markov Chain, HMM, Baseline‑Modell‑Implementierungen</li>
+        <li><strong>Evaluationsframework</strong> – Umfassende Metriken und Business Case Analyse</li>
+      </ul>
+      
+      <h6 class="mt-2">Umfassende Teststrategie</h6>
+      <p>95%+ Testabdeckung mit mehreren Testebenen:</p>
+      <ul>
+        <li><strong>Unit Tests</strong> – Individuelle Funktions‑ und Methodentests</li>
+        <li><strong>Integration Tests</strong> – End‑to‑End‑Pipeline‑Validierung</li>
+        <li><strong>Modellvalidierung</strong> – Cross‑Validation und Performance‑Benchmarking</li>
+        <li><strong>Business Logic Tests</strong> – ROI‑Berechnung und Kostenanalyse‑Validierung</li>
+      </ul>
+      
+      <h6 class="mt-2">Qualitätssicherungsframework</h6>
+      <p>KI‑unterstützte Entwicklungsqualitätsprozesse:</p>
+      <ul>
+        <li><strong>Code Review Checkliste</strong> – Umfassende Validierung für KI‑generierten Code</li>
+        <li><strong>Qualitätsgates</strong> – Automatisierte Tests, Linting und Review‑Prozesse</li>
+        <li><strong>Dokumentationsstandards</strong> – Technische Blog‑Posts, Case Studies, Code‑Kommentare</li>
+        <li><strong>Review Session Templates</strong> – Strukturierter Ansatz zur Code‑Qualitätsbewertung</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Technische Innovation: Modellauswahl‑Framework</h5>
+      <h6 class="mt-2">Entscheidungsmatrix‑Implementierung</h6>
+      <p>Quantitatives Framework für Modellauswahl in Production ML:</p>
+      <div class="table-responsive">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>Kriterium</th>
+              <th>Gewichtung</th>
+              <th>Markov Chain</th>
+              <th>Random Forest</th>
+              <th>Gewichtete Punktzahl</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Performance (RMSE)</td>
+              <td>30%</td>
+              <td>7/10</td>
+              <td>10/10</td>
+              <td>2,1 vs 3,0</td>
+            </tr>
+            <tr>
+              <td>Interpretierbarkeit</td>
+              <td>25%</td>
+              <td>10/10</td>
+              <td>3/10</td>
+              <td>2,5 vs 0,75</td>
+            </tr>
+            <tr>
+              <td>Regulatorische Compliance</td>
+              <td>20%</td>
+              <td>10/10</td>
+              <td>2/10</td>
+              <td>2,0 vs 0,4</td>
+            </tr>
+            <tr>
+              <td>Wartungsunterstützung</td>
+              <td>15%</td>
+              <td>9/10</td>
+              <td>4/10</td>
+              <td>1,35 vs 0,6</td>
+            </tr>
+            <tr>
+              <td>Implementierungskomplexität</td>
+              <td>10%</td>
+              <td>6/10</td>
+              <td>8/10</td>
+              <td>0,6 vs 0,8</td>
+            </tr>
+            <tr class="table-primary">
+              <td><strong>Gesamtpunktzahl</strong></td>
+              <td><strong>100%</strong></td>
+              <td><strong>8,55/10</strong></td>
+              <td><strong>5,55/10</strong></td>
+              <td><strong>Markov Chain gewinnt</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <h6 class="mt-2">Wichtige technische Erkenntnisse</h6>
+      <ul>
+        <li><strong>Performance ist nicht alles</strong> – Business‑Anforderungen überwiegen oft statistische Genauigkeit</li>
+        <li><strong>Interpretierbarkeit hat Wert</strong> – Erklärbare KI ermöglicht regulatorische Compliance und Stakeholder‑Buy‑in</li>
+        <li><strong>Kontext ist wichtig</strong> – Sicherheitskritische Anwendungen erfordern andere Modellauswahlkriterien</li>
+        <li><strong>Quantitative Frameworks helfen</strong> – Strukturierte Entscheidungsfindung verhindert ad‑hoc Modellauswahl</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Implementierungsherausforderungen &amp; Lösungen</h5>
+      <h6 class="mt-2">Datenqualität und Preprocessing</h6>
+      <p>NASA CMAPSS‑Dataset‑Herausforderungen und Lösungen:</p>
+      <ul>
+        <li><strong>Fehlende Datenbehandlung</strong> – Forward‑fill, Backward‑fill und Mean‑Imputation‑Strategien</li>
+        <li><strong>Feature Engineering</strong> – Rolling Window Statistiken und Degradationsindikatoren</li>
+        <li><strong>Normalisierung</strong> – StandardScaler für konsistente Feature‑Skalierung</li>
+        <li><strong>Validierungssplits</strong> – Temporale Splits zur Verhinderung von Datenlecks</li>
+      </ul>
+      
+      <h6 class="mt-2">Modellkonvergenz und Stabilität</h6>
+      <p>Sicherstellung zuverlässigen Modelltrainings und Vorhersage:</p>
+      <ul>
+        <li><strong>Initialisierungsstrategien</strong> – Ordnungsgemäße Zustandsübergangsmatrix‑Initialisierung</li>
+        <li><strong>Konvergenzkriterien</strong> – Early Stopping und Konvergenzüberwachung</li>
+        <li><strong>Cross‑Validation</strong> – Robuste Performance‑Schätzung über verschiedene Datensplits</li>
+        <li><strong>Hyperparameter‑Tuning</strong> – Grid Search für optimale Modellparameter</li>
+      </ul>
+      
+      <h6 class="mt-2">Produktionsdeployment‑Überlegungen</h6>
+      <p>Real‑world‑Deployment‑Herausforderungen und Lösungen:</p>
+      <ul>
+        <li><strong>Modellpersistenz</strong> – JSON‑Serialisierung für Modellzustandsspeicherung</li>
+        <li><strong>Inferenz‑Optimierung</strong> – Effiziente Vorhersage für Echtzeitanwendungen</li>
+        <li><strong>Monitoring und Logging</strong> – Modellperformance‑Tracking und Alerting</li>
+        <li><strong>Versionskontrolle</strong> – Modellversionierung und Rollback‑Fähigkeiten</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Technische Dokumentation &amp; Wissenstransfer</h5>
+      <h6 class="mt-2">Umfassende Dokumentationsstrategie</h6>
+      <p>Mehrebenen‑Dokumentation für verschiedene Zielgruppen:</p>
+      <ul>
+        <li><strong>Technischer Blog‑Post</strong> – Modellauswahl‑Philosophie und Entscheidungsframework</li>
+        <li><strong>Projekt README</strong> – Setup, Installation und Quick Start Guide</li>
+        <li><strong>Case Study</strong> – Business Impact Analyse und ROI‑Berechnung</li>
+        <li><strong>Code‑Kommentare</strong> – Inline‑Dokumentation für Wartbarkeit</li>
+      </ul>
+      
+      <h6 class="mt-2">Qualitätsreview‑Prozess</h6>
+      <p>Strukturierter Ansatz zur KI‑unterstützten Entwicklungsqualität:</p>
+      <ul>
+        <li><strong>Code Review Checkliste</strong> – Umfassende Validierungskriterien</li>
+        <li><strong>Review Session Templates</strong> – Strukturierter Qualitätsbewertungsprozess</li>
+        <li><strong>Qualitätsstandards</strong> – Definierte Kriterien für produktionsreifen Code</li>
+        <li><strong>Interview‑Vorbereitung</strong> – Technische Deep‑Dive‑Vorbereitungsmaterialien</li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="mb-4">
+      <h5>Verwandte Analyse ansehen</h5>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-sm btn-outline-primary" href="projektfuehrung.html">Projektführung</a>
+        <a class="btn btn-sm btn-outline-primary" href="produktstrategie.html">Produktstrategie</a>
+        <a class="btn btn-sm btn-primary" href="index.html">Projektübersicht</a>
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/markov-predictive-maintenance" target="_blank" rel="noopener">Repository</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Technische Highlights</h5>
+        <ul class="mb-0">
+          <li><strong>Modellauswahl‑Philosophie</strong> – Interpretierbarkeit über Performance</li>
+          <li><strong>Markov Chain Implementierung</strong> – 4‑Zustands‑Gesundheitsprogression</li>
+          <li><strong>HMM Erweiterung</strong> – Probabilistische Zustandsmodellierung</li>
+          <li><strong>Umfassende Evaluation</strong> – 7 Performance‑Metriken</li>
+          <li><strong>Production ML Engineering</strong> – 95%+ Testabdeckung</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h6 class="card-title">Performance‑Vergleich</h6>
+        <ul class="mb-0">
+          <li><strong>Markov Chain</strong>: 49 Zyklen RMSE</li>
+          <li><strong>Random Forest</strong>: 42 Zyklen RMSE</li>
+          <li><strong>LSTM</strong>: 45 Zyklen RMSE</li>
+          <li><strong>Linear Regression</strong>: 58 Zyklen RMSE</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h6 class="card-title">Wichtige Technologien</h6>
+        <div class="d-flex flex-wrap gap-1">
+          <span class="badge bg-warning">Python</span>
+          <span class="badge bg-warning">PyTorch</span>
+          <span class="badge bg-warning">scikit-learn</span>
+          <span class="badge bg-warning">hmmlearn</span>
+          <span class="badge bg-warning">pytest</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Senior-Level AI Code Review: Von Generierung zur strategischen Partnerschaft"
+lang: de
+---
+<h1>Senior-Level AI Code Review: Von Generierung zur strategischen Partnerschaft</h1>
+<p><em>Wie erfahrene Entwickler AI kollaborativ nutzen – mit Architektururteil und ohne Over‑Engineering</em></p>
+
+<h2>Einführung</h2>
+<p>Der frühere Ablauf – Problem beschreiben, Code erhalten, anpassen – skaliert bei komplexen Systemen schlecht. Beim Aufbau eines Multi‑Output‑LSTM für Netzprognosen war generierter Code formal korrekt, aber architektonisch fehleranfällig. Die Lehre: AI als <em>Partner</em> nutzen – stark in der Umsetzung, jedoch mit menschlicher Steuerung bei Architektur, Komplexität und Domänenvalidierung.</p>
+
+<h2>Prinzipien seniorer AI‑Nutzung</h2>
+<ol>
+  <li><strong>Spezifikation vor Implementierung</strong>: Anforderungen präzisieren (Cohorts, Lookback/Forecast, Integration, Persistenz, SLOs).</li>
+  <li><strong>Komplexitäts‑Begründung</strong>: Jede Architekturentscheidung gegen Nutzen, Performance, Wartung, Integration prüfen.</li>
+  <li><strong>Domänenvalidierung</strong>: Zeitreihen brauchen temporale Splits; Gebäudekohorten unterscheiden Muster; Workflows der Netzbetreiber berücksichtigen.</li>
+  <li><strong>Produktionsreife</strong>: Input‑Validierung, Ressourcenbudget, Integrations‑Adapter, Monitoring/Logging, Fehlertoleranz.</li>
+  <li><strong>Architektur‑Kohärenz</strong>: Komponenten müssen nahtlos zusammenpassen (Brückenfunktionen bereitstellen).</li>
+</ol>
+
+<h2>Systematischer Review‑Rahmen</h2>
+<ul>
+  <li><strong>Requirements Alignment</strong>: Erfüllt, keine Scope‑Creeps, Interfaces korrekt?</li>
+  <li><strong>Over‑Engineering</strong>: Schein‑Attention, überflüssige Encodings vermeiden.</li>
+  <li><strong>Production Readiness</strong>: Validation, Ressourcen, Integration, Observability, Doku.</li>
+  <li><strong>Domain Consistency</strong>: Temporale Splits, relevante Metriken, Domänen‑Constraints.</li>
+</ul>
+
+<h2>Praxisbeispiel LSTM</h2>
+<p>Initiale Issues: ✅ Multi‑Output, ❌ Schein‑Attention/Encoding, ❌ fehlende Validierung/Adapter, ❌ Random‑Splits. Nach strukturiertem Review: vereinfachte Architektur, Produktionsfeatures, temporale Splits, klare Interfaces.</p>
+
+<h2>Schlussfolgerungen</h2>
+<p>AI ist am effektivsten als architektonischer <em>Kollaborateur</em>: schnelle Umsetzung anhand klarer Spezifikationen, danach strukturierte Reviews für Kohärenz und Domänenpassung. Qualitätsprüfung erweitert sich um Komplexitätsbegründung, Domänenabgleich und Integrationsfit. So entsteht robuste, wartbare Systemarchitektur – mit AI als Beschleuniger, nicht als Ersatz.</p>
+<hr/>
+<p><em>Checklisten und Beispiele finden sich im Energie‑Empfehlungssystem‑Repository. Die Multi‑Output‑LSTM‑Implementierung folgt dem hier beschriebenen Kollaborationsrahmen.</em></p>
+
+

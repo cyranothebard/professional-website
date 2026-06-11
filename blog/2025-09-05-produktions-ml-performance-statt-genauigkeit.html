@@ -1,0 +1,43 @@
+---
+layout: default
+title: "Produktions-ML: Wenn Performance wichtiger ist als Genauigkeit"
+lang: de
+---
+<h1>Produktions-ML: Wenn Performance wichtiger ist als Genauigkeit</h1>
+
+<p><em>Aus dem Energie‑Empfehlungssystem</em></p>
+
+<h2>Produktionsrealität</h2>
+<p>In produktiven ML‑Systemen optimieren wir <strong>Latenz, Speicher, Zuverlässigkeit</strong> – nicht nur Accuracy. Für ein netzskaliertes Energie‑Empfehlungssystem ersetzte ich einen End‑to‑End‑Ensemble‑Ansatz durch eine <strong>modulare Drei‑Phasen‑Pipeline</strong>, die &gt;8.000 Gebäude in &lt;30 Sekunden mit &lt;50MB Speicher verarbeitet.</p>
+
+<h2>Architektur</h2>
+<ul>
+  <li><strong>Phase 1: Multi‑Kohorten‑Forecasting</strong> – LSTM‑Prognosen für 15 Gebäudetypen</li>
+  <li><strong>Phase 2: Compliance‑Vorhersage</strong> – Realistische 36,3% Befolgungsrate</li>
+  <li><strong>Phase 3: Portfolio‑Optimierung</strong> – Nebenbedingungen für maximalen Netzeffekt</li>
+</ul>
+
+<h2>Ergebnisse</h2>
+<ul>
+  <li>Durchsatz: &lt;30s für 8.111 Gebäude</li>
+  <li>Speicher: &lt;50MB</li>
+  <li>Netzreduktion: 5,4% aggregiert bei Extremwetter (innerhalb 2–7% Benchmarks)</li>
+</ul>
+
+<h2>Warum Modularität gewinnt</h2>
+<ul>
+  <li><strong>Fehlerisolation</strong> und <strong>Fallback</strong>‑Strategien</li>
+  <li><strong>Parallele Entwicklung</strong> durch klare Schnittstellen</li>
+  <li><strong>Betriebliche Zuverlässigkeit</strong> unter Last</li>
+</ul>
+
+<h2>Führung & Lernen</h2>
+<ul>
+  <li>Performance‑Constraints bestimmen oft die Architektur stärker als Accuracy</li>
+  <li>Realistische Annahmen (z. B. Compliance‑Raten) erhöhen Glaubwürdigkeit</li>
+  <li>Monitoring & Observability sind Kernfunktionen – nicht Beiwerk</li>
+</ul>
+
+<hr/>
+<p>Implementierung: <a href="https://github.com/cyranothebard/energy-recommendation-engine">energy-recommendation-engine</a>.</p>
+<p><a href="/blog/en/2025-09-05-production-ml-performance-over-accuracy">English version</a></p>
