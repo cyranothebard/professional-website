@@ -1,35 +1,100 @@
 ---
 layout: default
 title: "Industrial IoT Data Platform | BridgeOps AI"
-description: "Scaffolded case study for industrial data integration, validation, monitoring, and analytics."
+description: "Portfolio-Fallstudie: Wie Fertigungsdaten in eine belastbare Grundlage fuer Analytics und kuenftige industrielle KI ueberfuehrt werden."
 lang: de
 alternate_url: /projects/industrial-iot-data-platform/
 ---
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Case Study in Development</p>
+    <p class="eyebrow">Portfolio · Datenplattform</p>
     <h1>Industrial IoT Data Platform</h1>
-    <p class="lead">Vom Maschinensignal zur belastbaren Analytics-Grundlage.</p>
+    <p class="lead">Vom Maschinensignal zur belastbaren Analytics-Grundlage. Das Projekt zeigt, warum KI-Skalierung mit vertrauenswuerdigen operativen Daten beginnt.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
-    <!-- TODO: Replace lorem ipsum after project build sprint. -->
-    <h2>Problemkontext</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with final project context.</p>
+    <h2>Strategischer Zweck</h2>
+    <p>
+      Dieses Projekt ist die zentrale technische Demonstration der Data-Stufe im BridgeOps Framework: Operations → Data → Insights &amp; Decisions → Automation → AI. Es zeigt, wie Daten aus mehreren Fertigungssystemen in verlaessliche, kontextualisierte Informationen fuer operative Entscheidungen ueberfuehrt werden.
+    </p>
+    <p>
+      Die Kernaussage: <strong>KI-Skalierung haengt von robusten operativen Datenfundamenten ab.</strong> Die Plattform ist bewusst als realistische industrielle Datenarchitektur gebaut - nicht als Machine-Learning-Demo.
+    </p>
+  </div>
+</section>
 
-    <h2>Geplante Architektur</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with final architecture summary.</p>
+<section class="section bg-light">
+  <div class="container">
+    <h2>Business-Szenario</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Umgebung</h3>
+        <p>Ein mittelstaendischer Hersteller mit SPS-gesteuerten Anlagen, Sensorik, Qualitaetsstationen, Instandhaltungssystemen und ERP-Produktionsplanung.</p>
+      </div>
+      <div>
+        <h3>Ausgangsproblem</h3>
+        <p>Daten sind vorhanden, aber ueber Systeme verteilt. Fuehrung und Betrieb koennen Anlagenzustand, Leistung, Qualitaet und Stillstand nicht verlaesslich in einer Sicht steuern.</p>
+      </div>
+      <div>
+        <h3>Zielbild</h3>
+        <p>Zuerst eine skalierbare operative Datenplattform aufbauen und darauf spaeter Predictive Maintenance, Computer Vision und angewandte KI aufsetzen.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2>Technische Bausteine</h2>
-    <ul>
-      <li>Lorem ipsum placeholder component</li>
-      <li>Lorem ipsum placeholder component</li>
-      <li>Lorem ipsum placeholder component</li>
-    </ul>
+<section class="section">
+  <div class="container">
+    <h2>Architektur und Pipeline</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Ingestion</h3><p>Python-basierte Simulation realistischer Industriestroeme: Sensorik, Maschinenzustaende, Qualitaet, Wartung und ERP-Produktionsdaten.</p></div>
+      <div><span>02</span><h3>Validierung und Verarbeitung</h3><p>Bronze → Silver mit Cleaning, Deduplikation, Missing-Value-Handling, Zeitstempel-Normalisierung und Konsistenzpruefungen.</p></div>
+      <div><span>03</span><h3>Lakehouse-Modellierung</h3><p>Gold-Datensaetze fuer KPI-faehige Analytics: Reliability-, Produktions-, Qualitaets- und Wartungssichten.</p></div>
+      <div><span>04</span><h3>Decision Layer</h3><p>Management-Dashboard mit Operations-Ueberblick, Reliability-Metriken und explizitem Datenqualitaets-Monitoring.</p></div>
+    </div>
+  </div>
+</section>
 
-    <h2>Geschaffener Business Value</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with expected business outcome.</p>
+<section class="section bg-light">
+  <div class="container">
+    <h2>Datenqualitaets-Layer</h2>
+    <p class="lead">Diese Ebene wird in vielen Portfolio-Projekten ausgelassen. Hier ist sie explizit und messbar umgesetzt.</p>
+    <div class="card-grid three">
+      <div>
+        <h3>Pruefungen</h3>
+        <p>Missing Values, Ausreisser, Duplikate, ungueltige Maschinenzustaende und Sensor-Drift-Indikatoren.</p>
+      </div>
+      <div>
+        <h3>Quality Scoring</h3>
+        <p>Zusammengefasste Qualitaetsmetriken pro Datendomane inklusive Trend- und Fehlertracking.</p>
+      </div>
+      <div>
+        <h3>Entscheidungswirkung</h3>
+        <p>Vor jedem KI-Einsatz wird sichtbar, ob die zugrunde liegenden Betriebsdaten fuer vertrauenswuerdige Entscheidungen geeignet sind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Gelieferte operative KPIs</h2>
+    <div class="card-grid four">
+      <div><h3>Reliability</h3><p>MTBF, MTTR und Verfuegbarkeit pro Produktionslinie und Zeitraum.</p></div>
+      <div><h3>Produktion</h3><p>Durchsatz, OEE, Downtime-Analyse und Soll-Ist-Erfuellung.</p></div>
+      <div><h3>Qualitaet</h3><p>Ausschussrate, First Pass Yield und Defekttrend-Transparenz.</p></div>
+      <div><h3>Instandhaltung</h3><p>Work-Order-Volumen, Fehlerkategorien und Verhaeltnis praeventiv vs. reaktiv.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container">
+    <h2>Was dieses Projekt nachweist</h2>
+    <p>Hiring Manager sehen realistische industrielle Datenarchitektur. Consulting-Kunden sehen die notwendige Basis vor KI-Investitionen. Technische Peers sehen ein skalierbares System statt eines Spielzeug-ML-Projekts.</p>
+    <a class="btn btn-primary" href="/kontakt/">Architektur besprechen</a>
+    <a class="btn btn-outline-light" href="https://github.com/cyranothebard/industrial-iot-data-platform" target="_blank" rel="noopener">Repository oeffnen</a>
   </div>
 </section>

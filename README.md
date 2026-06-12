@@ -1,6 +1,6 @@
-# bridgeops.ai Professional Website
+# BridgeOps Professional Website
 
-This folder contains the Jekyll source for bridgeops.ai hosted on Cloudflare Pages.
+This folder contains the Jekyll source for bridge-ops.ai hosted on Cloudflare Pages.
 
 ## Stack
 

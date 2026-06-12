@@ -22,8 +22,8 @@ Cloudflare builds on Linux and does not require the local macOS `eventmachine` c
 
 ## Custom domains
 
-1. Add `bridgeops.ai` as the primary custom domain.
-1. Add `www.bridgeops.ai` as a secondary domain.
+1. Add `bridge-ops.ai` as the primary custom domain.
+1. Add `www.bridge-ops.ai` as a secondary domain.
 1. Keep the redirect in `_redirects` so `www` resolves permanently to the apex domain.
 1. Enable **Always Use HTTPS** in Cloudflare SSL/TLS settings.
 1. Use **Full (strict)** SSL mode after the Pages certificate is active.
@@ -31,15 +31,15 @@ Cloudflare builds on Linux and does not require the local macOS `eventmachine` c
 ## Post-deployment checks
 
 - Confirm `/`, `/en/`, `/projects/`, `/projekte/`, `/blog/`, and `/blog/en/` return HTTP 200.
-- Confirm `https://www.bridgeops.ai/` redirects to `https://bridgeops.ai/`.
+- Confirm `https://www.bridge-ops.ai/` redirects to `https://bridge-ops.ai/`.
 - Confirm `/robots.txt`, `/sitemap.xml`, `/_headers`, and redirects are deployed as expected.
 - Inspect canonical and `hreflang` tags in rendered page source.
 - Enable Cloudflare Web Analytics only after the privacy approach is approved.
 
 ## Launch TODOs (Confirmed)
 
-- Create and configure `hello@bridgeops.ai` mailbox routing before launch.
-- Keep a separate dedicated repository for `bridgeops.ai` site source.
+- Create and configure `hello@bridge-ops.ai` mailbox routing before launch.
+- Keep a separate dedicated repository for `bridge-ops.ai` site source.
 
 ## Build troubleshooting
 
