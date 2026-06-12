@@ -732,6 +732,148 @@ button:focus-visible{
   transition:transform .3s ease,opacity .3s ease;
 }
 
+/* Utility Classes for Sprint 1 */
+
+.section{
+  padding:4rem 0;
+}
+
+.page-hero{
+  padding:4rem 0 3rem;
+  background:var(--surface);
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-weight:700;
+  font-size:.78rem;
+  color:var(--accent);
+  margin-bottom:.75rem;
+  display:block;
+}
+
+.narrow{
+  max-width:860px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.profile-image{
+  width:100%;
+  max-width:320px;
+  border-radius:24px;
+  box-shadow:0 20px 50px rgba(16,34,53,.15);
+}
+
+.card-grid,
+.bridge-grid,
+.credibility-grid,
+.process-grid,
+.case-study-grid,
+.service-list,
+.contact-prompts{
+  display:grid;
+  gap:1.5rem;
+}
+
+.card-grid.three{
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.card-grid.four,
+.process-grid.four,
+.bridge-grid{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+
+.card-grid>div,
+.bridge-grid>div,
+.service-list article,
+.case-card,
+.credibility-grid>div,
+.process-grid>div,
+.contact-prompts>div{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:1.5rem;
+  box-shadow:0 10px 30px rgba(16,34,53,.05);
+}
+
+.bg-light .card-grid>div,
+.bg-light .bridge-grid>div,
+.bg-light .service-list article,
+.bg-light .case-card,
+.bg-light .credibility-grid>div{
+  background:#fff;
+}
+
+.credibility-grid{
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  margin:1.5rem 0;
+}
+
+.credibility-grid strong{
+  display:block;
+  font-size:1.7rem;
+  color:var(--ink);
+  margin-bottom:.25rem;
+}
+
+.credibility-grid span{
+  display:block;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+.service-list{
+  display:grid;
+  gap:1.5rem;
+}
+
+.timeline-list li,
+.principle-list li{
+  margin-bottom:1rem;
+}
+
+.cta-section{
+  background:var(--ink);
+  color:#fff;
+}
+
+.cta-section h2,
+.cta-section p{
+  color:#fff;
+}
+
+.placeholder{
+  border-style:dashed;
+  opacity:.8;
+}
+
+.text-link{
+  font-weight:700;
+  text-decoration:none;
+  color:var(--brand);
+  transition:color .2s ease;
+}
+
+.text-link:hover{
+  color:var(--accent);
+}
+
+.contact-prompts{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem;
+  margin:2rem 0;
+}
+
+.bg-light{
+  background-color:var(--surface);
+}
+
 /* Print styles */
 @media print{
   .navbar,.footer,.btn,.consent-banner{
