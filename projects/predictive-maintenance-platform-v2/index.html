@@ -9,28 +9,83 @@ alternate_url: /projekte/predictive-maintenance-platform-v2/
   <div class="container">
     <p class="eyebrow">BridgeOps Intelligence Layer</p>
     <h1>Predictive Maintenance Decision Intelligence</h1>
-    <p class="lead">Explainable maintenance recommendations for industrial operations.</p>
+    <p class="lead">Explainable maintenance recommendations for industrial operations with a clear human-in-the-loop operating model.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
-    <h2>Executive Summary</h2>
-    <p>This project turns operational data into explainable maintenance actions. It combines health-state modeling, failure-risk forecasting, remaining useful life estimation, and a recommendation engine that tells teams what to do next.</p>
+    <h2>Problem</h2>
+    <p>Many predictive maintenance programs stop at risk scoring. Operations and maintenance teams still need practical decisions: which asset to prioritize now, which action to take first, and what business impact to expect from acting versus waiting.</p>
 
-    <h2>BridgeOps Position</h2>
-    <p>The work belongs in the Intelligence Layer: it sits above the data platform and below future automation. The point is decision support, not autonomous maintenance.</p>
+    <h2>BridgeOps Framework Role</h2>
+    <p>This project is the BridgeOps <strong>Intelligence Layer</strong> between the Data Layer and Automation Layer. It connects data quality, knowledge retrieval context, and model-driven recommendations into practical decision intelligence. Execution is intentionally human-in-the-loop and governance-ready.</p>
 
-    <h2>Key Outputs</h2>
-    <ul>
-      <li>Health states: Healthy, Degraded, Critical, Failure</li>
-      <li>Failure probability and failure-risk score</li>
-      <li>Predicted remaining useful life</li>
-      <li>Recommended action: Monitor, Inspect, Schedule Maintenance, or Immediate Review</li>
-      <li>Explainability via transition probabilities and state evolution</li>
-    </ul>
+    <h2>Approach</h2>
+    <p>The solution combines health-state modeling, failure-risk forecasting, remaining useful life estimation, and recommendation logic. Instead of delivering predictions alone, it provides explainable maintenance actions with prioritization and impact context.</p>
+  </div>
+</section>
 
-    <h2>Business Value</h2>
-    <p>The project helps maintenance teams reduce unplanned downtime, prioritize the right assets, and connect technical signals to business value. A small automation preview shows how the recommendation could trigger workflow tooling in the future.</p>
+<section class="section bg-light">
+  <div class="container">
+    <h2>Architecture</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Data Inputs</h3><p>Asset signals, operating context, and degradation features are integrated and validated for data quality.</p></div>
+      <div><span>02</span><h3>Health & Risk Modeling</h3><p>Health states, failure probability, and RUL are estimated through interpretable model logic.</p></div>
+      <div><span>03</span><h3>Decision Intelligence</h3><p>Recommendation logic prioritizes actions such as Monitor, Inspect, Schedule Maintenance, or Immediate Review.</p></div>
+      <div><span>04</span><h3>Automation Preview</h3><p>A controlled preview shows how validated recommendations can flow into downstream workflow automation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Technologies</h2>
+    <div class="card-grid four">
+      <div><h3>Application Layer</h3><p>Streamlit dashboard for asset-level decisions, portfolio prioritization, and recommendation explainability.</p></div>
+      <div><h3>Decision Engine</h3><p>Rule-guided recommendations with thresholds, priority classes, and explicit rationale.</p></div>
+      <div><h3>Modeling Stack</h3><p>Health-state logic, failure risk scoring, and RUL estimation with reproducible inputs and tests.</p></div>
+      <div><h3>Governance</h3><p>Traceable rationale, documented architecture, and a human-in-the-loop review gate before automation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Results / Impact</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Operational outcomes</h3>
+        <p>Better asset prioritization, reduced unplanned downtime risk, and more consistent maintenance actions.</p>
+      </div>
+      <div>
+        <h3>Business impact</h3>
+        <p>Technical recommendations are tied to cost and savings context for decision transparency.</p>
+      </div>
+      <div>
+        <h3>Portfolio positioning</h3>
+        <p>Clear evidence of the Intelligence layer in the Data → Knowledge → Intelligence → Automation sequence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Screenshots / Demo</h2>
+    <div class="card-grid three">
+      <div><h3>Screenshot Slot 1</h3><p>Asset Decision View: health state, risk score, RUL, and recommended action.</p></div>
+      <div><h3>Screenshot Slot 2</h3><p>Portfolio Prioritization View: ranked asset backlog and impact-oriented planning.</p></div>
+      <div><h3>Screenshot Slot 3</h3><p>Automation Preview: controlled handoff of validated recommendations to workflow systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container">
+    <h2>Repository / Demo</h2>
+    <p>Reviewers can inspect architecture, setup steps, demo runbook, and BridgeOps positioning directly in the repository.</p>
+    <a class="btn btn-primary" href="/en/contact/">Discuss this use case</a>
+    <a class="btn btn-outline-light" href="https://github.com/cyranothebard/Markov_Based_Predictive_Maintenance" target="_blank" rel="noopener">Open repository</a>
   </div>
 </section>

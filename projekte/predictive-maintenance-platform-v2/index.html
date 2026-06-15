@@ -9,28 +9,83 @@ alternate_url: /projects/predictive-maintenance-platform-v2/
   <div class="container">
     <p class="eyebrow">BridgeOps Intelligence Layer</p>
     <h1>Predictive Maintenance Decision Intelligence</h1>
-    <p class="lead">Erklaerbare Wartungsempfehlungen fuer industrielle Operationen.</p>
+    <p class="lead">Erklaerbare Wartungsempfehlungen fuer industrielle Operationen mit klarem Human-in-the-Loop-Fokus.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
-    <h2>Executive Summary</h2>
-    <p>Dieses Projekt verwandelt operative Daten in erklaerbare Wartungsentscheidungen. Es kombiniert Health-State-Modellierung, Failure-Risk-Forecasting, Remaining-Useful-Life-Schätzung und eine Recommendation Engine.</p>
+    <h2>Problem</h2>
+    <p>Viele Predictive-Maintenance-Initiativen liefern nur Risikoscores. Operations- und Instandhaltungsteams brauchen aber konkrete, priorisierte Handlungsentscheidungen: welches Asset zuerst, welche Massnahme jetzt und welcher wirtschaftliche Effekt bei Aktion versus Warten zu erwarten ist.</p>
 
-    <h2>BridgeOps Position</h2>
-    <p>Das Projekt gehoert in die Intelligence Layer: oberhalb der Datenplattform und unterhalb kuenftiger Automatisierung. Der Fokus liegt auf Entscheidungsunterstuetzung, nicht auf autonomen Entscheidungen.</p>
+    <h2>BridgeOps Framework Role</h2>
+    <p>Dieses Projekt ist die BridgeOps <strong>Intelligence Layer</strong> zwischen Data Layer und Automation Layer: Es verbindet Datenqualitaet, Knowledge Retrieval und modellbasierte Entscheidungsvorschlaege zu belastbarer Decision Intelligence. Die Umsetzung bleibt bewusst human-in-the-loop und governance-faehig.</p>
 
-    <h2>Zentrale Ergebnisse</h2>
-    <ul>
-      <li>Gesundheitszustände: Healthy, Degraded, Critical, Failure</li>
-      <li>Failure Probability und Risk Score</li>
-      <li>Predicted Remaining Useful Life</li>
-      <li>Empfehlung: Monitor, Inspect, Schedule Maintenance oder Immediate Review</li>
-      <li>Erklaerbarkeit ueber Transition Probabilities und State Evolution</li>
-    </ul>
+    <h2>Approach</h2>
+    <p>Die Loesung kombiniert Health-State-Modellierung, Failure-Risk-Forecasting, Remaining-Useful-Life-Schaetzung und eine Recommendation Engine. Statt reiner Prognosen erzeugt das System erklaerbare Wartungsempfehlungen mit Priorisierung und erwarteter Wirkung.</p>
+  </div>
+</section>
 
-    <h2>Business Value</h2>
-    <p>Das Projekt hilft Wartungsteams, ungeplante Ausfaelle zu reduzieren, die richtigen Assets zu priorisieren und technische Signale mit geschäftlichem Wert zu verbinden. Ein kleiner Automation Preview zeigt, wie die Empfehlung spaeter Workflow-Tools ausloesen koennte.</p>
+<section class="section bg-light">
+  <div class="container">
+    <h2>Architecture</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Data Inputs</h3><p>Asset-Signale, Betriebskontext und degradationsnahe Merkmale werden zusammengefuehrt und auf Datenqualitaet geprueft.</p></div>
+      <div><span>02</span><h3>Health & Risk Modeling</h3><p>Health States, Ausfallwahrscheinlichkeit und RUL werden mit nachvollziehbarer Logik berechnet.</p></div>
+      <div><span>03</span><h3>Decision Intelligence</h3><p>Empfehlungslogik priorisiert Aktionen wie Monitor, Inspect, Schedule Maintenance oder Immediate Review.</p></div>
+      <div><span>04</span><h3>Automation Preview</h3><p>Ein kontrollierter Preview zeigt, wie validierte Empfehlungen spaeter in Workflow-Automatisierung uebergehen koennen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Technologies</h2>
+    <div class="card-grid four">
+      <div><h3>Application Layer</h3><p>Streamlit-Dashboard fuer Asset-Ansicht, Portfolio-Priorisierung und Erklaerbarkeit.</p></div>
+      <div><h3>Decision Engine</h3><p>Regelbasierte Empfehlungen mit Risikoschwellen, Prioritaet und begruendeter Handlungsausgabe.</p></div>
+      <div><h3>Modeling Stack</h3><p>Health-State-Logik, Failure Risk und RUL-Schaetzung mit reproduzierbaren Inputs und Testabdeckung.</p></div>
+      <div><h3>Governance</h3><p>Nachvollziehbare Rationale, dokumentierte Architektur und human-in-the-loop-Freigabepunkt vor Automation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Results / Impact</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Operative Wirkung</h3>
+        <p>Bessere Priorisierung kritischer Assets, reduzierte ungeplante Ausfaelle und konsistentere Wartungsentscheidungen.</p>
+      </div>
+      <div>
+        <h3>Business Impact</h3>
+        <p>Verknuepfung von technischer Empfehlung mit wirtschaftlicher Wirkung durch Kosten- und Einsparungskontext.</p>
+      </div>
+      <div>
+        <h3>Portfolio-Positionierung</h3>
+        <p>Klarer Nachweis der Intelligence Layer innerhalb Data → Knowledge → Intelligence → Automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Screenshots / Demo</h2>
+    <div class="card-grid three">
+      <div><h3>Screenshot Slot 1</h3><p>Asset Decision View: Health State, Risk Score, RUL und empfohlene Aktion.</p></div>
+      <div><h3>Screenshot Slot 2</h3><p>Portfolio Prioritization View: Rangfolge und Impact-basierte Wartungsplanung.</p></div>
+      <div><h3>Screenshot Slot 3</h3><p>Automation Preview: kontrollierte Weitergabe validierter Empfehlungen an Folgeprozesse.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container">
+    <h2>Repository / Demo</h2>
+    <p>Reviewer finden im Repository die Referenzarchitektur, Setup-Schritte, Demo-Runbook und die Positionierung im BridgeOps Framework.</p>
+    <a class="btn btn-primary" href="/kontakt/">Anwendungsfall besprechen</a>
+    <a class="btn btn-outline-light" href="https://github.com/cyranothebard/Markov_Based_Predictive_Maintenance" target="_blank" rel="noopener">Repository oeffnen</a>
   </div>
 </section>
