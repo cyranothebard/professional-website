@@ -1,35 +1,124 @@
 ---
 layout: english
 title: "Engineering Knowledge Assistant | BridgeOps AI"
-description: "Scaffolded case study for generative AI support for technical documentation and knowledge work."
+description: "Portfolio case study: multilingual retrieval, traceable answers, and knowledge-gap detection for manufacturing engineering documentation."
 lang: en
 alternate_url: /projekte/engineering-knowledge-assistant/
 ---
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Case Study in Development</p>
+    <p class="eyebrow">Portfolio · Knowledge Layer</p>
     <h1>Engineering Knowledge Assistant</h1>
-    <p class="lead">Generative AI for technical documentation and know-how.</p>
+    <p class="lead">Turn fragmented engineering documentation into governed operational intelligence with multilingual retrieval, citations, and visible knowledge gaps.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
-    <!-- TODO: Replace lorem ipsum after project build sprint. -->
-    <h2>Problem context</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with final project context.</p>
+    <h2>Strategic purpose</h2>
+    <p>
+      This project is the BridgeOps <strong>Knowledge Layer</strong> between the Industrial IoT Data Platform and future decision intelligence systems. It demonstrates how manufacturing organizations can move from document storage to governed knowledge retrieval without pretending a general chatbot is enough.
+    </p>
+    <p>
+      The core thesis is straightforward: <strong>operational knowledge becomes useful only when engineers can retrieve trusted, traceable answers fast enough to support real work.</strong>
+    </p>
+  </div>
+</section>
 
-    <h2>Planned architecture</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with final architecture summary.</p>
+<section class="section bg-light">
+  <div class="container">
+    <h2>Business challenge</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Environment</h3>
+        <p>A manufacturing site with SOPs, incident reports, RCA documents, safety procedures, standards, and vendor manuals spread across formats and languages.</p>
+      </div>
+      <div>
+        <h3>Current challenge</h3>
+        <p>Engineers lose time searching for approved procedures, troubleshooting history, and equipment-specific instructions. Knowledge remains siloed and weakly governed.</p>
+      </div>
+      <div>
+        <h3>Target state</h3>
+        <p>Provide fast, source-grounded answers in English or German, while making missing or weak documentation visible instead of hiding uncertainty.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2>Technical components</h2>
-    <ul>
-      <li>Lorem ipsum placeholder component</li>
-      <li>Lorem ipsum placeholder component</li>
-      <li>Lorem ipsum placeholder component</li>
+<section class="section">
+  <div class="container">
+    <h2>Why not just use ChatGPT?</h2>
+    <div class="card-grid four">
+      <div><h3>Controlled corpus</h3><p>Answers are grounded in approved engineering documents, not open-ended internet recall.</p></div>
+      <div><h3>Traceability</h3><p>Every answer includes explicit citations with title, document type, and source reference.</p></div>
+      <div><h3>Governance</h3><p>The system flags potential knowledge gaps when retrieval quality is weak or relevant documentation is missing.</p></div>
+      <div><h3>Organizational memory</h3><p>The assistant reflects company-specific procedures, incidents, standards, and operational language.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Architecture and workflow</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Document ingestion</h3><p>PDF, TXT, and Markdown documents are loaded with validated metadata across equipment, process, site, and language.</p></div>
+      <div><span>02</span><h3>Chunking and embeddings</h3><p>Documents are segmented, enriched with metadata, and embedded into a Chroma vector store.</p></div>
+      <div><span>03</span><h3>Retrieval and answer generation</h3><p>Relevant chunks are retrieved before the system composes a multilingual answer with citations and confidence indicators.</p></div>
+      <div><span>04</span><h3>Knowledge governance</h3><p>Weak retrieval performance triggers a visible knowledge-gap warning instead of a falsely confident response.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Technical implementation</h2>
+    <div class="card-grid four">
+      <div><h3>Frontend</h3><p>Streamlit interface for conversational search, source review, and user feedback.</p></div>
+      <div><h3>Retrieval layer</h3><p>LangChain orchestration with ChromaDB vector retrieval and bilingual query expansion.</p></div>
+      <div><h3>Validation</h3><p>Pydantic metadata schema ensures each document remains traceable and replaceable without code changes.</p></div>
+      <div><h3>Metrics</h3><p>Lightweight usage telemetry tracks total questions, helpful feedback, and top searched equipment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>What this demonstrates</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Product management</h3>
+        <p>Clear scoping around explainability, governance, multilingual retrieval, and a focused user narrative for manufacturing engineers.</p>
+      </div>
+      <div>
+        <h3>Industrial AI</h3>
+        <p>A practical GenAI use case tied to operational work: startup procedures, troubleshooting, quality investigations, and safety-critical instructions.</p>
+      </div>
+      <div>
+        <h3>Platform thinking</h3>
+        <p>The assistant sits on top of structured data and document pipelines, making it a bridge between data platforms and decision systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Related BridgeOps content</h2>
+    <p>This project fits into a broader progression from operations data toward decision intelligence:</p>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 12px;"><a href="/projects/industrial-iot-data-platform/">Industrial IoT Data Platform</a> – the data foundation underneath future knowledge and AI layers</li>
+      <li style="margin-bottom: 12px;"><a href="/en/insights/bridging-operations-data-and-ai/">Bridging Operations, Data, and AI</a> – why companies struggle between raw data and usable decisions</li>
+      <li style="margin-bottom: 12px;"><a href="/en/insights/why-industrial-ai-projects-fail/">Why Industrial AI Projects Fail</a> – the recurring failure modes this project is designed to address</li>
+      <li><a href="/projects/markov-maintenance/">Predictive Maintenance Platform</a> – the next intelligence layer that benefits from stronger organizational memory</li>
     </ul>
+  </div>
+</section>
 
-    <h2>Business value demonstrated</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with expected business outcome.</p>
+<section class="section cta-section">
+  <div class="container">
+    <h2>What this project proves</h2>
+    <p>A hiring manager sees technical product management and GenAI restraint. An industrial client sees a governed approach to operational knowledge, not a generic chatbot bolted onto PDFs.</p>
+    <a class="btn btn-primary" href="/en/contact/">Discuss this architecture</a>
+    <a class="btn btn-outline-light" href="https://github.com/cyranothebard/engineering-knowledge-assistant" target="_blank" rel="noopener">Open repository</a>
   </div>
 </section>

@@ -1,249 +1,100 @@
 ---
 layout: default
-title: "Markov-basierte Predictive Maintenance - Brandon Lewis Portfolio"
+title: "Predictive Maintenance Decision Intelligence - Brandon Lewis Portfolio"
 lang: de
 ---
 <div class="row">
   <div class="col-lg-8">
-    <h1 class="mb-4">Markov‑basierte Predictive Maintenance</h1>
-    <p class="lead">Produktionsreifes Predictive‑Maintenance‑System mit erweiterter Modellauswahl‑Philosophie und interpretierbarer KI für sicherheitskritische Flugzeugwartung.</p>
+    <h1 class="mb-4">Predictive Maintenance Decision Intelligence</h1>
+    <p class="lead">Erklaerbare Wartungsentscheidungsunterstuetzung fuer industrielle Anlagen. Das System wandelt Betriebsdaten in klare Empfehlungen um: nicht nur Ausfallvorhersage, sondern konkrete naechste Schritte.</p>
 
     <figure class="mb-4 text-center">
-      <img src="https://cyranothebard.github.io/assets/img/markov-maintenance/markov-architecture.png" class="img-fluid d-block mx-auto" alt="Markov Chain Predictive Maintenance Architektur" />
-      <figcaption class="mt-2 small text-muted">Markov Chain Architektur für Triebwerkszustandsprognose und RUL‑Schätzung</figcaption>
+      <img src="https://cyranothebard.github.io/assets/img/markov-maintenance/markov-architecture.png" class="img-fluid d-block mx-auto" alt="Predictive Maintenance Decision Intelligence Architektur" />
+      <figcaption class="mt-2 small text-muted">Health-State-Modellierung, Risiko-Prognose, RUL und Empfehlungsschicht als BridgeOps Intelligence Layer</figcaption>
     </figure>
 
     <div class="mb-4">
-      <h5>Meine Rolle &amp; Wirkung</h5>
-      <p>Ich habe ein umfassendes Predictive‑Maintenance‑System für Flugzeugtriebwerksüberwachung entwickelt und implementiert, das <strong>49‑Zyklus RMSE</strong> mit <strong>$8,4M Jahresersparnis</strong> und <strong>1‑Monat Amortisation</strong> erreicht. Das Projekt demonstriert Senior‑Level Modellauswahl‑Philosophie, wobei interpretierbare Markov‑Chain‑Modelle über leistungsstärkere Random Forest für sicherheitskritische Anwendungen gewählt wurden.</p>
-      <h6 class="mt-3">Wichtige Führungsentscheidungen</h6>
+      <h5>Executive Summary</h5>
+      <p>Viele Predictive-Maintenance-Loesungen stoppen bei einer Zahl wie "Ausfallwahrscheinlichkeit 72%". In der Praxis bleibt dann offen, welche Anlage zuerst bearbeitet werden soll und welche Massnahme sinnvoll ist.</p>
+      <p><strong>Dieses Projekt schliesst diese Luecke.</strong> Es kombiniert Zustandsmodellierung, Risiko-Forecasting und Regelwerk zur Handlungsempfehlung:</p>
       <ul>
-        <li>Markov‑Chain‑Modelle über Random Forest trotz 15% Performance‑Gap gewählt, priorisiert Interpretierbarkeit für sicherheitskritische Luftfahrt</li>
-        <li>Umfassendes Modellvergleichs‑Framework mit 7 Evaluationsmetriken und Business Case Analyse implementiert</li>
-        <li>Zustandsbasiertes Gesundheitsüberwachungssystem für Wartungsentscheidungsunterstützung und Compliance entwickelt</li>
-        <li>Produktionsreife ML‑Pipeline mit Unit Testing, Dokumentation und Qualitätsreview‑Prozessen etabliert</li>
+        <li>Gesundheitszustaende: Healthy, Degraded, Critical, Failure</li>
+        <li>Risikosicht: Failure Probability, Health Score, Remaining Useful Life</li>
+        <li>Empfehlungen: Monitor Normally, Schedule Inspection, Schedule Maintenance, Immediate Review Required</li>
+        <li>Erklaerbarkeit: Markov-Transitionspfade und Uebergangswahrscheinlichkeiten</li>
+        <li>Wirtschaftlicher Bezug: reaktive vs. geplante Kosten</li>
       </ul>
     </div>
 
     <hr/>
 
     <div class="mb-4">
-      <h5>Die Geschäftsherausforderung, die ich adressiert habe</h5>
-      <p>Flugzeugwartungsbetriebe stehen vor kritischen Herausforderungen bei der Vorhersage von Triebwerksausfällen, während sie Sicherheitsanforderungen mit operativer Effizienz balancieren müssen. Ungeplante Triebwerksausfälle können $1‑2M pro Vorfall kosten und erhebliche Flugverspätungen verursachen, während vorzeitige Wartung Ressourcen verschwendet und Flugzeugverfügbarkeit reduziert.</p>
-      <p><strong>Die strategische Chance</strong>: NASAs CMAPSS‑Dataset bietet realistische Triebwerksdegradationsdaten, aber bestehende Lösungen fehlt die Interpretierbarkeit, die für Luftfahrtsicherheitsstandards erforderlich ist. Ich identifizierte die Kern‑Techniklücke: <strong>kein System konnte sowohl hohe Genauigkeit als auch erklärbare Vorhersagen für Wartungsentscheidungsunterstützung in sicherheitskritischen Umgebungen bieten.</strong></p>
-      <p><strong>Marktkontext</strong>: Der Predictive‑Maintenance‑Markt wächst mit 25,2% CAGR auf $28,2B bis 2026, wobei Luftfahrt ein hochwertiges Segment mit regulatorischer Compliance und Sicherheitszertifizierung darstellt.</p>
+      <h5>BridgeOps Positionierung</h5>
+      <p>Das Projekt ist die <strong>Intelligence Layer</strong> im BridgeOps-Framework:</p>
+      <ul>
+        <li>Data: Industrial IoT Data Platform</li>
+        <li>Knowledge: Engineering Knowledge Assistant</li>
+        <li><strong>Intelligence: Predictive Maintenance Decision Intelligence (dieses Projekt)</strong></li>
+        <li>Automation: Operational Decision Orchestration Platform (zukuenftig)</li>
+      </ul>
+      <p>Der Fokus liegt bewusst auf menschlich gefuehrter Entscheidung und nicht auf autonomer Ausfuehrung.</p>
     </div>
 
     <hr/>
 
     <div class="mb-4">
-      <h5>Mein technischer Ansatz &amp; Architekturentscheidungen</h5>
-      <h6 class="mt-2">Entscheidung 1: Modellauswahl‑Philosophie über reine Performance</h6>
-      <p>Anstatt das leistungsstärkste Modell zu wählen, implementierte ich ein umfassendes Entscheidungsframework:</p>
+      <h5>Business Problem und Nutzen</h5>
+      <p>In der Fertigung fuehren ungeplante Ausfaelle zu Notfalleinsaetzen, schlechter Priorisierung und hohen Opportunitaetskosten. Das Projekt beantwortet nicht primaer die Frage "Wann faellt die Anlage aus?", sondern <strong>"Welche Wartungsaktion ist jetzt sinnvoll?"</strong></p>
       <ul>
-        <li><strong>Markov‑Chain‑Modelle</strong> – Interpretierbare zustandsbasierte Vorhersagen mit klaren Gesundheitszustandsübergängen</li>
-        <li><strong>Hidden Markov Models (HMM)</strong> – Probabilistische Zustandsmodellierung mit Emissionswahrscheinlichkeiten</li>
-        <li><strong>Baseline‑Vergleiche</strong> – Random Forest, LSTM und Linear Regression für Performance‑Benchmarking</li>
-      </ul>
-      <p><strong>Warum Markov Chains gewannen</strong>: Trotz 15% niedrigerem RMSE als Random Forest bieten Markov Chains interpretierbare Zustandsübergänge, regulatorische Compliance und Wartungsentscheidungsunterstützung, die Random Forest nicht erreichen kann.</p>
-      
-      <h6 class="mt-2">Entscheidung 2: Umfassendes Evaluationsframework</h6>
-      <ul>
-        <li><strong>7 Performance‑Metriken</strong> – RMSE, MAE, MAPE, R², Richtungsgenauigkeit, sMAPE, späte Vorhersagestrafe</li>
-        <li><strong>Business Impact Analyse</strong> – Kosteneinsparungen, ROI‑Berechnung, Amortisationszeitanalyse</li>
-        <li><strong>Interpretierbarkeitsbewertung</strong> – Zustandsübergangsanalyse, Wartungsentscheidungsunterstützungskapazität</li>
-      </ul>
-      <p><strong>Strategische Begründung</strong>: Flugzeugwartung erfordert erklärbare KI für Sicherheitszertifizierung und operative Entscheidungsunterstützung, nicht nur statistische Genauigkeit.</p>
-      
-      <h6 class="mt-2">Entscheidung 3: Produktionsreife ML‑Technik</h6>
-      <ul>
-        <li>Umfassende Unit‑Test‑Suite mit 95%+ Abdeckung</li>
-        <li>Modulare Architektur mit klarer Trennung der Verantwortlichkeiten</li>
-        <li>Dokumentationsstrategie einschließlich technischer Blog‑Posts und Case Studies</li>
-        <li>Qualitätsreview‑Prozesse für KI‑unterstützte Entwicklung</li>
-      </ul>
-      <p><strong>Implementierungsstrategie</strong>: PyTorch‑basierte LSTM‑Baselines, scikit‑learn für traditionelles ML und hmmlearn für Hidden Markov Models, mit umfassender Evaluation und Business Case Analyse.</p>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Wichtige technische Innovationen, die ich implementiert habe</h5>
-      <h6 class="mt-2">Zustandsbasiertes Gesundheitsüberwachungssystem</h6>
-      <ul>
-        <li><strong>4 Gesundheitszustände</strong> – Gesund, Warnung, Kritisch, Ausfall mit interpretierbaren Übergängen</li>
-        <li><strong>Emissionswahrscheinlichkeitsmodelle</strong> – Gaußsche Verteilungen für jeden Gesundheitszustand</li>
-        <li><strong>Übergangsmatrix‑Lernen</strong> – Datengetriebene Zustandsübergangswahrscheinlichkeiten</li>
-      </ul>
-      <p><strong>Performance‑Erreichung</strong>: 49‑Zyklus RMSE mit 78% Richtungsgenauigkeit, bietet zuverlässige Wartungsentscheidungsunterstützung.</p>
-      
-      <h6 class="mt-2">Umfassendes Modellvergleichs‑Framework</h6>
-      <ul>
-        <li><strong>Multi‑Modell‑Evaluation</strong> – Markov Chain, HMM, Random Forest, LSTM, Linear Regression</li>
-        <li><strong>Business Case Analyse</strong> – $8,4M Jahresersparnis mit 1‑Monat Amortisation</li>
-        <li><strong>Interpretierbarkeitsbewertung</strong> – Zustandsübergangsanalyse vs. Black‑Box‑Vorhersagen</li>
-      </ul>
-      <p><strong>Business Impact</strong>: Demonstriert, dass interpretierbare Modelle überlegene Geschäftswerte trotz niedrigerer statistischer Performance bieten können.</p>
-      
-      <h6 class="mt-2">Produktionsreife ML‑Pipeline</h6>
-      <ul>
-        <li><strong>Modulare Architektur</strong> – Datenladung, Feature Engineering, Modellierung, Evaluation</li>
-        <li><strong>Umfassendes Testing</strong> – Unit Tests, Integration Tests, Modellvalidierung</li>
-        <li><strong>Dokumentationsstrategie</strong> – Technische Blog‑Posts, Case Studies, Code‑Qualitätsstandards</li>
+        <li>Reduktion ungeplanter Downtime</li>
+        <li>Bessere Wartungsplanung und Priorisierung</li>
+        <li>Hohere Asset-Verfuegbarkeit</li>
+        <li>Transparente Begruendung fuer operative Entscheidungen</li>
       </ul>
     </div>
 
     <hr/>
 
     <div class="mb-4">
-      <h5>Ergebnisse &amp; Business Impact, die ich geliefert habe</h5>
-      <h6 class="mt-2">Quantifizierte Performance‑Metriken</h6>
+      <h5>Technische Kernergebnisse</h5>
       <ul>
-        <li><strong>Markov Chain RMSE</strong>: 49 Zyklen (interpretierbare zustandsbasierte Vorhersagen)</li>
-        <li><strong>Random Forest RMSE</strong>: 42 Zyklen (15% bessere Performance aber Black‑Box)</li>
-        <li><strong>Richtungsgenauigkeit</strong>: 78% für Wartungsentscheidungsunterstützung</li>
-        <li><strong>Modellauswahlentscheidung</strong>: Markov Chain für Interpretierbarkeit über Performance gewählt</li>
+        <li><strong>Markov Chain RMSE</strong>: 49 Zyklen (interpretierbar)</li>
+        <li><strong>Random Forest RMSE</strong>: 42 Zyklen (besser, aber Black Box)</li>
+        <li><strong>Richtungsgenauigkeit</strong>: 78%</li>
+        <li><strong>Annual Savings</strong>: $8.4M</li>
+        <li><strong>Payback</strong>: 1 Monat</li>
+        <li><strong>ROI</strong>: 1,200% (5 Jahre)</li>
       </ul>
-      
-      <h6 class="mt-2">Geschaffener wirtschaftlicher Wert</h6>
-      <ul>
-        <li><strong>Jährliche Kosteneinsparungen</strong>: $8,4M durch reduzierte ungeplante Wartung</li>
-        <li><strong>Amortisationszeit</strong>: 1 Monat mit konservativen Annahmen</li>
-        <li><strong>ROI‑Analyse</strong>: 1.200% Rendite über 5 Jahre</li>
-        <li><strong>Risikominderung</strong>: Reduzierte Sicherheitsvorfälle durch interpretierbare Vorhersagen</li>
-      </ul>
-      
-      <h6 class="mt-2">Technische Führungsleistungen</h6>
-      <ul>
-        <li><strong>Modellauswahl‑Framework</strong>: Umfassende Entscheidungskriterien balancieren Performance und Interpretierbarkeit</li>
-        <li><strong>Production ML Engineering</strong>: Unit Testing, Dokumentation, Qualitätsreview‑Prozesse</li>
-        <li><strong>Business Case Entwicklung</strong>: ROI‑Analyse, Sensitivitätsanalyse, Stakeholder‑Kommunikation</li>
-      </ul>
+      <p>Die Modellauswahl priorisiert Erklaerbarkeit und Entscheidungsqualitaet vor reiner Genauigkeit.</p>
     </div>
 
     <hr/>
 
     <div class="mb-4">
-      <h5>Modellauswahl‑Philosophie &amp; Entscheidungsframework</h5>
-      <h6 class="mt-2">Der Interpretierbarkeit vs. Performance Trade‑off</h6>
-      <p>Dieses Projekt demonstriert eine kritische Entscheidung in Production ML: wann Interpretierbarkeit über Performance zu priorisieren ist. Während Random Forest 15% besseren RMSE erreichte, bieten Markov Chains:</p>
+      <h5>Bewusst Out of Scope</h5>
       <ul>
-        <li><strong>Regulatorische Compliance</strong> – Erklärbare Zustandsübergänge für Luftfahrtsicherheitszertifizierung</li>
-        <li><strong>Wartungsentscheidungsunterstützung</strong> – Klare Gesundheitszustandsprogression für operative Planung</li>
-        <li><strong>Stakeholder‑Kommunikation</strong> – Interpretierbare Vorhersagen für Wartungsteams und Management</li>
-        <li><strong>Risikomanagement</strong> – Transparentes Modellverhalten für sicherheitskritische Anwendungen</li>
+        <li>Vollstaendige Workflow-Orchestrierung</li>
+        <li>CMMS-Integration</li>
+        <li>ERP-Integration</li>
+        <li>Autonome Wartungsentscheidungen</li>
+        <li>Echtzeit-Streaming-Architektur</li>
+        <li>Digital Twins</li>
+        <li>Enterprise-Rollout-Architektur</li>
       </ul>
-      
-      <h6 class="mt-2">Entscheidungsframework für Modellauswahl</h6>
-      <div class="table-responsive">
-        <table class="table table-sm">
-          <thead>
-            <tr>
-              <th>Kriterium</th>
-              <th>Markov Chain</th>
-              <th>Random Forest</th>
-              <th>Gewichtung</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Performance (RMSE)</td>
-              <td>49 Zyklen</td>
-              <td>42 Zyklen</td>
-              <td>30%</td>
-            </tr>
-            <tr>
-              <td>Interpretierbarkeit</td>
-              <td>Hoch</td>
-              <td>Niedrig</td>
-              <td>25%</td>
-            </tr>
-            <tr>
-              <td>Regulatorische Compliance</td>
-              <td>Hoch</td>
-              <td>Niedrig</td>
-              <td>20%</td>
-            </tr>
-            <tr>
-              <td>Wartungsunterstützung</td>
-              <td>Hoch</td>
-              <td>Niedrig</td>
-              <td>15%</td>
-            </tr>
-            <tr>
-              <td>Implementierungskomplexität</td>
-              <td>Mittel</td>
-              <td>Niedrig</td>
-              <td>10%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p><strong>Gewichtete Punktzahl</strong>: Markov Chain gewinnt trotz niedrigerer Performance aufgrund überlegener Interpretierbarkeit und regulatorischer Compliance.</p>
+      <p>Diese Themen gehoeren in die zukuenftige Automation Layer und sind hier absichtlich ausgeschlossen.</p>
     </div>
 
     <hr/>
 
     <div class="mb-4">
-      <h5>Projektmanagement &amp; Qualitätssicherung</h5>
-      <h6 class="mt-2">KI‑unterstützte Entwicklungsqualitäts‑Framework</h6>
-      <ul>
-        <li><strong>Code Review Prozess</strong> – Umfassende Checkliste für KI‑generierte Code‑Validierung</li>
-        <li><strong>Unit Testing Strategie</strong> – 95%+ Abdeckung mit umfassenden Testszenarien</li>
-        <li><strong>Dokumentationsstandards</strong> – Technische Blog‑Posts, Case Studies, Code‑Qualitätsrichtlinien</li>
-        <li><strong>Qualitätsgates</strong> – Automatisierte Tests, Linting und Review‑Prozesse</li>
-      </ul>
-      
-      <h6 class="mt-2">Demonstrierte technische Führungskapazitäten</h6>
-      <ul>
-        <li><strong>Modellauswahl‑Philosophie</strong> – Balancieren von Performance mit Geschäftsanforderungen</li>
-        <li><strong>Production ML Engineering</strong> – Umfassendes Testing, Dokumentation, Deployment‑Bereitschaft</li>
-        <li><strong>Stakeholder‑Kommunikation</strong> – Übersetzung technischer Entscheidungen in Geschäftswert</li>
-        <li><strong>Qualitätssicherung</strong> – Etablierung von Prozessen für KI‑unterstützte Entwicklung</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Strategische Geschäftsauswirkungen</h5>
-      <h6 class="mt-2">Luftfahrtindustrie‑Impact</h6>
-      <ul>
-        <li><strong>Sicherheitsverbesserung</strong> – Interpretierbare Vorhersagen für Wartungsentscheidungsunterstützung</li>
-        <li><strong>Kostenoptimierung</strong> – $8,4M Jahresersparnis durch Predictive Maintenance</li>
-        <li><strong>Regulatorische Compliance</strong> – Erklärbare KI für Luftfahrtsicherheitszertifizierung</li>
-        <li><strong>Operative Effizienz</strong> – Zustandsbasierte Gesundheitsüberwachung für Wartungsplanung</li>
-      </ul>
-      
-      <h6 class="mt-2">Technischer Führungswert</h6>
-      <ul>
-        <li><strong>Modellauswahl‑Expertise</strong> – Demonstriert Senior‑Level Entscheidungsfindung in Production ML</li>
-        <li><strong>Business Impact Fokus</strong> – ROI‑getriebener Ansatz zu technischen Entscheidungen</li>
-        <li><strong>Qualitätsengineering</strong> – Umfassende Testing‑ und Dokumentationsstandards</li>
-        <li><strong>Stakeholder‑Management</strong> – Klare Kommunikation technischer Trade‑offs</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Detaillierte Analyse ansehen</h5>
+      <h5>Detaillierte Perspektiven</h5>
       <div class="d-flex flex-wrap gap-2">
         <a class="btn btn-sm btn-primary" href="technische-details.html">Technische Details</a>
-        <a class="btn btn-sm btn-outline-primary" href="projektfuehrung.html">Projektführung</a>
+        <a class="btn btn-sm btn-outline-primary" href="projektfuehrung.html">Projektfuehrung</a>
         <a class="btn btn-sm btn-outline-primary" href="produktstrategie.html">Produktstrategie</a>
       </div>
       <div class="mt-3">
-        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/markov-predictive-maintenance" target="_blank" rel="noopener">Repository</a>
-      </div>
-      <div class="mt-3">
-        <p class="mb-1"><strong>Verwandte Dokumentation</strong></p>
-        <ul>
-          <li><a href="https://github.com/cyranothebard/markov-predictive-maintenance/blob/main/README.md">Projekt README</a></li>
-          <li><a href="https://github.com/cyranothebard/markov-predictive-maintenance/blob/main/PROJECT_SUMMARY.md">Projektzusammenfassung</a></li>
-          <li><a href="https://github.com/cyranothebard/markov-predictive-maintenance/blob/main/CASE_STUDY.md">Business Case Study</a></li>
-          <li><a href="https://github.com/cyranothebard/markov-predictive-maintenance/blob/main/BLOG_POST_MODEL_SELECTION.md">Technischer Blog: Modellauswahl‑Philosophie</a></li>
-        </ul>
+        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/predictive-maintenance-decision-intelligence" target="_blank" rel="noopener">GitHub Repository</a>
       </div>
     </div>
   </div>
@@ -251,25 +102,15 @@ lang: de
   <div class="col-lg-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Perspektiven</h5>
-        <p class="card-text">Wählen Sie eine Perspektive für detaillierte Einblicke:</p>
-        <div class="d-grid gap-2">
-          <a href="technische-details.html" class="btn btn-primary">Technische Details</a>
-          <a href="projektfuehrung.html" class="btn btn-outline-primary">Projektführung</a>
-          <a href="produktstrategie.html" class="btn btn-outline-primary">Produktstrategie</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mt-3">
-      <div class="card-body">
-        <h6 class="card-title">Technologien</h6>
+        <h5 class="card-title">Technologie-Stack</h5>
         <div class="d-flex flex-wrap gap-1">
           <span class="badge bg-warning">Python</span>
-          <span class="badge bg-warning">PyTorch</span>
-          <span class="badge bg-warning">scikit-learn</span>
-          <span class="badge bg-warning">hmmlearn</span>
-          <span class="badge bg-warning">Jupyter</span>
+          <span class="badge bg-warning">Markov Chains</span>
+          <span class="badge bg-warning">Hidden Markov Models</span>
+          <span class="badge bg-warning">Random Forest</span>
+          <span class="badge bg-warning">LSTM</span>
+          <span class="badge bg-warning">Plotly</span>
+          <span class="badge bg-warning">Pandas</span>
           <span class="badge bg-warning">pytest</span>
         </div>
       </div>
@@ -277,15 +118,22 @@ lang: de
 
     <div class="card mt-3">
       <div class="card-body">
-        <h6 class="card-title">Wichtige Metriken</h6>
+        <h6 class="card-title">Empfehlungstaxonomie</h6>
         <ul class="mb-0">
-          <li><strong>RMSE</strong>: 49 Zyklen</li>
-          <li><strong>Jahresersparnis</strong>: $8,4M</li>
-          <li><strong>Amortisation</strong>: 1 Monat</li>
-          <li><strong>ROI</strong>: 1.200%</li>
+          <li>Monitor Normally</li>
+          <li>Schedule Inspection</li>
+          <li>Schedule Maintenance</li>
+          <li>Immediate Review Required</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-body">
+        <h6 class="card-title">BridgeOps Layer</h6>
+        <p class="mb-2">Data -&gt; Knowledge -&gt; <strong>Intelligence</strong> -&gt; Automation</p>
+        <p class="mb-0 small text-muted">Dieses Projekt ist die Intelligence Layer.</p>
       </div>
     </div>
   </div>
 </div>
-

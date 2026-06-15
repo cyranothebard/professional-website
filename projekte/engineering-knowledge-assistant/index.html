@@ -1,35 +1,124 @@
 ---
 layout: default
 title: "Engineering Knowledge Assistant | BridgeOps AI"
-description: "Scaffolded case study for generative AI support for technical documentation and knowledge work."
+description: "Portfolio-Case-Study: Mehrsprachige Retrieval-Suche, nachvollziehbare Antworten und Wissenslücken-Erkennung für technische Fertigungsdokumentation."
 lang: de
 alternate_url: /projects/engineering-knowledge-assistant/
 ---
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Case Study in Development</p>
+    <p class="eyebrow">Portfolio · Knowledge Layer</p>
     <h1>Engineering Knowledge Assistant</h1>
-    <p class="lead">Generative KI für technische Dokumentation und Erfahrungswissen.</p>
+    <p class="lead">Fragmentierte Engineering-Dokumentation in gesteuerte operative Intelligenz übersetzen – mit mehrsprachiger Suche, Quellenangaben und sichtbaren Wissenslücken.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
-    <!-- TODO: Replace lorem ipsum after project build sprint. -->
-    <h2>Problemkontext</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with final project context.</p>
+    <h2>Strategischer Zweck</h2>
+    <p>
+      Dieses Projekt ist die BridgeOps-<strong>Knowledge Layer</strong> zwischen der Industrial IoT Data Platform und zukünftigen Decision-Intelligence-Systemen. Es zeigt, wie Fertigungsunternehmen von reiner Dokumentablage zu gesteuertem Wissenszugriff wechseln können, ohne einen allgemeinen Chatbot mit einer belastbaren Wissenslösung zu verwechseln.
+    </p>
+    <p>
+      Die Kernaussage ist einfach: <strong>Operatives Wissen wird erst dann wertvoll, wenn Engineers vertrauenswürdige und nachvollziehbare Antworten schnell genug für ihre reale Arbeit abrufen können.</strong>
+    </p>
+  </div>
+</section>
 
-    <h2>Geplante Architektur</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with final architecture summary.</p>
+<section class="section bg-light">
+  <div class="container">
+    <h2>Business Challenge</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Umfeld</h3>
+        <p>Ein Fertigungsstandort mit SOPs, Incident Reports, RCA-Dokumenten, Sicherheitsanweisungen, Standards und Vendor Manuals über mehrere Formate und Sprachen verteilt.</p>
+      </div>
+      <div>
+        <h3>Aktuelle Herausforderung</h3>
+        <p>Engineers verlieren Zeit bei der Suche nach freigegebenen Verfahren, Troubleshooting-Historie und anlagenspezifischen Anweisungen. Wissen bleibt isoliert und schwach gesteuert.</p>
+      </div>
+      <div>
+        <h3>Zielbild</h3>
+        <p>Schnelle, quellengestützte Antworten auf Deutsch oder Englisch bereitstellen und fehlende oder schwache Dokumentation sichtbar machen, statt Unsicherheit zu kaschieren.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2>Technische Bausteine</h2>
-    <ul>
-      <li>Lorem ipsum placeholder component</li>
-      <li>Lorem ipsum placeholder component</li>
-      <li>Lorem ipsum placeholder component</li>
+<section class="section">
+  <div class="container">
+    <h2>Warum nicht einfach ChatGPT?</h2>
+    <div class="card-grid four">
+      <div><h3>Kontrollierter Korpus</h3><p>Antworten basieren auf freigegebenen Engineering-Dokumenten, nicht auf offenem Internetwissen.</p></div>
+      <div><h3>Nachvollziehbarkeit</h3><p>Jede Antwort enthält explizite Quellenangaben mit Titel, Dokumenttyp und Referenz.</p></div>
+      <div><h3>Governance</h3><p>Das System markiert potenzielle Wissenslücken, wenn Retrieval-Qualität oder Dokumentabdeckung zu schwach sind.</p></div>
+      <div><h3>Organisationales Gedächtnis</h3><p>Der Assistant spiegelt unternehmensspezifische Verfahren, Vorfälle, Standards und operative Sprache wider.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Architektur und Workflow</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Dokumenten-Ingestion</h3><p>PDF-, TXT- und Markdown-Dokumente werden mit validierten Metadaten zu Equipment, Prozess, Standort und Sprache geladen.</p></div>
+      <div><span>02</span><h3>Chunking und Embeddings</h3><p>Dokumente werden segmentiert, mit Metadaten angereichert und in einen Chroma-Vector-Store eingebettet.</p></div>
+      <div><span>03</span><h3>Retrieval und Antwortgenerierung</h3><p>Relevante Chunks werden zuerst abgerufen, bevor das System eine mehrsprachige Antwort mit Quellenangaben und Confidence-Indikator erzeugt.</p></div>
+      <div><span>04</span><h3>Knowledge Governance</h3><p>Schwache Retrieval-Leistung löst eine sichtbare Wissenslücken-Warnung aus, statt eine zu selbstsichere Antwort zu liefern.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Technische Umsetzung</h2>
+    <div class="card-grid four">
+      <div><h3>Frontend</h3><p>Streamlit-Oberfläche für konversationelle Suche, Quellenprüfung und Nutzerfeedback.</p></div>
+      <div><h3>Retrieval Layer</h3><p>LangChain-Orchestrierung mit ChromaDB-Vektor-Retrieval und zweisprachiger Query-Erweiterung.</p></div>
+      <div><h3>Validierung</h3><p>Ein Pydantic-Metadatenschema stellt sicher, dass jedes Dokument nachvollziehbar und ohne Codeänderung austauschbar bleibt.</p></div>
+      <div><h3>Metrics</h3><p>Leichtgewichtige Nutzungsmetriken erfassen Gesamtfragen, hilfreiches Feedback und meistgesuchte Anlagen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Was dieses Projekt demonstriert</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Produktmanagement</h3>
+        <p>Klare Abgrenzung rund um Erklärbarkeit, Governance, mehrsprachige Suche und eine fokussierte User-Story für Manufacturing Engineers.</p>
+      </div>
+      <div>
+        <h3>Industrial AI</h3>
+        <p>Ein pragmatischer GenAI-Anwendungsfall mit direktem Bezug zur operativen Arbeit: Startup-Verfahren, Troubleshooting, Qualitätsanalysen und sicherheitskritische Anweisungen.</p>
+      </div>
+      <div>
+        <h3>Plattform-Denken</h3>
+        <p>Der Assistant sitzt auf strukturierten Daten- und Dokumentpipelines und bildet damit die Brücke zwischen Datenplattformen und Entscheidungssystemen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Verwandte BridgeOps-Inhalte</h2>
+    <p>Dieses Projekt passt in eine breitere Entwicklung von Operations-Daten hin zu Decision Intelligence:</p>
+    <ul style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 12px;"><a href="/projekte/industrial-iot-datenplattform/">Industrial IoT Data Platform</a> – das Datenfundament unter zukünftigen Knowledge- und AI-Layern</li>
+      <li style="margin-bottom: 12px;"><a href="/insights/operations-daten-und-ki-verbinden/">Operations, Daten und KI verbinden</a> – warum Unternehmen zwischen Rohdaten und nutzbaren Entscheidungen stecken bleiben</li>
+      <li style="margin-bottom: 12px;"><a href="/insights/warum-industrielle-ki-projekte-scheitern/">Warum Industrial-AI-Projekte scheitern</a> – die wiederkehrenden Muster, die dieses Projekt adressiert</li>
+      <li><a href="/projekte/markov-wartung/">Predictive-Maintenance-Plattform</a> – die nächste Intelligence-Layer, die von stärkerem organisationalem Gedächtnis profitiert</li>
     </ul>
+  </div>
+</section>
 
-    <h2>Geschaffener Business Value</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Replace with expected business outcome.</p>
+<section class="section cta-section">
+  <div class="container">
+    <h2>Was dieses Projekt beweist</h2>
+    <p>Ein Hiring Manager sieht technisches Produktmanagement und disziplinierte GenAI-Anwendung. Ein Industriekunde sieht einen gesteuerten Ansatz für operatives Wissen statt eines generischen Chatbots auf PDF-Basis.</p>
+    <a class="btn btn-primary" href="/kontakt/">Über diese Architektur sprechen</a>
+    <a class="btn btn-outline-light" href="https://github.com/cyranothebard/engineering-knowledge-assistant" target="_blank" rel="noopener">Repository öffnen</a>
   </div>
 </section>
