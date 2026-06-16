@@ -43,7 +43,7 @@
     }
     </script>
   </head>
-  <body>
+  <body class="{{ page.body_class | default: '' }}">
     {% include nav-en.html %}
     <main class="py-5">
       <div class="container">
