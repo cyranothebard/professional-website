@@ -15,7 +15,7 @@
         <li class="nav-item"><a class="nav-link" href="/kontakt">Kontakt</a></li>
       </ul>
       <div class="d-flex ms-lg-3">
-        <a href="/en" class="btn btn-outline-secondary btn-sm me-2">EN</a>
+        <a href="{% if page.alternate_url %}{{ page.alternate_url }}{% else %}/en/{% endif %}" class="btn btn-outline-secondary btn-sm me-2">EN</a>
       </div>
     </div>
   </div>
