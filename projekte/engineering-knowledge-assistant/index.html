@@ -26,6 +26,222 @@ alternate_url: /projects/engineering-knowledge-assistant/
 </section>
 
 <section class="section bg-light">
+  <div class="container narrow">
+    <h2>Demonstration Environment</h2>
+    <p>Dieses Projekt ist eine Referenzimplementierung, um Knowledge Retrieval, Quellen-Nachvollziehbarkeit und Governance-Workflows für industrielle Engineering-Kontexte zu demonstrieren.</p>
+    <p>Die gezeigten Visuals und Beispiele basieren auf repräsentativer Engineering-Dokumentation, darunter Verfahren, technische Handbuecher und Arbeitsanweisungen, nicht auf proprietaeren Kundendaten.</p>
+    <p>Das Ziel ist zu zeigen, wie organisationales Wissen in ein durchsuchbares und vertrauenswuerdiges operatives Asset ueberfuehrt werden kann, ohne sensible Inhalte offenzulegen.</p>
+  </div>
+</section>
+
+<section class="section decision-visuals">
+  <div class="container">
+    <h2>Visual Evidence: Engineering Knowledge System</h2>
+    <p class="visual-intro">Dieses Visual-Evidence-Modell beantwortet drei Fuehrungsfragen: <strong>Kann Wissen gefunden werden?</strong> <strong>Wie ist Wissen verbunden?</strong> <strong>Kann dem System vertraut werden?</strong></p>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 1</p>
+          <h3>Knowledge Retrieval in Action</h3>
+        </div>
+        <p class="ops-answer">Executive Question: Koennen Engineers die benoetigte Information finden?</p>
+      </header>
+
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>User Question und Generated Answer</h4>
+          <p><strong>User question:</strong> Welche freigegebene Lockout-Sequenz gilt fuer die Hydraulikpresse vor Wartungsbeginn?</p>
+          <p><strong>Generated answer:</strong> Folge SOP-17 Rev C: elektrische Einspeisung isolieren, Hydraulikventil HV-22 schliessen, Restdruck ueber Entlastungsport BP-4 abbauen, Nullenergie am Panel P3 verifizieren und Operator-Bestaetigung im Wartungslog erfassen.</p>
+          <p class="ops-footnote"><strong>Trust signal:</strong> Die Antwort ist quellenbasiert und verweist auf konkrete Verfahrensschritte.</p>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Prominente Zitate und Dokumentreferenzen</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Quellenbasierte Zitatliste zur Retrieval-Antwort">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Quelle</th>
+                  <th>Typ</th>
+                  <th>Abschnitt</th>
+                  <th>Relevanz</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SOP-17 Rev C</td>
+                  <td>SOP</td>
+                  <td>4.2 Lockout-Sequenz</td>
+                  <td><span class="status healthy">Hoch</span></td>
+                </tr>
+                <tr>
+                  <td>Hydraulikpressen-Wartungsleitfaden</td>
+                  <td>Maintenance Guide</td>
+                  <td>Kapitel 2 Sicherheitsisolation</td>
+                  <td><span class="status healthy">Hoch</span></td>
+                </tr>
+                <tr>
+                  <td>Sicherheitsbulletin SB-09</td>
+                  <td>Work Instruction</td>
+                  <td>Anhang A Energiefreisetzung</td>
+                  <td><span class="status watch">Mittel</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Engineers benoetigen schnelle Antworten, koennen die Herkunft jedoch oft nicht pruefen.</p></div>
+        <div><h4>Approach</h4><p>Generierte Antworten mit sichtbaren Zitaten, Dokumenttyp und abschnittsgenauen Referenzen bereitstellen.</p></div>
+        <div><h4>Outcome</h4><p>Kritische Informationen werden schneller und mit hoher Nachvollziehbarkeit gefunden.</p></div>
+      </div>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 2</p>
+          <h3>Knowledge Relationship Map</h3>
+        </div>
+        <p class="ops-answer">Executive Question: Wie ist organisationales Wissen verbunden?</p>
+      </header>
+
+      <div class="ops-chart-card">
+        <h4>Vernetzte Engineering-Knowledge-Assets</h4>
+        <div class="ops-table-wrap" role="img" aria-label="Relationship Map fuer SOPs, Wartungsleitfaeden, technische Handbuecher, Designspezifikationen und Arbeitsanweisungen">
+          <svg viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
+            <rect x="0" y="0" width="920" height="360" fill="#f8fbf9" rx="14"/>
+            <g stroke="#cfdad4" stroke-width="2">
+              <line x1="210" y1="90" x2="460" y2="180"/>
+              <line x1="210" y1="270" x2="460" y2="180"/>
+              <line x1="460" y1="180" x2="710" y2="90"/>
+              <line x1="460" y1="180" x2="710" y2="270"/>
+              <line x1="210" y1="90" x2="210" y2="270"/>
+              <line x1="710" y1="90" x2="710" y2="270"/>
+            </g>
+
+            <g>
+              <rect x="95" y="58" width="230" height="64" rx="12" fill="#e8f2ed" stroke="#bdd1c6"/>
+              <text x="210" y="86" text-anchor="middle" fill="#0f3d35" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">SOPs</text>
+              <text x="210" y="106" text-anchor="middle" fill="#355467" font-size="12" font-family="'IBM Plex Sans', sans-serif">Freigegebene Verfahren</text>
+            </g>
+
+            <g>
+              <rect x="80" y="238" width="260" height="64" rx="12" fill="#eef6fb" stroke="#c7dcea"/>
+              <text x="210" y="266" text-anchor="middle" fill="#13405f" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Maintenance Guides</text>
+              <text x="210" y="286" text-anchor="middle" fill="#355467" font-size="12" font-family="'IBM Plex Sans', sans-serif">Asset-Service-Methoden</text>
+            </g>
+
+            <g>
+              <rect x="360" y="148" width="200" height="64" rx="12" fill="#fff8e8" stroke="#ecd7a5"/>
+              <text x="460" y="176" text-anchor="middle" fill="#5d430d" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Work Instructions</text>
+              <text x="460" y="196" text-anchor="middle" fill="#5c4a27" font-size="12" font-family="'IBM Plex Sans', sans-serif">Task-spezifische Guidance</text>
+            </g>
+
+            <g>
+              <rect x="600" y="58" width="220" height="64" rx="12" fill="#f0eefc" stroke="#d5cfef"/>
+              <text x="710" y="86" text-anchor="middle" fill="#353069" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Technical Manuals</text>
+              <text x="710" y="106" text-anchor="middle" fill="#45557a" font-size="12" font-family="'IBM Plex Sans', sans-serif">OEM-Referenzwissen</text>
+            </g>
+
+            <g>
+              <rect x="590" y="238" width="240" height="64" rx="12" fill="#eaf4f0" stroke="#c6d9d1"/>
+              <text x="710" y="266" text-anchor="middle" fill="#16483c" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Design Specifications</text>
+              <text x="710" y="286" text-anchor="middle" fill="#355467" font-size="12" font-family="'IBM Plex Sans', sans-serif">Engineering-Grenzwerte und Toleranzen</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Kritische Wissensquellen sind ueber Systeme verteilt und werden isoliert genutzt.</p></div>
+        <div><h4>Approach</h4><p>Verfahren, Handbuecher, Spezifikationen und Anweisungen ueber Metadaten und Retrieval-Links verbinden.</p></div>
+        <div><h4>Outcome</h4><p>Teams sehen, wie Wissen organisiert ist und entlang operativer Workflows zusammenhaengt.</p></div>
+      </div>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 3</p>
+          <h3>Evaluation and Governance Dashboard</h3>
+        </div>
+        <p class="ops-answer">Executive Question: Woher wissen wir, dass das System verlaesslich ist?</p>
+      </header>
+
+      <div class="ops-kpi-grid">
+        <div><span class="ops-label">Retrieval Accuracy</span><strong>92.4%</strong></div>
+        <div><span class="ops-label">Citation Coverage</span><strong>96.8%</strong></div>
+        <div><span class="ops-label">Evaluation Questions Completed</span><strong>240 / 250</strong></div>
+        <div><span class="ops-label">Response Quality</span><strong>4.5 / 5.0</strong></div>
+      </div>
+
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>Governance-Metriken pro Woche</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Evaluations- und Governance-Metriken ueber vier Wochen">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Woche</th>
+                  <th>Accuracy</th>
+                  <th>Citation Coverage</th>
+                  <th>Quality Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>W21</td>
+                  <td>88.1%</td>
+                  <td>93.0%</td>
+                  <td>4.2</td>
+                </tr>
+                <tr>
+                  <td>W22</td>
+                  <td>90.3%</td>
+                  <td>94.6%</td>
+                  <td>4.3</td>
+                </tr>
+                <tr>
+                  <td>W23</td>
+                  <td>91.8%</td>
+                  <td>95.7%</td>
+                  <td>4.4</td>
+                </tr>
+                <tr>
+                  <td>W24</td>
+                  <td>92.4%</td>
+                  <td>96.8%</td>
+                  <td>4.5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Governance-Kontrollen</h4>
+          <p><strong>Evaluationsprotokoll:</strong> Kuratierter Engineering-Fragenkatalog mit Domain-Review.</p>
+          <p><strong>Citation Gate:</strong> Antworten ohne Quellen werden zur Pruefung markiert.</p>
+          <p><strong>Qualitaetsreview:</strong> Schwache Antworten fliessen in ein woechentliches Verbesserungs-Backlog.</p>
+          <p><strong>Coverage-Management:</strong> Fehlende Quellenmuster werden als Dokumentationsluecken erfasst.</p>
+          <p class="ops-footnote"><strong>Message:</strong> Verlaesslichkeit wird kontinuierlich gemessen, nicht einmalig behauptet.</p>
+        </div>
+      </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Knowledge-Systeme sind riskant, wenn Vertrauen und Qualitaet nicht explizit gemessen werden.</p></div>
+        <div><h4>Approach</h4><p>Retrieval-Leistung, Citation-Abdeckung und Evaluationsergebnisse mit formalen Governance-Checks verfolgen.</p></div>
+        <div><h4>Outcome</h4><p>Fuehrungsteams koennen die Vertrauenswuerdigkeit und Verbesserung ueber Zeit bewerten.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
   <div class="container">
     <h2>Problem</h2>
     <div class="card-grid three">
@@ -47,7 +263,7 @@ alternate_url: /projects/engineering-knowledge-assistant/
 
 <section class="section">
   <div class="container">
-    <h2>Warum nicht einfach ChatGPT?</h2>
+    <h2>Warum das ein Knowledge-System ist</h2>
     <div class="card-grid four">
       <div><h3>Kontrollierter Korpus</h3><p>Antworten basieren auf freigegebenen Engineering-Dokumenten, nicht auf offenem Internetwissen.</p></div>
       <div><h3>Nachvollziehbarkeit</h3><p>Jede Antwort enthält explizite Quellenangaben mit Titel, Dokumenttyp und Referenz.</p></div>
@@ -81,32 +297,6 @@ alternate_url: /projects/engineering-knowledge-assistant/
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <h2>Screenshots / Demo</h2>
-    <div class="card-grid three">
-      <div>
-        <h3>Screenshot: Query + Citations View</h3>
-        <p><strong>Problem:</strong> Operative Teams erhalten oft Antworten ohne nachvollziehbare Quelle.</p>
-        <p><strong>Approach:</strong> Retrieval-gestützte Antwort mit expliziten Dokumentverweisen und Metadaten.</p>
-        <p><strong>Outcome:</strong> Höheres Vertrauen in Knowledge Retrieval und bessere Entscheidungsqualität.</p>
-      </div>
-      <div>
-        <h3>Screenshot: Knowledge Gap Alert</h3>
-        <p><strong>Problem:</strong> Fehlende Dokumente bleiben im Tagesgeschäft häufig unentdeckt.</p>
-        <p><strong>Approach:</strong> Sichtbare Warnlogik bei schwacher Retrieval-Qualität oder geringer Dokumentabdeckung.</p>
-        <p><strong>Outcome:</strong> Governance-fähige Priorisierung von Dokumentationslücken statt Scheinsicherheit.</p>
-      </div>
-      <div>
-        <h3>Screenshot: Usage Metrics</h3>
-        <p><strong>Problem:</strong> Ohne Nutzungsdaten ist die Wirkung eines Wissenssystems kaum steuerbar.</p>
-        <p><strong>Approach:</strong> Leichtgewichtige Metriken zu Fragenvolumen, Feedback und häufigen Suchbereichen.</p>
-        <p><strong>Outcome:</strong> Kontinuierliche Verbesserung entlang operativer Anforderungen.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section bg-light">
   <div class="container">
     <h2>Results / Impact</h2>
@@ -117,7 +307,7 @@ alternate_url: /projects/engineering-knowledge-assistant/
       </div>
       <div>
         <h3>Industrial AI</h3>
-        <p>Ein pragmatischer GenAI-Anwendungsfall mit direktem Bezug zur operativen Arbeit: Startup-Verfahren, Troubleshooting, Qualitätsanalysen und sicherheitskritische Anweisungen.</p>
+        <p>Ein pragmatischer Knowledge-Retrieval-Anwendungsfall mit direktem Bezug zur operativen Arbeit: Startup-Verfahren, Troubleshooting, Qualitaetsanalysen und sicherheitskritische Anweisungen.</p>
       </div>
       <div>
         <h3>Plattform-Denken</h3>
@@ -143,7 +333,7 @@ alternate_url: /projects/engineering-knowledge-assistant/
 <section class="section cta-section">
   <div class="container">
     <h2>Repository / Demo</h2>
-    <p>Ein Hiring Manager sieht technisches Produktmanagement und disziplinierte GenAI-Anwendung. Ein Industriekunde sieht einen gesteuerten Ansatz für operatives Wissen statt eines generischen Chatbots auf PDF-Basis.</p>
+    <p>Ein Hiring Manager sieht technisches Produktmanagement und diszipliniertes Knowledge-System-Design. Ein Industriekunde sieht einen gesteuerten Ansatz fuer operatives Wissen statt eines generischen Chatbots auf PDF-Basis.</p>
     <a class="btn btn-primary" href="/kontakt/">Über diese Architektur sprechen</a>
     <a class="btn btn-outline-light" href="https://github.com/cyranothebard/engineering-knowledge-assistant" target="_blank" rel="noopener">Repository öffnen</a>
   </div>

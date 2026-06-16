@@ -26,117 +26,285 @@ alternate_url: /projekte/industrial-iot-datenplattform/
 </section>
 
 <section class="section">
-  <div class="container">
-    <h2>Screenshots / Demo</h2>
-    <div class="card-grid three">
-      <div>
-        <h3>Screenshot: Data Quality Dashboard</h3>
-        <p><strong>Problem:</strong> Distributed sources make it hard to trust operational KPIs.</p>
-        <p><strong>Approach:</strong> Explicit data-quality scoring across critical data domains.</p>
-        <p><strong>Outcome:</strong> Reliable decision inputs for downstream intelligence and automation initiatives.</p>
-      </div>
-      <div>
-        <h3>Screenshot: Operations Overview</h3>
-        <p><strong>Problem:</strong> Production, quality, and maintenance are often managed in silos.</p>
-        <p><strong>Approach:</strong> Consolidate KPI views into one operational management perspective.</p>
-        <p><strong>Outcome:</strong> Faster prioritization and stronger alignment across teams.</p>
-      </div>
-      <div>
-        <h3>Screenshot: Reliability View</h3>
-        <p><strong>Problem:</strong> Failure patterns and maintenance needs are difficult to prioritize without context.</p>
-        <p><strong>Approach:</strong> Combine reliability metrics, downtime patterns, and maintenance context in one layer.</p>
-        <p><strong>Outcome:</strong> Better operational decisions and stronger planning for capital and maintenance investment.</p>
-      </div>
-    </div>
+  <div class="container narrow">
+    <h2>Demonstration Environment</h2>
+    <p>This project is a reference implementation designed to demonstrate modern manufacturing data platform concepts, including ingestion, transformation, observability, and operational analytics.</p>
+    <p>The dashboards and representative operational metrics shown throughout the project use realistic synthetic manufacturing data rather than production customer information.</p>
+    <p>The objective is to illustrate platform architecture, data workflows, and operational visibility patterns while avoiding the disclosure of proprietary manufacturing data.</p>
   </div>
 </section>
 
 <section class="section bg-light">
   <div class="container">
-    <h2>Problem</h2>
+    <h2>Operating Context</h2>
     <div class="card-grid three">
       <div>
         <h3>Environment</h3>
-        <p>A mid-sized manufacturer with PLC-controlled equipment, sensors, quality stations, maintenance systems, and ERP production planning.</p>
+        <p>A mid-sized discrete assembly manufacturer with connected machines, sensors, quality stations, maintenance records, and production planning systems.</p>
       </div>
       <div>
         <h3>Current challenge</h3>
-        <p>Data exists, but is fragmented across systems. Leadership cannot reliably monitor health, performance, quality, and downtime in one trusted view.</p>
+        <p>Operational data is fragmented across systems, which limits visibility into throughput, quality, utilization, and downtime.</p>
       </div>
       <div>
         <h3>Target state</h3>
-        <p>Build a scalable operational data platform first, then use it as the base layer for predictive maintenance, computer vision, and applied AI.</p>
+        <p>Create a trusted operational visibility platform that supports reporting today and advanced analytics and AI initiatives tomorrow.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section decision-visuals">
   <div class="container">
-    <h2>Architecture</h2>
-    <div class="process-grid four">
-      <div><span>01</span><h3>Ingestion</h3><p>Python simulation of realistic industrial streams: sensors, machine states, quality, maintenance, and ERP production data.</p></div>
-      <div><span>02</span><h3>Validation and processing</h3><p>Bronze → Silver transformation with cleaning, deduplication, missing value handling, timestamp normalization, and consistency checks.</p></div>
-      <div><span>03</span><h3>Lakehouse modeling</h3><p>Gold datasets for KPI-ready analytics: reliability, production, quality, and maintenance views.</p></div>
-      <div><span>04</span><h3>Decision layer</h3><p>Executive dashboard with operations overview, reliability metrics, and explicit data-quality monitoring.</p></div>
-    </div>
-  </div>
-</section>
+    <h2>Operational Visibility Visual Evidence</h2>
+    <p class="visual-intro">This evidence model follows a practical sequence: <strong>What is happening?</strong> <strong>Can we trust it?</strong> <strong>How does it become actionable?</strong> It reinforces the BridgeOps progression from Data to Knowledge, Intelligence, and Automation.</p>
 
-<section class="section bg-light">
-  <div class="container">
-    <h2>Technologies</h2>
-    <p class="lead">Most portfolio projects skip this layer. This project makes it explicit and measurable.</p>
-    <div class="card-grid three">
-      <div>
-        <h3>Checks implemented</h3>
-        <p>Missing values, outliers, duplicate events, invalid machine states, and sensor drift patterns.</p>
-      </div>
-      <div>
-        <h3>Quality scoring</h3>
-        <p>Composite quality metrics by domain, with trends and validation error tracking for operational trust.</p>
-      </div>
-      <div>
-        <h3>Decision impact</h3>
-        <p>Before any AI model is deployed, stakeholders can see whether the underlying operational data is reliable enough to support it.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 1</p>
+          <h3>Operational Performance Dashboard</h3>
+        </div>
+        <p class="ops-answer">Executive question: How is the operation performing?</p>
+      </header>
 
-<section class="section">
-  <div class="container">
-    <h2>Operational KPIs delivered</h2>
-    <div class="card-grid four">
-      <div><h3>Reliability</h3><p>MTBF, MTTR, and availability by production line and period.</p></div>
-      <div><h3>Production</h3><p>Throughput, OEE, downtime analysis, and planned-vs-actual attainment.</p></div>
-      <div><h3>Quality</h3><p>Scrap rate, first-pass yield, and defect trend visibility.</p></div>
-      <div><h3>Maintenance</h3><p>Work-order volume, failure categories, and preventive-vs-reactive ratio.</p></div>
-    </div>
-  </div>
-</section>
+      <div class="ops-kpi-grid">
+        <div><span class="ops-label">Throughput</span><strong>1,240 units/shift</strong></div>
+        <div><span class="ops-label">Utilization</span><strong>84.6%</strong></div>
+        <div><span class="ops-label">Quality Score</span><strong>97.3%</strong></div>
+        <div><span class="ops-label">Downtime</span><strong>4.9%</strong></div>
+      </div>
 
-<section class="section bg-light">
-  <div class="container">
-    <h2>Results / Impact</h2>
-    <p class="lead">KPIs only matter if they drive decisions. Here's what becomes actionable:</p>
-    <div class="card-grid four">
-      <div>
-        <h3>Reliability</h3>
-        <p>Shift from reactive firefighting to planned preventive maintenance. Prioritize equipment by actual risk, not intuition.</p>
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>Production and quality trends</h4>
+          <div class="ops-table-wrap" role="img" aria-label="Production and quality trend over six days">
+            <svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
+              <rect x="0" y="0" width="760" height="270" fill="#f8fbf9" rx="14"/>
+              <g stroke="#dbe5df" stroke-width="1">
+                <line x1="70" y1="46" x2="706" y2="46"/>
+                <line x1="70" y1="86" x2="706" y2="86"/>
+                <line x1="70" y1="126" x2="706" y2="126"/>
+                <line x1="70" y1="166" x2="706" y2="166"/>
+                <line x1="70" y1="206" x2="706" y2="206"/>
+              </g>
+              <polyline fill="none" stroke="#0f766e" stroke-width="4" points="90,180 190,168 290,152 390,138 490,122 590,108 690,102"/>
+              <polyline fill="none" stroke="#2563eb" stroke-width="4" points="90,132 190,126 290,118 390,121 490,112 590,107 690,100"/>
+              <g fill="#0f766e">
+                <circle cx="690" cy="102" r="5"/>
+              </g>
+              <g fill="#2563eb">
+                <circle cx="690" cy="100" r="5"/>
+              </g>
+              <text x="76" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Mon</text>
+              <text x="176" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Tue</text>
+              <text x="276" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Wed</text>
+              <text x="376" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Thu</text>
+              <text x="476" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Fri</text>
+              <text x="576" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Sat</text>
+              <text x="676" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Sun</text>
+              <text x="100" y="28" fill="#0f766e" font-size="12" font-family="'IBM Plex Sans', sans-serif">Production Trend</text>
+              <text x="250" y="28" fill="#2563eb" font-size="12" font-family="'IBM Plex Sans', sans-serif">Quality Trend</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Asset overview</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Machine status and production line summary">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Status</th>
+                  <th>Health</th>
+                  <th>Output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Line A</td>
+                  <td><span class="status healthy">Running</span></td>
+                  <td>92</td>
+                  <td>395 units</td>
+                </tr>
+                <tr>
+                  <td>Line B</td>
+                  <td><span class="status watch">Constrained</span></td>
+                  <td>78</td>
+                  <td>342 units</td>
+                </tr>
+                <tr>
+                  <td>Line C</td>
+                  <td><span class="status healthy">Running</span></td>
+                  <td>88</td>
+                  <td>387 units</td>
+                </tr>
+                <tr class="attention">
+                  <td>Line D</td>
+                  <td><span class="status critical">Downtime</span></td>
+                  <td>61</td>
+                  <td>116 units</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ops-footnote"><strong>Message:</strong> Operational leaders gain visibility into production performance through a unified operational platform.</p>
+        </div>
       </div>
-      <div>
-        <h3>Production</h3>
-        <p>Optimize scheduling based on real throughput constraints and downtime patterns, not forecasts.</p>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Operational data is fragmented across equipment, quality systems, and production processes.</p></div>
+        <div><h4>Approach</h4><p>Consolidate manufacturing data into a unified operational view using a modern analytics platform.</p></div>
+        <div><h4>Outcome</h4><p>Operators and managers gain real-time visibility into production performance and operational bottlenecks.</p></div>
       </div>
-      <div>
-        <h3>Quality</h3>
-        <p>Stop hunting defects. Know where scrap originates and implement targeted process improvements.</p>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 2</p>
+          <h3>Data Quality and Observability Dashboard</h3>
+        </div>
+        <p class="ops-answer">Executive question: Can we trust the data?</p>
+      </header>
+
+      <div class="ops-kpi-grid">
+        <div><span class="ops-label">Data Completeness</span><strong>98.7%</strong></div>
+        <div><span class="ops-label">Data Freshness</span><strong>4 min lag</strong></div>
+        <div><span class="ops-label">Validation Pass Rate</span><strong>97.8%</strong></div>
+        <div><span class="ops-label">Missing Records</span><strong>168/day</strong></div>
       </div>
-      <div>
-        <h3>Data governance</h3>
-        <p>Validate data quality before deploying any AI. Build stakeholder trust in algorithmic decisions.</p>
+
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>Data quality trend and validation alerts</h4>
+          <div class="ops-table-wrap" role="img" aria-label="Data quality trend with validation alert count">
+            <svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
+              <rect x="0" y="0" width="760" height="270" fill="#f8fbf9" rx="14"/>
+              <g stroke="#dbe5df" stroke-width="1">
+                <line x1="70" y1="46" x2="706" y2="46"/>
+                <line x1="70" y1="86" x2="706" y2="86"/>
+                <line x1="70" y1="126" x2="706" y2="126"/>
+                <line x1="70" y1="166" x2="706" y2="166"/>
+                <line x1="70" y1="206" x2="706" y2="206"/>
+              </g>
+              <polyline fill="none" stroke="#0f766e" stroke-width="4" points="90,122 190,118 290,112 390,106 490,103 590,98 690,92"/>
+              <polyline fill="none" stroke="#b45309" stroke-width="4" points="90,192 190,182 290,176 390,168 490,154 590,142 690,134"/>
+              <text x="92" y="28" fill="#0f766e" font-size="12" font-family="'IBM Plex Sans', sans-serif">Validation Pass Rate</text>
+              <text x="278" y="28" fill="#b45309" font-size="12" font-family="'IBM Plex Sans', sans-serif">Open Alerts (inverse)</text>
+              <text x="76" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Mon</text>
+              <text x="176" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Tue</text>
+              <text x="276" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Wed</text>
+              <text x="376" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Thu</text>
+              <text x="476" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Fri</text>
+              <text x="576" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Sat</text>
+              <text x="676" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Sun</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Source health indicators</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Source health and freshness monitor">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Source</th>
+                  <th>Completeness</th>
+                  <th>Freshness</th>
+                  <th>Health</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sensor Gateway</td>
+                  <td>99.1%</td>
+                  <td>2 min</td>
+                  <td><span class="status healthy">Stable</span></td>
+                </tr>
+                <tr>
+                  <td>Quality System</td>
+                  <td>97.9%</td>
+                  <td>6 min</td>
+                  <td><span class="status watch">Monitor</span></td>
+                </tr>
+                <tr>
+                  <td>MES</td>
+                  <td>98.4%</td>
+                  <td>4 min</td>
+                  <td><span class="status healthy">Stable</span></td>
+                </tr>
+                <tr class="attention">
+                  <td>Maintenance Logs</td>
+                  <td>95.6%</td>
+                  <td>18 min</td>
+                  <td><span class="status critical">Investigate</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ops-footnote"><strong>Message:</strong> The platform does not merely collect operational data. It actively measures and improves data quality.</p>
+        </div>
       </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Operational decisions are only as reliable as the underlying data.</p></div>
+        <div><h4>Approach</h4><p>Continuously monitor completeness, freshness, and validation metrics across data sources.</p></div>
+        <div><h4>Outcome</h4><p>Data quality issues can be identified before they affect reporting, analytics, or operational decisions.</p></div>
+      </div>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 3</p>
+          <h3>From Operational Data to Operational Visibility</h3>
+        </div>
+        <p class="ops-answer">Executive question: How does raw operational data become actionable information?</p>
+      </header>
+
+      <p class="ops-subtitle">Implemented using a Bronze-Silver-Gold (Medallion) data architecture.</p>
+      <div class="ops-flow" role="img" aria-label="Factory data flow from assets to operational visibility">
+        <div class="ops-flow-step">
+          <h4>Factory Assets</h4>
+          <p>Machines, Sensors, Quality Systems, Production Systems</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step bronze">
+          <h4>Bronze Layer</h4>
+          <p>Raw Operational Data</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step silver">
+          <h4>Silver Layer</h4>
+          <p>Validated and Standardized Data</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step gold">
+          <h4>Gold Layer</h4>
+          <p>Operational Metrics and KPIs</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step visibility">
+          <h4>Dashboards and Analytics</h4>
+          <p>Operational Visibility</p>
+        </div>
+      </div>
+      <p class="ops-footnote"><strong>Message:</strong> Operational intelligence requires trustworthy data foundations. The platform transforms fragmented operational data into reliable information for reporting, analytics, and future AI initiatives.</p>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Manufacturing organizations often struggle to scale analytics because operational data lacks structure, consistency, and governance.</p></div>
+        <div><h4>Approach</h4><p>Implement a layered data architecture that progressively transforms raw operational data into trusted business information.</p></div>
+        <div><h4>Outcome</h4><p>Create a reliable foundation for operational reporting, advanced analytics, and future AI capabilities.</p></div>
+      </div>
+    </article>
+
+    <div class="card-grid four ops-outcome-cards">
+      <div><h3>Data</h3><p>Manufacturing events are collected and standardized across previously disconnected systems.</p></div>
+      <div><h3>Knowledge</h3><p>Validated datasets provide shared operational context for engineering and management teams.</p></div>
+      <div><h3>Intelligence</h3><p>Representative operational metrics support prioritization, exception handling, and continuous improvement.</p></div>
+      <div><h3>Automation</h3><p>Trusted information foundations reduce risk when scaling workflow automation and future AI use cases.</p></div>
     </div>
   </div>
 </section>

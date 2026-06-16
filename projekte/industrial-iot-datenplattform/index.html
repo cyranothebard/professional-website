@@ -15,9 +15,9 @@ alternate_url: /projects/industrial-iot-data-platform/
 
 <section class="section">
   <div class="container narrow">
-    <h2>Approach</h2>
+    <h2>Ansatz</h2>
     <p>
-      Dieses Projekt ist die zentrale technische Demonstration der Data-Stufe im BridgeOps Framework: Data → Knowledge → Intelligence → Automation. Operations bilden den Anwendungskontext. Das Projekt zeigt, wie Daten aus mehreren Fertigungssystemen in verlässliche, kontextualisierte Informationen für operative Entscheidungen überführt werden.
+      Dieses Projekt ist die zentrale technische Demonstration der Daten-Stufe im BridgeOps Framework: Daten → Wissen → Intelligenz → Automatisierung. Der operative Betrieb bildet den Anwendungskontext. Das Projekt zeigt, wie Daten aus mehreren Fertigungssystemen in verlässliche, kontextualisierte Informationen für operative Entscheidungen überführt werden.
     </p>
     <p>
       Die Kernaussage: <strong>KI-Skalierung hängt von robusten operativen Datenfundamenten ab.</strong> Die Plattform ist bewusst als realistische industrielle Datenarchitektur gebaut - nicht als Machine-Learning-Demo.
@@ -25,118 +25,282 @@ alternate_url: /projects/industrial-iot-data-platform/
   </div>
 </section>
 
+<section class="section">
+  <div class="container narrow">
+    <h2>Demonstrationsumgebung</h2>
+    <p>Dieses Projekt ist eine Referenzimplementierung, die moderne Konzepte industrieller Datenplattformen demonstriert, einschließlich Datenerfassung, Transformation, Beobachtbarkeit und operativer Analytics.</p>
+    <p>Die gezeigten Dashboards und repräsentativen operativen Kennzahlen basieren auf realistisch synthetischen Fertigungsdaten und nicht auf produktiven Kundendaten.</p>
+    <p>Ziel ist es, Plattformarchitektur, Daten-Workflows und Muster operativer Transparenz zu veranschaulichen, ohne proprietäre Fertigungsinformationen offenzulegen.</p>
+  </div>
+</section>
+
 <section class="section bg-light">
   <div class="container">
-    <h2>Problem</h2>
+    <h2>Operativer Kontext</h2>
     <div class="card-grid three">
       <div>
         <h3>Umgebung</h3>
-        <p>Ein mittelständischer Hersteller mit SPS-gesteuerten Anlagen, Sensorik, Qualitätsstationen, Instandhaltungssystemen und ERP-Produktionsplanung.</p>
+        <p>Ein mittelständischer Hersteller in der diskreten Fertigung mit vernetzten Maschinen, Sensorik, Qualitätsstationen, Instandhaltungsdaten und Produktionsplanungssystemen.</p>
       </div>
       <div>
         <h3>Ausgangsproblem</h3>
-        <p>Daten sind vorhanden, aber über Systeme verteilt. Führung und Betrieb können Anlagenzustand, Leistung, Qualität und Stillstand nicht verlässlich in einer Sicht steuern.</p>
+        <p>Operative Daten sind über Systeme fragmentiert, wodurch Transparenz für Durchsatz, Qualität, Auslastung und Stillstände eingeschränkt ist.</p>
       </div>
       <div>
         <h3>Zielbild</h3>
-        <p>Zuerst eine skalierbare operative Datenplattform aufbauen und darauf später Predictive Maintenance, Computer Vision und angewandte KI aufsetzen.</p>
+        <p>Eine vertrauenswürdige Plattform für operative Transparenz schaffen, die heutiges Reporting und zukünftige Analytics- und KI-Initiativen unterstützt.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section decision-visuals">
   <div class="container">
-    <h2>Architecture</h2>
-    <div class="process-grid four">
-      <div><span>01</span><h3>Ingestion</h3><p>Python-basierte Simulation realistischer Industrieströme: Sensorik, Maschinenzustände, Qualität, Wartung und ERP-Produktionsdaten.</p></div>
-      <div><span>02</span><h3>Validierung und Verarbeitung</h3><p>Bronze → Silver mit Cleaning, Deduplikation, Missing-Value-Handling, Zeitstempel-Normalisierung und Konsistenzprüfungen.</p></div>
-      <div><span>03</span><h3>Lakehouse-Modellierung</h3><p>Gold-Datensätze für KPI-fähige Analytics: Reliability-, Produktions-, Qualitäts- und Wartungssichten.</p></div>
-      <div><span>04</span><h3>Decision Layer</h3><p>Management-Dashboard mit Operations-Überblick, Reliability-Metriken und explizitem Datenqualitäts-Monitoring.</p></div>
-    </div>
-  </div>
-</section>
+    <h2>Visuelle Evidenz für operative Transparenz</h2>
+    <p class="visual-intro">Dieses Evidenzmodell folgt einer klaren Sequenz: <strong>Was passiert?</strong> <strong>Können wir den Daten vertrauen?</strong> <strong>Wie wird daraus Handlungsfähigkeit?</strong> Es stärkt die BridgeOps-Logik von Daten über Wissen und Intelligenz bis zur Automatisierung.</p>
 
-<section class="section bg-light">
-  <div class="container">
-    <h2>Technologies</h2>
-    <p class="lead">Diese Ebene wird in vielen Portfolio-Projekten ausgelassen. Hier ist sie explizit und messbar umgesetzt.</p>
-    <div class="card-grid three">
-      <div>
-        <h3>Prüfungen</h3>
-        <p>Missing Values, Ausreißer, Duplikate, ungültige Maschinenzustände und Sensor-Drift-Indikatoren.</p>
-      </div>
-      <div>
-        <h3>Quality Scoring</h3>
-        <p>Zusammengefasste Qualitätsmetriken pro Datendomäne inklusive Trend- und Fehlertracking.</p>
-      </div>
-      <div>
-        <h3>Entscheidungswirkung</h3>
-        <p>Vor jedem KI-Einsatz wird sichtbar, ob die zugrunde liegenden Betriebsdaten für vertrauenswürdige Entscheidungen geeignet sind.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visualisierung 1</p>
+          <h3>Dashboard zur operativen Leistung</h3>
+        </div>
+        <p class="ops-answer">Leitfrage: Wie performt der Betrieb aktuell?</p>
+      </header>
 
-<section class="section">
-  <div class="container">
-    <h2>Gelieferte operative KPIs</h2>
-    <div class="card-grid four">
-      <div><h3>Reliability</h3><p>MTBF, MTTR und Verfügbarkeit pro Produktionslinie und Zeitraum.</p></div>
-      <div><h3>Produktion</h3><p>Durchsatz, OEE, Downtime-Analyse und Soll-Ist-Erfüllung.</p></div>
-      <div><h3>Qualität</h3><p>Ausschussrate, First Pass Yield und Defekttrend-Transparenz.</p></div>
-      <div><h3>Instandhaltung</h3><p>Work-Order-Volumen, Fehlerkategorien und Verhältnis präventiv vs. reaktiv.</p></div>
-    </div>
-  </div>
-</section>
+      <div class="ops-kpi-grid">
+        <div><span class="ops-label">Durchsatz</span><strong>1.240 Einheiten/Schicht</strong></div>
+        <div><span class="ops-label">Auslastung</span><strong>84,6%</strong></div>
+        <div><span class="ops-label">Qualitätsindex</span><strong>97,3%</strong></div>
+        <div><span class="ops-label">Stillstand</span><strong>4,9%</strong></div>
+      </div>
 
-<section class="section bg-light">
-  <div class="container">
-    <h2>Results / Impact</h2>
-    <p class="lead">KPIs sind nützlich nur, wenn sie Entscheidungen steuern. Hier wird Handeln möglich:</p>
-    <div class="card-grid four">
-      <div>
-        <h3>Reliability</h3>
-        <p>Von reaktivem Feuerlöschen zu geplanter Vorbeugung. Anlagen nach echtem Risiko statt Bauchgefühl priorisieren.</p>
-      </div>
-      <div>
-        <h3>Produktion</h3>
-        <p>Scheduling basierend auf echten Durchsatz-Limitationen und Downtime-Mustern, nicht auf Prognosen.</p>
-      </div>
-      <div>
-        <h3>Qualität</h3>
-        <p>Aufhören, Ausschuss zu jagen. Wissen, wo Fehler entstehen und gezielte Prozessverbesserungen einleiten.</p>
-      </div>
-      <div>
-        <h3>Datenqualität</h3>
-        <p>Datenqualität prüfen, bevor KI-Systeme eingesetzt werden. Vertrauen in algorithmische Entscheidungen aufbauen.</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>Produktions- und Qualitätstrend</h4>
+          <div class="ops-table-wrap" role="img" aria-label="Produktions- und Qualitätstrend ueber sechs Tage">
+            <svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
+              <rect x="0" y="0" width="760" height="270" fill="#f8fbf9" rx="14"/>
+              <g stroke="#dbe5df" stroke-width="1">
+                <line x1="70" y1="46" x2="706" y2="46"/>
+                <line x1="70" y1="86" x2="706" y2="86"/>
+                <line x1="70" y1="126" x2="706" y2="126"/>
+                <line x1="70" y1="166" x2="706" y2="166"/>
+                <line x1="70" y1="206" x2="706" y2="206"/>
+              </g>
+              <polyline fill="none" stroke="#0f766e" stroke-width="4" points="90,180 190,168 290,152 390,138 490,122 590,108 690,102"/>
+              <polyline fill="none" stroke="#2563eb" stroke-width="4" points="90,132 190,126 290,118 390,121 490,112 590,107 690,100"/>
+              <g fill="#0f766e"><circle cx="690" cy="102" r="5"/></g>
+              <g fill="#2563eb"><circle cx="690" cy="100" r="5"/></g>
+              <text x="76" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Mo</text>
+              <text x="176" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Di</text>
+              <text x="276" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Mi</text>
+              <text x="376" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Do</text>
+              <text x="476" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Fr</text>
+              <text x="576" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Sa</text>
+              <text x="676" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">So</text>
+              <text x="100" y="28" fill="#0f766e" font-size="12" font-family="'IBM Plex Sans', sans-serif">Produktionstrend</text>
+              <text x="250" y="28" fill="#2563eb" font-size="12" font-family="'IBM Plex Sans', sans-serif">Qualitaetstrend</text>
+            </svg>
+          </div>
+        </div>
 
-<section class="section">
-  <div class="container">
-    <h2>Screenshots / Demo</h2>
-    <div class="card-grid three">
-      <div>
-        <h3>Screenshot: Data Quality Dashboard</h3>
-        <p><strong>Problem:</strong> Verteilte Datenquellen erschweren Vertrauen in operative KPIs.</p>
-        <p><strong>Approach:</strong> Explizites Datenqualitäts-Scoring über alle relevanten Daten-Domänen.</p>
-        <p><strong>Outcome:</strong> Verlässliche Entscheidungsgrundlage für nachgelagerte Intelligence- und Automation-Initiativen.</p>
+        <div class="ops-chart-card">
+          <h4>Anlagenüberblick</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Maschinenstatus und Produktionslinien-Überblick">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Linie</th>
+                  <th>Status</th>
+                  <th>Zustand</th>
+                  <th>Ausstoß</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Linie A</td>
+                  <td><span class="status healthy">Laufend</span></td>
+                  <td>92</td>
+                  <td>395 Einheiten</td>
+                </tr>
+                <tr>
+                  <td>Linie B</td>
+                  <td><span class="status watch">Eingeschraenkt</span></td>
+                  <td>78</td>
+                  <td>342 Einheiten</td>
+                </tr>
+                <tr>
+                  <td>Linie C</td>
+                  <td><span class="status healthy">Laufend</span></td>
+                  <td>88</td>
+                  <td>387 Einheiten</td>
+                </tr>
+                <tr class="attention">
+                  <td>Linie D</td>
+                  <td><span class="status critical">Stillstand</span></td>
+                  <td>61</td>
+                  <td>116 Einheiten</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ops-footnote"><strong>Botschaft:</strong> Operative Führungsteams erhalten Transparenz über die Produktionsleistung durch eine vereinheitlichte operative Plattform.</p>
+        </div>
       </div>
-      <div>
-        <h3>Screenshot: Operations Overview</h3>
-        <p><strong>Problem:</strong> Produktion, Qualität und Instandhaltung werden isoliert betrachtet.</p>
-        <p><strong>Approach:</strong> Zusammenführung der Kennzahlen in einer operativ nutzbaren Führungssicht.</p>
-        <p><strong>Outcome:</strong> Schnellere Priorisierung von Maßnahmen und bessere Abstimmung zwischen Teams.</p>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Operative Daten sind über Anlagen, Qualitätssysteme und Produktionsprozesse fragmentiert.</p></div>
+        <div><h4>Ansatz</h4><p>Fertigungsdaten in einer einheitlichen operativen Sicht auf einer modernen Analytics-Plattform konsolidieren.</p></div>
+        <div><h4>Ergebnis</h4><p>Operatoren und Management erhalten Echtzeit-Transparenz zu Produktionsleistung und operativen Engpässen.</p></div>
       </div>
-      <div>
-        <h3>Screenshot: Reliability View</h3>
-        <p><strong>Problem:</strong> Ausfallmuster und Wartungsbedarf sind ohne Kontext schwer priorisierbar.</p>
-        <p><strong>Approach:</strong> Reliability-Metriken, Downtime-Muster und Wartungsdaten in einer konsistenten Analyseebene.</p>
-        <p><strong>Outcome:</strong> Höhere Transparenz für operative Entscheidungen und strategische Investitionsplanung.</p>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visualisierung 2</p>
+          <h3>Dashboard für Datenqualität und Beobachtbarkeit</h3>
+        </div>
+        <p class="ops-answer">Leitfrage: Können wir den Daten vertrauen?</p>
+      </header>
+
+      <div class="ops-kpi-grid">
+        <div><span class="ops-label">Datenvollständigkeit</span><strong>98,7%</strong></div>
+        <div><span class="ops-label">Datenaktualität</span><strong>4 Min Verzögerung</strong></div>
+        <div><span class="ops-label">Validierungsrate</span><strong>97,8%</strong></div>
+        <div><span class="ops-label">Fehlende Datensätze</span><strong>168/Tag</strong></div>
       </div>
+
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>Trend der Datenqualitaet und Validierungsalarme</h4>
+          <div class="ops-table-wrap" role="img" aria-label="Trend der Datenqualitaet mit Anzahl an Validierungsalarmen">
+            <svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
+              <rect x="0" y="0" width="760" height="270" fill="#f8fbf9" rx="14"/>
+              <g stroke="#dbe5df" stroke-width="1">
+                <line x1="70" y1="46" x2="706" y2="46"/>
+                <line x1="70" y1="86" x2="706" y2="86"/>
+                <line x1="70" y1="126" x2="706" y2="126"/>
+                <line x1="70" y1="166" x2="706" y2="166"/>
+                <line x1="70" y1="206" x2="706" y2="206"/>
+              </g>
+              <polyline fill="none" stroke="#0f766e" stroke-width="4" points="90,122 190,118 290,112 390,106 490,103 590,98 690,92"/>
+              <polyline fill="none" stroke="#b45309" stroke-width="4" points="90,192 190,182 290,176 390,168 490,154 590,142 690,134"/>
+              <text x="92" y="28" fill="#0f766e" font-size="12" font-family="'IBM Plex Sans', sans-serif">Validierungsrate</text>
+              <text x="278" y="28" fill="#b45309" font-size="12" font-family="'IBM Plex Sans', sans-serif">Offene Alarme (invers)</text>
+              <text x="76" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Mo</text>
+              <text x="176" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Di</text>
+              <text x="276" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Mi</text>
+              <text x="376" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Do</text>
+              <text x="476" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Fr</text>
+              <text x="576" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">Sa</text>
+              <text x="676" y="238" fill="#4a5c69" font-size="12" font-family="'IBM Plex Sans', sans-serif">So</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Quellsystem-Zustandsindikatoren</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Monitoring von Quellsystemzustand und Aktualität">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Quelle</th>
+                  <th>Vollständigkeit</th>
+                  <th>Aktualität</th>
+                  <th>Zustand</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sensor Gateway</td>
+                  <td>99,1%</td>
+                  <td>2 Min</td>
+                  <td><span class="status healthy">Stabil</span></td>
+                </tr>
+                <tr>
+                  <td>Qualitätssystem</td>
+                  <td>97,9%</td>
+                  <td>6 Min</td>
+                  <td><span class="status watch">Beobachten</span></td>
+                </tr>
+                <tr>
+                  <td>MES</td>
+                  <td>98,4%</td>
+                  <td>4 Min</td>
+                  <td><span class="status healthy">Stabil</span></td>
+                </tr>
+                <tr class="attention">
+                  <td>Wartungsprotokolle</td>
+                  <td>95,6%</td>
+                  <td>18 Min</td>
+                  <td><span class="status critical">Prüfen</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="ops-footnote"><strong>Botschaft:</strong> Die Plattform sammelt operative Daten nicht nur, sie misst und verbessert aktiv die Datenqualität.</p>
+        </div>
+      </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Operative Entscheidungen sind nur so zuverlässig wie die zugrunde liegenden Daten.</p></div>
+        <div><h4>Ansatz</h4><p>Vollständigkeit, Aktualität und Validierungsmetriken über Datenquellen kontinuierlich überwachen.</p></div>
+        <div><h4>Ergebnis</h4><p>Datenqualitätsprobleme werden erkannt, bevor sie Reporting, Analytics oder operative Entscheidungen beeinträchtigen.</p></div>
+      </div>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visualisierung 3</p>
+          <h3>Von operativen Daten zu operativer Transparenz</h3>
+        </div>
+        <p class="ops-answer">Leitfrage: Wie werden rohe Betriebsdaten zu handlungsrelevanter Information?</p>
+      </header>
+
+      <p class="ops-subtitle">Implementiert mit einer Bronze-Silber-Gold (Medallion) Datenarchitektur.</p>
+      <div class="ops-flow" role="img" aria-label="Datenfluss von Fabrikquellen zu operativer Transparenz">
+        <div class="ops-flow-step">
+          <h4>Fabrikquellen</h4>
+          <p>Maschinen, Sensorik, Qualitätssysteme, Produktionssysteme</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step bronze">
+          <h4>Bronze-Schicht</h4>
+          <p>Rohe operative Daten</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step silver">
+          <h4>Silber-Schicht</h4>
+          <p>Validierte und standardisierte Daten</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step gold">
+          <h4>Gold-Schicht</h4>
+          <p>Operative Kennzahlen und KPIs</p>
+        </div>
+        <span class="ops-flow-arrow" aria-hidden="true">↓</span>
+        <div class="ops-flow-step visibility">
+          <h4>Dashboards und Analytics</h4>
+          <p>Operative Transparenz</p>
+        </div>
+      </div>
+      <p class="ops-footnote"><strong>Botschaft:</strong> Operative Intelligenz braucht vertrauenswürdige Datenfundamente. Die Plattform transformiert fragmentierte Betriebsdaten in belastbare Informationen für Reporting, Analytics und künftige KI-Initiativen.</p>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Fertigungsorganisationen haben häufig Schwierigkeiten, Analytics zu skalieren, weil operative Daten Struktur, Konsistenz und Governance vermissen lassen.</p></div>
+        <div><h4>Ansatz</h4><p>Eine Schichtenarchitektur implementieren, die rohe operative Daten schrittweise in vertrauenswürdige Geschäftsinformationen transformiert.</p></div>
+        <div><h4>Ergebnis</h4><p>Eine belastbare Grundlage für operatives Reporting, fortgeschrittene Analytics und künftige KI-Fähigkeiten schaffen.</p></div>
+      </div>
+    </article>
+
+    <div class="card-grid four ops-outcome-cards">
+      <div><h3>Daten</h3><p>Fertigungsereignisse werden über zuvor getrennte Systeme hinweg erfasst und standardisiert.</p></div>
+      <div><h3>Wissen</h3><p>Validierte Datensätze schaffen einen gemeinsamen operativen Kontext für Technik- und Managementteams.</p></div>
+      <div><h3>Intelligenz</h3><p>Repräsentative operative Metriken unterstützen Priorisierung, Ausnahmebehandlung und kontinuierliche Verbesserung.</p></div>
+      <div><h3>Automatisierung</h3><p>Vertrauenswürdige Informationsfundamente reduzieren Risiken bei der Skalierung von Workflows und künftigen KI-Anwendungen.</p></div>
     </div>
   </div>
 </section>
@@ -146,7 +310,7 @@ alternate_url: /projects/industrial-iot-data-platform/
     <h2>Verknüpfte BridgeOps-Inhalte</h2>
     <p>Dieses Projekt ist ein Teil des BridgeOps-Frameworks zur skalierbaren KI durch belastbare operative Grundlagen:</p>
     <ul style="list-style: none; padding: 0;">
-      <li style="margin-bottom: 12px;"><a href="/bridgeops-framework">Das BridgeOps Framework</a> – Data → Knowledge → Intelligence → Automation als Systemlogik</li>
+      <li style="margin-bottom: 12px;"><a href="/bridgeops-framework">Das BridgeOps Framework</a> – Daten → Wissen → Intelligenz → Automatisierung als Systemlogik</li>
       <li style="margin-bottom: 12px;"><a href="/insights/operations-daten-und-ki-verbinden/">Operations, Daten und KI verbinden</a> – Warum Unternehmen die mittleren Schichten unterschätzen</li>
       <li style="margin-bottom: 12px;"><a href="/insights/warum-industrielle-ki-projekte-scheitern/">Warum Industrial-AI-Projekte scheitern</a> – Das wiederkehrende Muster in der Fertigung</li>
       <li><a href="/blog/2026-06-data-foundations-before-ai.html">Datengrundfeste vor KI-Skalierung</a> – Wie dieses Projekt in Ihre Roadmap passt</li>
@@ -157,7 +321,7 @@ alternate_url: /projects/industrial-iot-data-platform/
 <section class="section cta-section">
   <div class="container">
     <h2>Repository / Demo</h2>
-    <p>Hiring Manager sehen realistische industrielle Datenarchitektur. Consulting-Kunden sehen die notwendige Basis vor KI-Investitionen. Technische Peers sehen ein skalierbares System statt eines Spielzeug-ML-Projekts.</p>
+    <p>Personalverantwortliche sehen realistische industrielle Datenarchitektur. Beratungskunden sehen die notwendige Basis vor KI-Investitionen. Technische Fachkollegen sehen ein skalierbares System statt eines Spielzeug-ML-Projekts.</p>
     <a class="btn btn-primary" href="/kontakt/">Architektur besprechen</a>
     <a class="btn btn-outline-light" href="https://github.com/cyranothebard/industrial-iot-data-platform" target="_blank" rel="noopener">Repository öffnen</a>
   </div>

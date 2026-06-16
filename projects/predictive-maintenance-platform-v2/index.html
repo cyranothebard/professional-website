@@ -23,6 +23,10 @@ alternate_url: /projekte/predictive-maintenance-platform-v2/
 
     <h2>Approach</h2>
     <p>The solution combines health-state modeling, failure-risk forecasting, remaining useful life estimation, and recommendation logic. Instead of delivering predictions alone, it provides explainable maintenance actions with prioritization and impact context.</p>
+
+    <h2>Reference Implementation</h2>
+    <p>This project serves as a reference implementation for maintenance decision intelligence concepts and demonstrates how operational data can be transformed into actionable maintenance recommendations.</p>
+    <p>The focus is on decision support, workflow design, and system architecture rather than production deployment.</p>
   </div>
 </section>
 
@@ -35,6 +39,15 @@ alternate_url: /projekte/predictive-maintenance-platform-v2/
       <div><span>03</span><h3>Decision Intelligence</h3><p>Recommendation logic prioritizes actions such as Monitor, Inspect, Schedule Maintenance, or Immediate Review.</p></div>
       <div><span>04</span><h3>Automation Preview</h3><p>A controlled preview shows how validated recommendations can flow into downstream workflow automation.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>Demonstration Environment</h2>
+    <p>This project is a reference implementation designed to demonstrate how reliability engineering, predictive analytics, and decision-support workflows can be combined into a maintenance intelligence platform.</p>
+    <p>The dashboards, health scores, recommendations, and economic estimates shown throughout the project use realistic synthetic operating data rather than production customer data.</p>
+    <p>The objective is to illustrate system design, decision workflows, and user experience patterns while avoiding the disclosure of proprietary operational information.</p>
   </div>
 </section>
 
@@ -52,15 +65,15 @@ alternate_url: /projekte/predictive-maintenance-platform-v2/
 
 <section class="section bg-light">
   <div class="container">
-    <h2>Results / Impact</h2>
+    <h2>Modeled Outcomes / Impact</h2>
     <div class="card-grid three">
       <div>
-        <h3>Operational outcomes</h3>
-        <p>Better asset prioritization, reduced unplanned downtime risk, and more consistent maintenance actions.</p>
+        <h3>Operational impact profile</h3>
+        <p>Modeled scenarios indicate stronger asset prioritization, lower unplanned downtime risk, and more consistent maintenance actions.</p>
       </div>
       <div>
-        <h3>Business impact</h3>
-        <p>Technical recommendations are tied to cost and savings context for decision transparency.</p>
+        <h3>Economic impact model</h3>
+        <p>Technical recommendations are linked to modeled cost avoidance and estimated savings opportunity for transparent decision tradeoffs.</p>
       </div>
       <div>
         <h3>Portfolio positioning</h3>
@@ -70,29 +83,239 @@ alternate_url: /projekte/predictive-maintenance-platform-v2/
   </div>
 </section>
 
-<section class="section">
+<section class="section decision-visuals">
   <div class="container">
-    <h2>Screenshots / Demo</h2>
-    <div class="card-grid three">
-      <div>
-        <h3>Screenshot: Asset Decision View</h3>
-        <p><strong>Problem:</strong> Single-asset signals are difficult to prioritize without operational context.</p>
-        <p><strong>Approach:</strong> Combine health state, risk score, RUL, and recommendation rationale in one decision panel.</p>
-        <p><strong>Outcome:</strong> Teams prioritize maintenance actions consistently instead of reacting ad hoc.</p>
+    <h2>Decision Intelligence Visual Artifacts</h2>
+    <p class="visual-intro">These visuals focus on operational decisions: where to act now, what is likely to happen next, and which intervention creates the highest impact.</p>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 1</p>
+          <h3>Fleet Health Dashboard</h3>
+        </div>
+        <p class="ops-answer">Answers: Which assets require attention?</p>
+      </header>
+      <div class="ops-summary-grid">
+        <div>
+          <span class="ops-label">Healthy</span>
+          <strong>5 assets</strong>
+        </div>
+        <div>
+          <span class="ops-label">Watch</span>
+          <strong>4 assets</strong>
+        </div>
+        <div>
+          <span class="ops-label">Critical</span>
+          <strong>3 assets</strong>
+        </div>
       </div>
-      <div>
-        <h3>Screenshot: Portfolio Prioritization View</h3>
-        <p><strong>Problem:</strong> Multiple critical assets compete for limited maintenance capacity.</p>
-        <p><strong>Approach:</strong> Rank assets by risk and expected impact to guide operational scheduling.</p>
-        <p><strong>Outcome:</strong> Higher maintenance impact per planning cycle and clearer cross-team alignment.</p>
+      <div class="ops-table-wrap" role="region" aria-label="Fleet health table">
+        <table class="ops-table">
+          <thead>
+            <tr>
+              <th>Asset ID</th>
+              <th>Health Score</th>
+              <th>Risk Level</th>
+              <th>Status</th>
+              <th>Last Inspection</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CNC-104</td>
+              <td>92</td>
+              <td>Low</td>
+              <td><span class="status healthy">Healthy</span></td>
+              <td>2026-06-05</td>
+            </tr>
+            <tr>
+              <td>PRESS-218</td>
+              <td>81</td>
+              <td>Moderate</td>
+              <td><span class="status watch">Watch</span></td>
+              <td>2026-05-31</td>
+            </tr>
+            <tr>
+              <td>PUMP-067</td>
+              <td>68</td>
+              <td>Moderate</td>
+              <td><span class="status watch">Watch</span></td>
+              <td>2026-05-27</td>
+            </tr>
+            <tr>
+              <td>FURN-011</td>
+              <td>84</td>
+              <td>Low</td>
+              <td><span class="status healthy">Healthy</span></td>
+              <td>2026-06-02</td>
+            </tr>
+            <tr class="attention">
+              <td>COMP-332</td>
+              <td>39</td>
+              <td>High</td>
+              <td><span class="status critical">Critical</span></td>
+              <td>2026-05-20</td>
+            </tr>
+            <tr>
+              <td>MIX-145</td>
+              <td>76</td>
+              <td>Moderate</td>
+              <td><span class="status watch">Watch</span></td>
+              <td>2026-05-30</td>
+            </tr>
+            <tr>
+              <td>PACK-508</td>
+              <td>88</td>
+              <td>Low</td>
+              <td><span class="status healthy">Healthy</span></td>
+              <td>2026-06-06</td>
+            </tr>
+            <tr>
+              <td>CHILL-074</td>
+              <td>80</td>
+              <td>Moderate</td>
+              <td><span class="status watch">Watch</span></td>
+              <td>2026-06-01</td>
+            </tr>
+            <tr class="attention">
+              <td>ROBOT-919</td>
+              <td>33</td>
+              <td>High</td>
+              <td><span class="status critical">Critical</span></td>
+              <td>2026-05-19</td>
+            </tr>
+            <tr>
+              <td>BLOW-223</td>
+              <td>91</td>
+              <td>Low</td>
+              <td><span class="status healthy">Healthy</span></td>
+              <td>2026-06-04</td>
+            </tr>
+            <tr class="attention">
+              <td>CONV-440</td>
+              <td>41</td>
+              <td>High</td>
+              <td><span class="status critical">Critical</span></td>
+              <td>2026-05-22</td>
+            </tr>
+            <tr>
+              <td>WELD-150</td>
+              <td>86</td>
+              <td>Low</td>
+              <td><span class="status healthy">Healthy</span></td>
+              <td>2026-06-03</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div>
-        <h3>Screenshot: Automation Preview</h3>
-        <p><strong>Problem:</strong> Recommendations often stop before they reach execution workflows.</p>
-        <p><strong>Approach:</strong> Controlled handoff of validated recommendations through a human-in-the-loop process gate.</p>
-        <p><strong>Outcome:</strong> Scalable execution readiness without sacrificing governance and accountability.</p>
+      <p class="ops-footnote"><strong>Immediate attention:</strong> ROBOT-919, COMP-332, and CONV-440 are critical and should enter this week planning queue.</p>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 2</p>
+          <h3>Degradation and Remaining Useful Life</h3>
+        </div>
+        <p class="ops-answer">Answers: What is likely to happen next?</p>
+      </header>
+      <div class="rul-grid">
+        <div class="rul-plot" role="img" aria-label="Health trend and projected degradation with maintenance threshold">
+          <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="rulFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0f766e" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#0f766e" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="760" height="320" fill="#f7faf8" rx="16"/>
+            <g stroke="#d4ddd8" stroke-width="1">
+              <line x1="70" y1="50" x2="700" y2="50"/>
+              <line x1="70" y1="95" x2="700" y2="95"/>
+              <line x1="70" y1="140" x2="700" y2="140"/>
+              <line x1="70" y1="185" x2="700" y2="185"/>
+              <line x1="70" y1="230" x2="700" y2="230"/>
+              <line x1="70" y1="275" x2="700" y2="275"/>
+            </g>
+            <line x1="70" y1="185" x2="700" y2="185" stroke="#b91c1c" stroke-width="2" stroke-dasharray="8 7"/>
+            <text x="706" y="189" fill="#991b1b" font-size="12" font-family="'IBM Plex Sans', sans-serif">Maintenance Threshold (50)</text>
+
+            <path d="M70 85 L130 95 L190 104 L250 118 L310 130 L370 145 L430 162 L490 176" fill="none" stroke="#0f766e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M490 176 L550 198 L610 222 L670 248" fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 6"/>
+            <path d="M70 85 L130 95 L190 104 L250 118 L310 130 L370 145 L430 162 L490 176 L550 198 L610 222 L670 248 L670 275 L70 275 Z" fill="url(#rulFill)"/>
+
+            <circle cx="490" cy="176" r="6" fill="#0f766e"/>
+            <circle cx="610" cy="222" r="6" fill="#334155"/>
+            <circle cx="670" cy="248" r="6" fill="#334155"/>
+
+            <line x1="490" y1="45" x2="490" y2="275" stroke="#475569" stroke-width="1.4" stroke-dasharray="5 6"/>
+            <text x="460" y="34" fill="#334155" font-size="12" font-family="'IBM Plex Sans', sans-serif">Today</text>
+
+            <text x="78" y="292" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">W-14</text>
+            <text x="196" y="292" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">W-10</text>
+            <text x="315" y="292" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">W-6</text>
+            <text x="433" y="292" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">W-2</text>
+            <text x="548" y="292" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">W+2</text>
+            <text x="667" y="292" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">W+6</text>
+
+            <text x="16" y="55" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">100</text>
+            <text x="24" y="100" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">85</text>
+            <text x="24" y="145" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">70</text>
+            <text x="24" y="190" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">50</text>
+            <text x="24" y="235" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">35</text>
+            <text x="24" y="280" fill="#4b5563" font-size="12" font-family="'IBM Plex Sans', sans-serif">20</text>
+          </svg>
+        </div>
+        <div class="rul-context">
+          <p><strong>Monitored Asset:</strong> ROBOT-919</p>
+          <p><strong>Current health score:</strong> 33 and falling by approximately 3.5 points per week.</p>
+          <p><strong>Modeled RUL estimate:</strong> 19 days before crossing operating threshold under current load profile.</p>
+          <p><strong>Projection:</strong> Without intervention, this asset is expected to enter high-probability failure zone within the next planning cycle.</p>
+          <div class="legend-list">
+            <span><i class="legend historical"></i> Historical trend</span>
+            <span><i class="legend projected"></i> Projected trend</span>
+            <span><i class="legend threshold"></i> Maintenance threshold</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 3</p>
+          <h3>Maintenance Recommendation Panel</h3>
+        </div>
+        <p class="ops-answer">Answers: What should we do?</p>
+      </header>
+      <div class="recommendation-grid">
+        <div class="recommendation-row">
+          <h4>ROBOT-919</h4>
+          <p><strong>Recommended action:</strong> Replace spindle bearing and realign axis drive.</p>
+          <p><strong>Maintenance priority:</strong> P1 - Execute within 72 hours.</p>
+          <p><strong>Potential downtime reduction:</strong> 14.5 hours</p>
+          <p><strong>Estimated savings opportunity:</strong> $42,800</p>
+          <p><strong>Recommended intervention date:</strong> 2026-06-19 (night shift window)</p>
+        </div>
+        <div class="recommendation-row">
+          <h4>COMP-332</h4>
+          <p><strong>Recommended action:</strong> Schedule compressor seal replacement and vibration balancing.</p>
+          <p><strong>Maintenance priority:</strong> P1 - Execute within 5 days.</p>
+          <p><strong>Potential downtime reduction:</strong> 9.0 hours</p>
+          <p><strong>Estimated savings opportunity:</strong> $28,400</p>
+          <p><strong>Recommended intervention date:</strong> 2026-06-21 (planned utility shutdown)</p>
+        </div>
+        <div class="recommendation-row">
+          <h4>CONV-440</h4>
+          <p><strong>Recommended action:</strong> Replace conveyor motor coupling and inspect chain tension assembly.</p>
+          <p><strong>Maintenance priority:</strong> P2 - Execute within 7 days.</p>
+          <p><strong>Potential downtime reduction:</strong> 6.5 hours</p>
+          <p><strong>Estimated savings opportunity:</strong> $17,200</p>
+          <p><strong>Recommended intervention date:</strong> 2026-06-23 (line changeover slot)</p>
+        </div>
+      </div>
+    </article>
   </div>
 </section>
 

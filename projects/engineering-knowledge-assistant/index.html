@@ -26,28 +26,218 @@ alternate_url: /projekte/engineering-knowledge-assistant/
 </section>
 
 <section class="section">
+  <div class="container narrow">
+    <h2>Demonstration Environment</h2>
+    <p>This project is a reference implementation designed to demonstrate engineering knowledge retrieval, source traceability, and governance workflows across manufacturing contexts.</p>
+    <p>The visuals and examples use representative engineering documentation, including procedures, technical manuals, and work instructions, rather than proprietary customer information.</p>
+    <p>The objective is to show how organizational knowledge can be transformed into a searchable and trustworthy operational asset while protecting sensitive operational content.</p>
+  </div>
+</section>
+
+<section class="section decision-visuals">
   <div class="container">
-    <h2>Screenshots / Demo</h2>
-    <div class="card-grid three">
-      <div>
-        <h3>Screenshot: Query + Citations View</h3>
-        <p><strong>Problem:</strong> Operational teams often receive answers without source traceability.</p>
-        <p><strong>Approach:</strong> Retrieval-grounded response generation with explicit citations and metadata context.</p>
-        <p><strong>Outcome:</strong> Higher trust in knowledge retrieval and better decision quality.</p>
+    <h2>Knowledge System Visual Evidence</h2>
+    <p class="visual-intro">This visual evidence model answers three leadership questions: <strong>Can users find information?</strong> <strong>How is knowledge connected?</strong> <strong>Can the system be trusted?</strong></p>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 1</p>
+          <h3>Knowledge Retrieval in Action</h3>
+        </div>
+        <p class="ops-answer">Executive question: Can engineers find the information they need?</p>
+      </header>
+
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>User question and generated answer</h4>
+          <p><strong>User question:</strong> What is the approved lockout sequence for the hydraulic press before maintenance begins?</p>
+          <p><strong>Generated answer:</strong> Follow procedure SOP-17 Rev C: isolate electrical feed, close hydraulic supply valve HV-22, release stored pressure at bleed port BP-4, verify zero energy at panel P3, and record operator confirmation in the maintenance log before work starts.</p>
+          <p class="ops-footnote"><strong>Trust signal:</strong> Answer is grounded in controlled documentation and references exact procedural steps.</p>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Prominent citations and document references</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Source-backed citation list for retrieval answer">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Source</th>
+                  <th>Type</th>
+                  <th>Section</th>
+                  <th>Relevance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SOP-17 Rev C</td>
+                  <td>SOP</td>
+                  <td>4.2 Lockout Sequence</td>
+                  <td><span class="status healthy">High</span></td>
+                </tr>
+                <tr>
+                  <td>Hydraulic Press Maintenance Guide</td>
+                  <td>Maintenance Guide</td>
+                  <td>Chapter 2 Safety Isolation</td>
+                  <td><span class="status healthy">High</span></td>
+                </tr>
+                <tr>
+                  <td>Safety Bulletin SB-09</td>
+                  <td>Work Instruction</td>
+                  <td>Appendix A Energy Release</td>
+                  <td><span class="status watch">Medium</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Screenshot: Knowledge Gap Alert</h3>
-        <p><strong>Problem:</strong> Missing documentation remains hidden during day-to-day troubleshooting.</p>
-        <p><strong>Approach:</strong> Explicit warning logic when retrieval confidence or document coverage is weak.</p>
-        <p><strong>Outcome:</strong> Governance-ready prioritization of documentation gaps instead of false certainty.</p>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Engineers need fast answers, but often cannot verify where those answers come from.</p></div>
+        <div><h4>Approach</h4><p>Provide generated responses with visible citations, document type, and section-level references.</p></div>
+        <div><h4>Outcome</h4><p>Users can find critical information quickly and confidently, with explicit traceability.</p></div>
       </div>
-      <div>
-        <h3>Screenshot: Usage Metrics</h3>
-        <p><strong>Problem:</strong> Knowledge systems are difficult to improve without operational usage signals.</p>
-        <p><strong>Approach:</strong> Lightweight telemetry on question volume, feedback, and top searched areas.</p>
-        <p><strong>Outcome:</strong> Continuous improvement aligned with operational demand.</p>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 2</p>
+          <h3>Knowledge Relationship Map</h3>
+        </div>
+        <p class="ops-answer">Executive question: How is organizational knowledge connected?</p>
+      </header>
+
+      <div class="ops-chart-card">
+        <h4>Connected engineering knowledge assets</h4>
+        <div class="ops-table-wrap" role="img" aria-label="Relationship map connecting SOPs, maintenance guides, technical manuals, design specifications, and work instructions">
+          <svg viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
+            <rect x="0" y="0" width="920" height="360" fill="#f8fbf9" rx="14"/>
+            <g stroke="#cfdad4" stroke-width="2">
+              <line x1="210" y1="90" x2="460" y2="180"/>
+              <line x1="210" y1="270" x2="460" y2="180"/>
+              <line x1="460" y1="180" x2="710" y2="90"/>
+              <line x1="460" y1="180" x2="710" y2="270"/>
+              <line x1="210" y1="90" x2="210" y2="270"/>
+              <line x1="710" y1="90" x2="710" y2="270"/>
+            </g>
+
+            <g>
+              <rect x="95" y="58" width="230" height="64" rx="12" fill="#e8f2ed" stroke="#bdd1c6"/>
+              <text x="210" y="86" text-anchor="middle" fill="#0f3d35" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">SOPs</text>
+              <text x="210" y="106" text-anchor="middle" fill="#355467" font-size="12" font-family="'IBM Plex Sans', sans-serif">Approved procedures</text>
+            </g>
+
+            <g>
+              <rect x="80" y="238" width="260" height="64" rx="12" fill="#eef6fb" stroke="#c7dcea"/>
+              <text x="210" y="266" text-anchor="middle" fill="#13405f" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Maintenance Guides</text>
+              <text x="210" y="286" text-anchor="middle" fill="#355467" font-size="12" font-family="'IBM Plex Sans', sans-serif">Asset service methods</text>
+            </g>
+
+            <g>
+              <rect x="360" y="148" width="200" height="64" rx="12" fill="#fff8e8" stroke="#ecd7a5"/>
+              <text x="460" y="176" text-anchor="middle" fill="#5d430d" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Work Instructions</text>
+              <text x="460" y="196" text-anchor="middle" fill="#5c4a27" font-size="12" font-family="'IBM Plex Sans', sans-serif">Task-level guidance</text>
+            </g>
+
+            <g>
+              <rect x="600" y="58" width="220" height="64" rx="12" fill="#f0eefc" stroke="#d5cfef"/>
+              <text x="710" y="86" text-anchor="middle" fill="#353069" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Technical Manuals</text>
+              <text x="710" y="106" text-anchor="middle" fill="#45557a" font-size="12" font-family="'IBM Plex Sans', sans-serif">OEM reference knowledge</text>
+            </g>
+
+            <g>
+              <rect x="590" y="238" width="240" height="64" rx="12" fill="#eaf4f0" stroke="#c6d9d1"/>
+              <text x="710" y="266" text-anchor="middle" fill="#16483c" font-size="20" font-family="'Rajdhani', 'IBM Plex Sans', sans-serif">Design Specifications</text>
+              <text x="710" y="286" text-anchor="middle" fill="#355467" font-size="12" font-family="'IBM Plex Sans', sans-serif">Engineering limits and tolerances</text>
+            </g>
+          </svg>
+        </div>
       </div>
-    </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Critical knowledge assets are often stored in separate systems and interpreted in isolation.</p></div>
+        <div><h4>Approach</h4><p>Map and connect procedures, manuals, specifications, and instructions through shared metadata and retrieval links.</p></div>
+        <div><h4>Outcome</h4><p>Teams can understand how knowledge is organized and connected across operational workflows.</p></div>
+      </div>
+    </article>
+
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Visual 3</p>
+          <h3>Evaluation and Governance Dashboard</h3>
+        </div>
+        <p class="ops-answer">Executive question: How do we know the system is reliable?</p>
+      </header>
+
+      <div class="ops-kpi-grid">
+        <div><span class="ops-label">Retrieval Accuracy</span><strong>92.4%</strong></div>
+        <div><span class="ops-label">Citation Coverage</span><strong>96.8%</strong></div>
+        <div><span class="ops-label">Evaluation Questions Completed</span><strong>240 / 250</strong></div>
+        <div><span class="ops-label">Response Quality</span><strong>4.5 / 5.0</strong></div>
+      </div>
+
+      <div class="ops-two-col">
+        <div class="ops-chart-card">
+          <h4>Governance metrics by week</h4>
+          <div class="ops-table-wrap" role="region" aria-label="Evaluation and governance metrics over four weeks">
+            <table class="ops-table">
+              <thead>
+                <tr>
+                  <th>Week</th>
+                  <th>Accuracy</th>
+                  <th>Citation Coverage</th>
+                  <th>Quality Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>W21</td>
+                  <td>88.1%</td>
+                  <td>93.0%</td>
+                  <td>4.2</td>
+                </tr>
+                <tr>
+                  <td>W22</td>
+                  <td>90.3%</td>
+                  <td>94.6%</td>
+                  <td>4.3</td>
+                </tr>
+                <tr>
+                  <td>W23</td>
+                  <td>91.8%</td>
+                  <td>95.7%</td>
+                  <td>4.4</td>
+                </tr>
+                <tr>
+                  <td>W24</td>
+                  <td>92.4%</td>
+                  <td>96.8%</td>
+                  <td>4.5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="ops-chart-card">
+          <h4>Governance controls</h4>
+          <p><strong>Evaluation protocol:</strong> Curated engineering question set validated by domain reviewers.</p>
+          <p><strong>Citation gate:</strong> Responses without sources are flagged for review before acceptance.</p>
+          <p><strong>Quality review:</strong> Low-scoring responses feed a weekly content improvement backlog.</p>
+          <p><strong>Coverage management:</strong> Missing source patterns are tracked as documentation gaps.</p>
+          <p class="ops-footnote"><strong>Message:</strong> Reliability is measured continuously, not assumed from one-time demos.</p>
+        </div>
+      </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Knowledge systems are risky when trust and quality are not measured explicitly.</p></div>
+        <div><h4>Approach</h4><p>Track retrieval performance, citation coverage, and evaluation outcomes with formal governance checks.</p></div>
+        <div><h4>Outcome</h4><p>Leaders can assess whether the system is trustworthy and improving over time.</p></div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -73,7 +263,7 @@ alternate_url: /projekte/engineering-knowledge-assistant/
 
 <section class="section">
   <div class="container">
-    <h2>Why not just use ChatGPT?</h2>
+    <h2>Why this is a knowledge system</h2>
     <div class="card-grid four">
       <div><h3>Controlled corpus</h3><p>Answers are grounded in approved engineering documents, not open-ended internet recall.</p></div>
       <div><h3>Traceability</h3><p>Every answer includes explicit citations with title, document type, and source reference.</p></div>
@@ -117,7 +307,7 @@ alternate_url: /projekte/engineering-knowledge-assistant/
       </div>
       <div>
         <h3>Industrial AI</h3>
-        <p>A practical GenAI use case tied to operational work: startup procedures, troubleshooting, quality investigations, and safety-critical instructions.</p>
+        <p>A practical knowledge retrieval use case tied to operational work: startup procedures, troubleshooting, quality investigations, and safety-critical instructions.</p>
       </div>
       <div>
         <h3>Platform thinking</h3>
@@ -143,7 +333,7 @@ alternate_url: /projekte/engineering-knowledge-assistant/
 <section class="section cta-section">
   <div class="container">
     <h2>Repository / Demo</h2>
-    <p>A hiring manager sees technical product management and GenAI restraint. An industrial client sees a governed approach to operational knowledge, not a generic chatbot bolted onto PDFs.</p>
+    <p>A hiring manager sees technical product management and disciplined knowledge system design. An industrial client sees a governed approach to operational knowledge, not a generic chatbot bolted onto PDFs.</p>
     <a class="btn btn-primary" href="/en/contact/">Discuss this architecture</a>
     <a class="btn btn-outline-light" href="https://github.com/cyranothebard/engineering-knowledge-assistant" target="_blank" rel="noopener">Open repository</a>
   </div>
