@@ -477,28 +477,31 @@ button:focus-visible{
   margin:1.25rem 0 1.5rem;
 }
 
-.executive-scan-grid div{
+.executive-scan-item{
   background:#fff;
   border:1px solid var(--line);
   border-radius:14px;
   padding:.9rem 1rem;
+  margin:0;
 }
 
-.executive-scan-grid strong{
+.executive-scan-label{
   display:block;
   font-size:.8rem;
   letter-spacing:.06em;
   text-transform:uppercase;
   color:var(--accent);
   margin-bottom:.2rem;
+  font-weight:700;
 }
 
-.executive-scan-grid span{
+.executive-scan-text{
   display:block;
   color:var(--ink);
   font-weight:600;
   font-size:.92rem;
   line-height:1.35;
+  margin:0;
 }
 
 .split-summary{
@@ -1092,6 +1095,15 @@ button:focus-visible{
   margin-bottom:0;
 }
 
+.project-summary-strip{
+  border-color:#bfd2c8;
+  background:#f7fbf9;
+}
+
+.project-summary-strip .ops-caption-grid{
+  margin-top:.75rem;
+}
+
 .related-content-card ul{
   list-style:none;
   padding:0;
@@ -1279,6 +1291,37 @@ button:focus-visible{
   margin:0;
   color:var(--muted);
   line-height:1.45;
+}
+
+.contact-primary-cta{
+  margin-top:1rem;
+  border:1px solid #c4d8f5;
+  background:#f5f9ff;
+  border-radius:14px;
+  padding:.95rem 1rem;
+}
+
+.contact-primary-label{
+  margin:0 0 .5rem;
+  color:#16529e;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+.contact-primary-note{
+  margin:.5rem 0 0;
+  font-size:.9rem;
+}
+
+.contact-link-card-primary{
+  border-color:#9fc2ef;
+  background:#f5f9ff;
+}
+
+.contact-link-card-primary h3{
+  color:#13488a;
 }
 
 .bg-light{

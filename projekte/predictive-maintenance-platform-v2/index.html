@@ -8,9 +8,25 @@ body_class: project-detail
 ---
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">BridgeOps Intelligence Layer</p>
+    <p class="eyebrow">BridgeOps Intelligence-Ebene</p>
     <h1>Predictive Maintenance Decision Intelligence</h1>
     <p class="lead">Erklärbare Wartungsempfehlungen für industrielle Operationen mit klarem Human-in-the-Loop-Fokus.</p>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card project-summary-strip">
+      <h2>Management-Überblick</h2>
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Risikoscores allein sagen Teams nicht, welche Maßnahme als Nächstes zählt.</p></div>
+        <div><h4>Ansatz</h4><p>Health-, Risk- und RUL-Modelle mit erklärbarer Recommendation-Logik kombinieren.</p></div>
+        <div><h4>Ergebnis</h4><p>Priorisierte Wartungsmaßnahmen mit Wirkungskontext und Governance-Reife.</p></div>
+      </div>
+      <div class="action-row mt-3">
+        <a class="btn btn-outline-primary" href="#visual-evidence">Direkt zur visuellen Evidenz</a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -37,10 +53,10 @@ body_class: project-detail
   <div class="container">
     <h2>Architektur</h2>
     <div class="process-grid four">
-      <div><span>01</span><h3>Data Inputs</h3><p>Asset-Signale, Betriebskontext und degradationsnahe Merkmale werden zusammengeführt und auf Datenqualität geprüft.</p></div>
-      <div><span>02</span><h3>Health & Risk Modeling</h3><p>Health States, Ausfallwahrscheinlichkeit und RUL werden mit nachvollziehbarer Logik berechnet.</p></div>
-      <div><span>03</span><h3>Decision Intelligence</h3><p>Empfehlungslogik priorisiert Aktionen wie Monitor, Inspect, Schedule Maintenance oder Immediate Review.</p></div>
-      <div><span>04</span><h3>Automation Preview</h3><p>Ein kontrollierter Preview zeigt, wie validierte Empfehlungen später in Workflow-Automatisierung übergehen können.</p></div>
+      <div><span>01</span><h3>Dateninputs</h3><p>Asset-Signale, Betriebskontext und degradationsnahe Merkmale werden zusammengeführt und auf Datenqualität geprüft.</p></div>
+      <div><span>02</span><h3>Zustands- und Risikomodellierung</h3><p>Health States, Ausfallwahrscheinlichkeit und RUL werden mit nachvollziehbarer Logik berechnet.</p></div>
+      <div><span>03</span><h3>Entscheidungsintelligenz</h3><p>Empfehlungslogik priorisiert Aktionen wie Monitor, Inspect, Schedule Maintenance oder Immediate Review.</p></div>
+      <div><span>04</span><h3>Automatisierungs-Vorschau</h3><p>Ein kontrollierter Preview zeigt, wie validierte Empfehlungen später in Workflow-Automatisierung übergehen können.</p></div>
     </div>
   </div>
 </section>
@@ -88,9 +104,9 @@ body_class: project-detail
   </div>
 </section>
 
-<section class="section decision-visuals">
+<section id="visual-evidence" class="section decision-visuals">
   <div class="container">
-    <h2>Decision-Intelligence-Visualisierungen</h2>
+    <h2>Visualisierungen der Entscheidungsintelligenz</h2>
     <p class="visual-intro">Diese Visuals fokussieren operative Entscheidungen: wo sofort gehandelt werden muss, was als Nächstes wahrscheinlich passiert und welche Intervention den größten Nutzen erzeugt.</p>
 
     <article class="ops-card">
@@ -103,15 +119,15 @@ body_class: project-detail
       </header>
       <div class="ops-summary-grid">
         <div>
-          <span class="ops-label">Healthy</span>
+          <span class="ops-label">Stabil</span>
           <strong>5 Assets</strong>
         </div>
         <div>
-          <span class="ops-label">Watch</span>
+          <span class="ops-label">Beobachten</span>
           <strong>4 Assets</strong>
         </div>
         <div>
-          <span class="ops-label">Critical</span>
+          <span class="ops-label">Kritisch</span>
           <strong>3 Assets</strong>
         </div>
       </div>
@@ -121,94 +137,94 @@ body_class: project-detail
             <tr>
               <th>Asset ID</th>
               <th>Health Score</th>
-              <th>Risk Level</th>
+              <th>Risikostufe</th>
               <th>Status</th>
-              <th>Last Inspection</th>
+              <th>Letzte Inspektion</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>CNC-104</td>
               <td>92</td>
-              <td>Low</td>
-              <td><span class="status healthy">Healthy</span></td>
+              <td>Niedrig</td>
+              <td><span class="status healthy">Stabil</span></td>
               <td>2026-06-05</td>
             </tr>
             <tr>
               <td>PRESS-218</td>
               <td>81</td>
-              <td>Moderate</td>
-              <td><span class="status watch">Watch</span></td>
+              <td>Mittel</td>
+              <td><span class="status watch">Beobachten</span></td>
               <td>2026-05-31</td>
             </tr>
             <tr>
               <td>PUMP-067</td>
               <td>68</td>
-              <td>Moderate</td>
-              <td><span class="status watch">Watch</span></td>
+              <td>Mittel</td>
+              <td><span class="status watch">Beobachten</span></td>
               <td>2026-05-27</td>
             </tr>
             <tr>
               <td>FURN-011</td>
               <td>84</td>
-              <td>Low</td>
-              <td><span class="status healthy">Healthy</span></td>
+              <td>Niedrig</td>
+              <td><span class="status healthy">Stabil</span></td>
               <td>2026-06-02</td>
             </tr>
             <tr class="attention">
               <td>COMP-332</td>
               <td>39</td>
-              <td>High</td>
-              <td><span class="status critical">Critical</span></td>
+              <td>Hoch</td>
+              <td><span class="status critical">Kritisch</span></td>
               <td>2026-05-20</td>
             </tr>
             <tr>
               <td>MIX-145</td>
               <td>76</td>
-              <td>Moderate</td>
-              <td><span class="status watch">Watch</span></td>
+              <td>Mittel</td>
+              <td><span class="status watch">Beobachten</span></td>
               <td>2026-05-30</td>
             </tr>
             <tr>
               <td>PACK-508</td>
               <td>88</td>
-              <td>Low</td>
-              <td><span class="status healthy">Healthy</span></td>
+              <td>Niedrig</td>
+              <td><span class="status healthy">Stabil</span></td>
               <td>2026-06-06</td>
             </tr>
             <tr>
               <td>CHILL-074</td>
               <td>80</td>
-              <td>Moderate</td>
-              <td><span class="status watch">Watch</span></td>
+              <td>Mittel</td>
+              <td><span class="status watch">Beobachten</span></td>
               <td>2026-06-01</td>
             </tr>
             <tr class="attention">
               <td>ROBOT-919</td>
               <td>33</td>
-              <td>High</td>
-              <td><span class="status critical">Critical</span></td>
+              <td>Hoch</td>
+              <td><span class="status critical">Kritisch</span></td>
               <td>2026-05-19</td>
             </tr>
             <tr>
               <td>BLOW-223</td>
               <td>91</td>
-              <td>Low</td>
-              <td><span class="status healthy">Healthy</span></td>
+              <td>Niedrig</td>
+              <td><span class="status healthy">Stabil</span></td>
               <td>2026-06-04</td>
             </tr>
             <tr class="attention">
               <td>CONV-440</td>
               <td>41</td>
-              <td>High</td>
-              <td><span class="status critical">Critical</span></td>
+              <td>Hoch</td>
+              <td><span class="status critical">Kritisch</span></td>
               <td>2026-05-22</td>
             </tr>
             <tr>
               <td>WELD-150</td>
               <td>86</td>
-              <td>Low</td>
-              <td><span class="status healthy">Healthy</span></td>
+              <td>Niedrig</td>
+              <td><span class="status healthy">Stabil</span></td>
               <td>2026-06-03</td>
             </tr>
           </tbody>

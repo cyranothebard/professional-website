@@ -8,7 +8,7 @@ body_class: project-detail
 ---
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Portfolio · Knowledge Layer</p>
+    <p class="eyebrow">Portfolio · Wissensebene</p>
     <h1>Engineering Knowledge Assistant</h1>
     <p class="lead">Fragmentierte Engineering-Dokumentation in gesteuerte operative Intelligenz übersetzen – mit mehrsprachiger Suche, Quellenangaben und sichtbaren Wissenslücken.</p>
   </div>
@@ -16,10 +16,26 @@ body_class: project-detail
 
 <section class="section project-intro-section">
   <div class="container narrow">
+    <article class="project-intro-card project-summary-strip">
+      <h2>Management-Überblick</h2>
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Kritisches Engineering-Wissen ist verteilt und schwer schnell zu verifizieren.</p></div>
+        <div><h4>Ansatz</h4><p>Mehrsprachiges Retrieval mit quellenbasierten, nachvollziehbaren Antworten.</p></div>
+        <div><h4>Ergebnis</h4><p>Schnellere Entscheidungen mit Governance-Sichtbarkeit und Wissenslücken-Transparenz.</p></div>
+      </div>
+      <div class="action-row mt-3">
+        <a class="btn btn-outline-primary" href="#visual-evidence">Direkt zur visuellen Evidenz</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
     <article class="project-intro-card">
-      <h2>Approach</h2>
+      <h2>Ansatz</h2>
       <p>
-        Dieses Projekt ist die BridgeOps-<strong>Knowledge Layer</strong> zwischen der Industrial IoT Data Platform und der Predictive Maintenance Decision Intelligence. Es zeigt, wie Fertigungsunternehmen von reiner Dokumentablage zu gesteuertem Wissenszugriff wechseln können, ohne einen allgemeinen Chatbot mit einer belastbaren Wissenslösung zu verwechseln.
+        Dieses Projekt ist die BridgeOps-<strong>Knowledge Layer</strong> zwischen der Industrial IoT Data Platform und der Predictive Maintenance Decision Intelligence. Es zeigt, wie Fertigungsunternehmen von reiner Dokumentablage zu gesteuertem Wissenszugriff wechseln können.
       </p>
       <p>
         Die Kernaussage ist einfach: <strong>Operatives Wissen wird erst dann wertvoll, wenn Engineers vertrauenswürdige und nachvollziehbare Antworten schnell genug für ihre reale Arbeit abrufen können.</strong>
@@ -31,34 +47,34 @@ body_class: project-detail
 <section class="section bg-light project-intro-section">
   <div class="container narrow">
     <article class="project-intro-card">
-      <h2>Demonstration Environment</h2>
+      <h2>Demonstrationsumgebung</h2>
       <p>Dieses Projekt ist eine Referenzimplementierung, um Knowledge Retrieval, Quellen-Nachvollziehbarkeit und Governance-Workflows für industrielle Engineering-Kontexte zu demonstrieren.</p>
-      <p>Die gezeigten Visuals und Beispiele basieren auf repräsentativer Engineering-Dokumentation, darunter Verfahren, technische Handbuecher und Arbeitsanweisungen, nicht auf proprietaeren Kundendaten.</p>
-      <p>Das Ziel ist zu zeigen, wie organisationales Wissen in ein durchsuchbares und vertrauenswuerdiges operatives Asset ueberfuehrt werden kann, ohne sensible Inhalte offenzulegen.</p>
+      <p>Die gezeigten Visuals und Beispiele basieren auf repräsentativer Engineering-Dokumentation, darunter Verfahren, technische Handbücher und Arbeitsanweisungen, nicht auf proprietären Kundendaten.</p>
+      <p>Das Ziel ist zu zeigen, wie organisationales Wissen in ein durchsuchbares und vertrauenswürdiges operatives Asset überführt werden kann, ohne sensible Inhalte offenzulegen.</p>
     </article>
   </div>
 </section>
 
-<section class="section decision-visuals">
+<section id="visual-evidence" class="section decision-visuals">
   <div class="container">
-    <h2>Visual Evidence: Engineering Knowledge System</h2>
-    <p class="visual-intro">Dieses Visual-Evidence-Modell beantwortet drei Fuehrungsfragen: <strong>Kann Wissen gefunden werden?</strong> <strong>Wie ist Wissen verbunden?</strong> <strong>Kann dem System vertraut werden?</strong></p>
+    <h2>Visuelle Evidenz: Engineering-Knowledge-System</h2>
+    <p class="visual-intro">Dieses Visual-Evidence-Modell beantwortet drei Führungsfragen: <strong>Kann Wissen gefunden werden?</strong> <strong>Wie ist Wissen verbunden?</strong> <strong>Kann dem System vertraut werden?</strong></p>
 
     <article class="ops-card">
       <header class="ops-card-header">
         <div>
           <p class="ops-kicker">Visual 1</p>
-          <h3>Knowledge Retrieval in Action</h3>
+          <h3>Knowledge Retrieval in der Anwendung</h3>
         </div>
-        <p class="ops-answer">Executive Question: Koennen Engineers die benoetigte Information finden?</p>
+        <p class="ops-answer">Leitfrage: Können Engineers die benötigte Information finden?</p>
       </header>
 
       <div class="ops-two-col">
         <div class="ops-chart-card">
-          <h4>User Question und Generated Answer</h4>
-          <p><strong>User question:</strong> Welche freigegebene Lockout-Sequenz gilt fuer die Hydraulikpresse vor Wartungsbeginn?</p>
-          <p><strong>Generated answer:</strong> Folge SOP-17 Rev C: elektrische Einspeisung isolieren, Hydraulikventil HV-22 schliessen, Restdruck ueber Entlastungsport BP-4 abbauen, Nullenergie am Panel P3 verifizieren und Operator-Bestaetigung im Wartungslog erfassen.</p>
-          <p class="ops-footnote"><strong>Trust signal:</strong> Die Antwort ist quellenbasiert und verweist auf konkrete Verfahrensschritte.</p>
+          <h4>User Question und generierte Antwort</h4>
+          <p><strong>User question:</strong> Welche freigegebene Lockout-Sequenz gilt für die Hydraulikpresse vor Wartungsbeginn?</p>
+          <p><strong>Generated answer:</strong> Folge SOP-17 Rev C: elektrische Einspeisung isolieren, Hydraulikventil HV-22 schließen, Restdruck über Entlastungsport BP-4 abbauen, Nullenergie am Panel P3 verifizieren und Operator-Bestätigung im Wartungslog erfassen.</p>
+          <p class="ops-footnote"><strong>Vertrauenssignal:</strong> Die Antwort ist quellenbasiert und verweist auf konkrete Verfahrensschritte.</p>
         </div>
 
         <div class="ops-chart-card">
@@ -100,8 +116,8 @@ body_class: project-detail
 
       <div class="ops-caption-grid">
         <div><h4>Problem</h4><p>Engineers benoetigen schnelle Antworten, koennen die Herkunft jedoch oft nicht pruefen.</p></div>
-        <div><h4>Approach</h4><p>Generierte Antworten mit sichtbaren Zitaten, Dokumenttyp und abschnittsgenauen Referenzen bereitstellen.</p></div>
-        <div><h4>Outcome</h4><p>Kritische Informationen werden schneller und mit hoher Nachvollziehbarkeit gefunden.</p></div>
+        <div><h4>Ansatz</h4><p>Generierte Antworten mit sichtbaren Zitaten, Dokumenttyp und abschnittsgenauen Referenzen bereitstellen.</p></div>
+        <div><h4>Ergebnis</h4><p>Kritische Informationen werden schneller und mit hoher Nachvollziehbarkeit gefunden.</p></div>
       </div>
     </article>
 
@@ -111,12 +127,12 @@ body_class: project-detail
           <p class="ops-kicker">Visual 2</p>
           <h3>Knowledge Relationship Map</h3>
         </div>
-        <p class="ops-answer">Executive Question: Wie ist organisationales Wissen verbunden?</p>
+        <p class="ops-answer">Leitfrage: Wie ist organisationales Wissen verbunden?</p>
       </header>
 
       <div class="ops-chart-card">
         <h4>Vernetzte Engineering-Knowledge-Assets</h4>
-        <div class="ops-table-wrap" role="img" aria-label="Relationship Map fuer SOPs, Wartungsleitfaeden, technische Handbuecher, Designspezifikationen und Arbeitsanweisungen">
+          <div class="ops-table-wrap" role="img" aria-label="Relationship Map für SOPs, Wartungsleitfäden, technische Handbücher, Designspezifikationen und Arbeitsanweisungen">
           <svg viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg" class="ops-trend-svg">
             <rect x="0" y="0" width="920" height="360" fill="#f8fbf9" rx="14"/>
             <g stroke="#cfdad4" stroke-width="2">
@@ -162,9 +178,9 @@ body_class: project-detail
       </div>
 
       <div class="ops-caption-grid">
-        <div><h4>Problem</h4><p>Kritische Wissensquellen sind ueber Systeme verteilt und werden isoliert genutzt.</p></div>
-        <div><h4>Approach</h4><p>Verfahren, Handbuecher, Spezifikationen und Anweisungen ueber Metadaten und Retrieval-Links verbinden.</p></div>
-        <div><h4>Outcome</h4><p>Teams sehen, wie Wissen organisiert ist und entlang operativer Workflows zusammenhaengt.</p></div>
+        <div><h4>Problem</h4><p>Kritische Wissensquellen sind über Systeme verteilt und werden isoliert genutzt.</p></div>
+        <div><h4>Ansatz</h4><p>Verfahren, Handbücher, Spezifikationen und Anweisungen über Metadaten und Retrieval-Links verbinden.</p></div>
+        <div><h4>Ergebnis</h4><p>Teams sehen, wie Wissen organisiert ist und entlang operativer Workflows zusammenhängt.</p></div>
       </div>
     </article>
 
@@ -172,9 +188,9 @@ body_class: project-detail
       <header class="ops-card-header">
         <div>
           <p class="ops-kicker">Visual 3</p>
-          <h3>Evaluation and Governance Dashboard</h3>
+          <h3>Evaluations- und Governance-Dashboard</h3>
         </div>
-        <p class="ops-answer">Executive Question: Woher wissen wir, dass das System verlaesslich ist?</p>
+        <p class="ops-answer">Leitfrage: Woher wissen wir, dass das System verlässlich ist?</p>
       </header>
 
       <div class="ops-kpi-grid">
@@ -187,7 +203,7 @@ body_class: project-detail
       <div class="ops-two-col">
         <div class="ops-chart-card">
           <h4>Governance-Metriken pro Woche</h4>
-          <div class="ops-table-wrap" role="region" aria-label="Evaluations- und Governance-Metriken ueber vier Wochen">
+          <div class="ops-table-wrap" role="region" aria-label="Evaluations- und Governance-Metriken über vier Wochen">
             <table class="ops-table">
               <thead>
                 <tr>
@@ -230,17 +246,17 @@ body_class: project-detail
         <div class="ops-chart-card">
           <h4>Governance-Kontrollen</h4>
           <p><strong>Evaluationsprotokoll:</strong> Kuratierter Engineering-Fragenkatalog mit Domain-Review.</p>
-          <p><strong>Citation Gate:</strong> Antworten ohne Quellen werden zur Pruefung markiert.</p>
-          <p><strong>Qualitaetsreview:</strong> Schwache Antworten fliessen in ein woechentliches Verbesserungs-Backlog.</p>
-          <p><strong>Coverage-Management:</strong> Fehlende Quellenmuster werden als Dokumentationsluecken erfasst.</p>
-          <p class="ops-footnote"><strong>Message:</strong> Verlaesslichkeit wird kontinuierlich gemessen, nicht einmalig behauptet.</p>
+          <p><strong>Quellen-Gate:</strong> Antworten ohne Quellen werden zur Prüfung markiert.</p>
+          <p><strong>Qualitätsreview:</strong> Schwache Antworten fließen in ein wöchentliches Verbesserungs-Backlog.</p>
+          <p><strong>Abdeckungsmanagement:</strong> Fehlende Quellenmuster werden als Dokumentationslücken erfasst.</p>
+          <p class="ops-footnote"><strong>Botschaft:</strong> Verlässlichkeit wird kontinuierlich gemessen, nicht einmalig behauptet.</p>
         </div>
       </div>
 
       <div class="ops-caption-grid">
-        <div><h4>Problem</h4><p>Knowledge-Systeme sind riskant, wenn Vertrauen und Qualitaet nicht explizit gemessen werden.</p></div>
-        <div><h4>Approach</h4><p>Retrieval-Leistung, Citation-Abdeckung und Evaluationsergebnisse mit formalen Governance-Checks verfolgen.</p></div>
-        <div><h4>Outcome</h4><p>Fuehrungsteams koennen die Vertrauenswuerdigkeit und Verbesserung ueber Zeit bewerten.</p></div>
+        <div><h4>Problem</h4><p>Knowledge-Systeme sind riskant, wenn Vertrauen und Qualität nicht explizit gemessen werden.</p></div>
+        <div><h4>Ansatz</h4><p>Retrieval-Leistung, Citation-Abdeckung und Evaluationsergebnisse mit formalen Governance-Checks verfolgen.</p></div>
+        <div><h4>Ergebnis</h4><p>Führungsteams können die Vertrauenswürdigkeit und Verbesserung über Zeit bewerten.</p></div>
       </div>
     </article>
   </div>
@@ -280,7 +296,7 @@ body_class: project-detail
 
 <section class="section bg-light">
   <div class="container">
-    <h2>Architecture</h2>
+    <h2>Architektur</h2>
     <div class="process-grid four">
       <div><span>01</span><h3>Dokumenten-Ingestion</h3><p>PDF-, TXT- und Markdown-Dokumente werden mit validierten Metadaten zu Equipment, Prozess, Standort und Sprache geladen.</p></div>
       <div><span>02</span><h3>Chunking und Embeddings</h3><p>Dokumente werden segmentiert, mit Metadaten angereichert und in einen Chroma-Vector-Store eingebettet.</p></div>
@@ -292,27 +308,27 @@ body_class: project-detail
 
 <section class="section">
   <div class="container">
-    <h2>Technologies</h2>
+    <h2>Technologien</h2>
     <div class="card-grid four">
       <div><h3>Frontend</h3><p>Streamlit-Oberfläche für konversationelle Suche, Quellenprüfung und Nutzerfeedback.</p></div>
       <div><h3>Retrieval Layer</h3><p>LangChain-Orchestrierung mit ChromaDB-Vektor-Retrieval und zweisprachiger Query-Erweiterung.</p></div>
       <div><h3>Validierung</h3><p>Ein Pydantic-Metadatenschema stellt sicher, dass jedes Dokument nachvollziehbar und ohne Codeänderung austauschbar bleibt.</p></div>
-      <div><h3>Metrics</h3><p>Leichtgewichtige Nutzungsmetriken erfassen Gesamtfragen, hilfreiches Feedback und meistgesuchte Anlagen.</p></div>
+      <div><h3>Metriken</h3><p>Leichtgewichtige Nutzungsmetriken erfassen Gesamtfragen, hilfreiches Feedback und meistgesuchte Anlagen.</p></div>
     </div>
   </div>
 </section>
 
 <section class="section bg-light">
   <div class="container">
-    <h2>Results / Impact</h2>
+    <h2>Ergebnisse und Wirkung</h2>
     <div class="card-grid three">
       <div>
         <h3>Produktmanagement</h3>
         <p>Klare Abgrenzung rund um Erklärbarkeit, Governance, mehrsprachige Suche und eine fokussierte User-Story für Manufacturing Engineers.</p>
       </div>
       <div>
-        <h3>Industrial AI</h3>
-        <p>Ein pragmatischer Knowledge-Retrieval-Anwendungsfall mit direktem Bezug zur operativen Arbeit: Startup-Verfahren, Troubleshooting, Qualitaetsanalysen und sicherheitskritische Anweisungen.</p>
+        <h3>Industrielle KI</h3>
+        <p>Ein pragmatischer Knowledge-Retrieval-Anwendungsfall mit direktem Bezug zur operativen Arbeit: Startup-Verfahren, Troubleshooting, Qualitätsanalysen und sicherheitskritische Anweisungen.</p>
       </div>
       <div>
         <h3>Plattform-Denken</h3>
@@ -324,21 +340,23 @@ body_class: project-detail
 
 <section class="section">
   <div class="container">
-    <h2>Verwandte BridgeOps-Inhalte</h2>
-    <p>Dieses Projekt passt in eine breitere Entwicklung von Operations-Daten hin zu Decision Intelligence:</p>
-    <ul style="list-style: none; padding: 0;">
-      <li style="margin-bottom: 12px;"><a href="/projekte/industrial-iot-datenplattform/">Industrial IoT Data Platform</a> – das Datenfundament unter zukünftigen Knowledge- und AI-Layern</li>
-      <li style="margin-bottom: 12px;"><a href="/insights/operations-daten-und-ki-verbinden/">Operations, Daten und KI verbinden</a> – warum Unternehmen zwischen Rohdaten und nutzbaren Entscheidungen stecken bleiben</li>
-      <li style="margin-bottom: 12px;"><a href="/insights/warum-industrielle-ki-projekte-scheitern/">Warum Industrial-AI-Projekte scheitern</a> – die wiederkehrenden Muster, die dieses Projekt adressiert</li>
-      <li><a href="/projekte/predictive-maintenance-platform-v2/">Predictive Maintenance Decision Intelligence</a> – die nächste Intelligence Layer, die von stärkerem organisationalem Gedächtnis profitiert</li>
-    </ul>
+    <article class="related-content-card">
+      <h2>Verwandte BridgeOps-Inhalte</h2>
+      <p>Dieses Projekt passt in eine breitere Entwicklung von Operations-Daten hin zu Decision Intelligence:</p>
+      <ul>
+        <li><a href="/projekte/industrial-iot-datenplattform/">Industrial IoT Data Platform</a> – das Datenfundament unter zukünftigen Knowledge- und KI-Layern</li>
+        <li><a href="/insights/operations-daten-und-ki-verbinden/">Operations, Daten und KI verbinden</a> – warum Unternehmen zwischen Rohdaten und nutzbaren Entscheidungen stecken bleiben</li>
+        <li><a href="/insights/warum-industrielle-ki-projekte-scheitern/">Warum Industrial-AI-Projekte scheitern</a> – die wiederkehrenden Muster, die dieses Projekt adressiert</li>
+        <li><a href="/projekte/predictive-maintenance-platform-v2/">Predictive Maintenance Decision Intelligence</a> – die nächste Intelligence Layer, die von stärkerem organisationalem Gedächtnis profitiert</li>
+      </ul>
+    </article>
   </div>
 </section>
 
 <section class="section cta-section">
   <div class="container">
-    <h2>Repository / Demo</h2>
-    <p>Ein Hiring Manager sieht technisches Produktmanagement und diszipliniertes Knowledge-System-Design. Ein Industriekunde sieht einen gesteuerten Ansatz fuer operatives Wissen statt eines generischen Chatbots auf PDF-Basis.</p>
+    <h2>Repository und Demo</h2>
+    <p>Ein Hiring Manager sieht technisches Produktmanagement und diszipliniertes Knowledge-System-Design. Ein Industriekunde sieht einen gesteuerten Ansatz für operatives Wissen statt eines generischen Chatbots auf PDF-Basis.</p>
     <a class="btn btn-primary" href="/kontakt/">Über diese Architektur sprechen</a>
     <a class="btn btn-outline-light" href="https://github.com/cyranothebard/engineering-knowledge-assistant" target="_blank" rel="noopener">Repository öffnen</a>
   </div>
