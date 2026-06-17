@@ -1059,7 +1059,12 @@ button:focus-visible{
 }
 
 .project-detail .page-hero{
+  max-width:none;
   padding:4rem 0 3rem;
+}
+
+.project-detail .page-hero .container{
+  text-align:center;
 }
 
 .project-detail .project-intro-section{
@@ -1068,6 +1073,28 @@ button:focus-visible{
 
 .project-detail .project-intro-section + .project-intro-section{
   padding-top:.45rem;
+}
+
+@media (min-width:992px){
+  .project-detail .page-hero .container{
+    max-width:920px;
+  }
+
+  .project-detail .project-intro-section .container.narrow{
+    max-width:960px;
+  }
+}
+
+@media (min-width:1200px){
+  .project-detail .project-intro-section .container.narrow{
+    max-width:1140px;
+  }
+}
+
+@media (min-width:1400px){
+  .project-detail .project-intro-section .container.narrow{
+    max-width:1320px;
+  }
 }
 
 .project-intro-card,
