@@ -1,203 +1,171 @@
 ---
 layout: english
-title: "Heart Failure Readmission & Resource Optimization"
+title: "Risk-Based Clinical Decision Support | BridgeOps AI"
+description: "Case study: heart failure readmission risk stratification for intervention prioritization and care operations planning."
 lang: en
+alternate_url: /projekte/heart-failure-readmission/
+body_class: project-detail
 ---
-<div class="row">
-  <div class="col-lg-8">
-    <h1 class="mb-3">Heart Failure Readmission & Resource Optimization</h1>
-    <p class="lead">Transforming healthcare resource optimization through clinical ML.</p>
-
-    <div class="mb-4">
-      <h5>My Role &amp; Impact</h5>
-      <p>I designed and implemented a comprehensive ML solution that changes how facilities manage heart failure patients and allocate nursing resources. By predicting 30‑day readmission risk and modeling staffing requirements, the system <strong>reduces readmissions, optimizes resource allocation, and helps avoid Medicare penalties</strong> in a condition costing the US over $30B annually.</p>
-      <h6 class="mt-2">Key Leadership Decisions</h6>
-      <ul>
-        <li>Architected dual‑prediction system linking clinical risk to operational staffing</li>
-        <li>Built memory‑efficient data pipeline handling MIMIC‑IV at scale</li>
-        <li>Established comprehensive evaluation across multiple ML approaches</li>
-        <li>Integrated healthcare economics quantifying ROI for interventions</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>The Healthcare Challenge I Addressed</h5>
-      <p>Heart failure affects 6.2M US adults, with <strong>25% 30‑day readmission</strong> and 1M+ annual hospitalizations. Hospitals face poorer outcomes and financial pressure from penalties.</p>
-      <p><strong>Strategic Problem</strong>: Readmission prediction and resource allocation are often separate. Risk scores rarely translate into staffing decisions, leading to reactive management.</p>
-      <p><strong>Market Need</strong>: Connect clinical prediction to operational optimization for proactive interventions backed by quantified resources.</p>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>My Technical Approach &amp; Architecture Decisions</h5>
-      <h6 class="mt-2">Decision 1: Dual‑Prediction Architecture</h6>
-      <ul>
-        <li><strong>Clinical Prediction</strong>: Models identifying 30‑day readmission risk</li>
-        <li><strong>Resource Forecasting</strong>: Regression for nursing hour requirements by care level</li>
-        <li><strong>Integration Layer</strong>: Connects risk scores to staffing recommendations</li>
-      </ul>
-      <p><strong>Why</strong>: Administrators need actionable staffing plans, not just risk scores.</p>
-      <h6 class="mt-2">Decision 2: Real‑World Clinical Data Foundation</h6>
-      <ul>
-        <li>Comprehensive variables: ICD, vitals, labs, meds, procedures</li>
-        <li>Operational data: care units, length of stay, staffing patterns</li>
-        <li>De‑identified, HIPAA‑compliant structure for scalable deployment</li>
-      </ul>
-      <p><strong>Implementation</strong>: Memory‑efficient chunking to process MIMIC‑IV quickly and reliably.</p>
-      <h6 class="mt-2">Decision 3: Healthcare Economics Integration</h6>
-      <ul>
-        <li>Cost‑benefit analysis of prevented readmissions</li>
-        <li>ROI for intervention programs</li>
-        <li>Resource optimization linking predictions to nurse ratios</li>
-        <li>Penalty avoidance addressing regulatory concerns</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Key Technical Innovations I Implemented</h5>
-      <h6 class="mt-2">Comprehensive Clinical Feature Engineering</h6>
-      <ul>
-        <li>Comorbidity via ICD‑10, temporal vitals, lab normalization</li>
-        <li>Medication regimen analysis; literature‑guided with data‑driven discovery</li>
-      </ul>
-      <h6 class="mt-2">Multi‑Model Evaluation Framework</h6>
-      <ul>
-        <li>Logistic Regression, Random Forest, XGBoost</li>
-        <li>Temporal cross‑validation; precision/recall balance; interpretability</li>
-      </ul>
-      <h6 class="mt-2">Resource Utilization Prediction</h6>
-      <ul>
-        <li>Care level classification and nursing hours estimation</li>
-        <li>Staffing optimization and cost quantification</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>System Design &amp; Architecture Impact</h5>
-      <h6 class="mt-2">Clinical Prediction Framework</h6>
-      <ul>
-        <li>Model architecture comparison optimized for deployment</li>
-        <li>Risk stratification enabling targeted interventions</li>
-        <li>Validation aligned with clinical literature and data‑driven insights</li>
-      </ul>
-      <h6 class="mt-2">Healthcare Economics Framework</h6>
-      <ul>
-        <li>Proactive nursing allocation from predicted acuity and risk</li>
-        <li>Cost analysis and ROI for program decisions</li>
-      </ul>
-      <h6 class="mt-2">Production Deployment Architecture</h6>
-      <ul>
-        <li>Memory‑efficient pipeline for production‑scale clinical databases</li>
-        <li>HIPAA/GDPR‑supportive design; EHR integration readiness</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Healthcare Domain Expertise &amp; Stakeholder Management</h5>
-      <h6 class="mt-2">Clinical Collaboration</h6>
-      <ul>
-        <li>Interpretable predictions supporting clinical decision‑making</li>
-        <li>Administrator‑ready ROI and resource recommendations</li>
-        <li>IT‑compatible architecture</li>
-      </ul>
-      <h6 class="mt-2">Regulatory &amp; Ethics</h6>
-      <ul>
-        <li>Data privacy throughout pipeline</li>
-        <li>Patient‑safety emphasis; bias mitigation</li>
-        <li>FDA AI/ML guidance aware</li>
-      </ul>
-      <h6 class="mt-2">Healthcare Economics Understanding</h6>
-      <ul>
-        <li>CMS penalty avoidance alignment</li>
-        <li>Nursing cost models and intervention budgeting</li>
-        <li>Value‑based care support</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Strategic Business Implications</h5>
-      <h6 class="mt-2">Market Positioning</h6>
-      <ul>
-        <li>Integrated clinical‑operational approach vs. predictive‑only solutions</li>
-        <li>Scalable across health systems; built‑in compliance considerations</li>
-      </ul>
-      <h6 class="mt-2">Technology Transfer</h6>
-      <ul>
-        <li>Applicability to German/Swiss systems with regulatory adaptation</li>
-        <li>Pharma and device integration opportunities</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Professional Development &amp; Leadership Growth</h5>
-      <h6 class="mt-2">Domain Expertise Developed</h6>
-      <ul>
-        <li>Clinical data structures, workflows, and regulations</li>
-        <li>Healthcare economics and operations</li>
-        <li>Cross‑functional translation from tech to clinical/admin value</li>
-      </ul>
-      <h6 class="mt-2">Technical Leadership in Regulated Industries</h6>
-      <ul>
-        <li>Compliance‑first ML design</li>
-        <li>Stakeholder and risk management</li>
-      </ul>
-      <h6 class="mt-2">Business Impact Quantification</h6>
-      <ul>
-        <li>Healthcare ROI analysis; resource optimization</li>
-        <li>Adoption pattern and deployment challenge assessment</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Key Lessons &amp; Professional Insights</h5>
-      <ul>
-        <li>Production‑ready choices over research‑oriented optimization improved outcomes</li>
-        <li>Clear interfaces enabled distributed development and reduced integration complexity</li>
-        <li>Realistic targets built credibility with clinical stakeholders</li>
-        <li>Economic validation is essential for adoption</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>View Detailed Analysis</h5>
-      <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-sm btn-primary" href="technical.html">Technical Deep‑Dive</a>
-        <a class="btn btn-sm btn-outline-primary" href="management.html">Management Perspective</a>
-        <a class="btn btn-sm btn-outline-primary" href="product.html">Product Strategy</a>
-      </div>
-      <div class="mt-3">
-        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/heart_failure_readmission" target="_blank" rel="noopener">Repository</a>
-      </div>
-    </div>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Supporting Project</p>
+    <h1>Risk-Based Clinical Decision Support</h1>
+    <p class="lead">Case Study: Heart Failure Readmission Risk Stratification.</p>
   </div>
+</section>
 
-  <div class="col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Quick Links</h5>
-        <div class="d-grid gap-2">
-          <a href="/projekte/heart-failure-readmission/" class="btn btn-outline-secondary">DE Overview</a>
-          <a href="https://github.com/cyranothebard/heart_failure_readmission" class="btn btn-outline-primary">Repository</a>
-          <a href="https://docs.google.com/presentation/d/1_dl7fGjbTNhiWKFbtGORN2V61KJQjh87kfE1NttkUAw/edit?slide=id.gcb9a0b074_1_0#slide=id.gcb9a0b074_1_0" class="btn btn-outline-primary">Slide Deck</a>
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Project Overview</h2>
+      <p>This supporting case study demonstrates how predictive analytics can support intervention prioritization after discharge for heart failure patients while keeping clinical judgment central.</p>
+      <p>The project reframes model output as an operational decision-support input for care teams managing limited resources.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Problem</h2>
+      <p>Healthcare organizations must identify which patients may require additional intervention following discharge. Without effective risk stratification, limited clinical resources may be allocated inefficiently and preventable readmissions may increase.</p>
+
+      <h2>Approach</h2>
+      <p>The solution builds a predictive workflow that estimates readmission risk and supports intervention prioritization for care management teams.</p>
+      <p>The objective is to augment clinical decision-making, not replace clinical judgment.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section decision-visuals">
+  <div class="container">
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Supporting Visual</p>
+          <h3>From Patient Data to Care Prioritization</h3>
+        </div>
+        <p class="ops-answer">Executive question: How can organizations prioritize limited intervention resources?</p>
+      </header>
+
+      <p class="ops-subtitle">This workflow shows how predictive insights are translated into operational care actions for teams managing limited follow-up capacity.</p>
+
+      <div class="ops-flow" role="img" aria-label="Workflow from patient information to risk categories and care management actions">
+        <div class="ops-flow-step bronze">
+          <h4>Patient Information</h4>
+          <p>Demographics, clinical history, and discharge information are assembled for structured assessment.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step silver">
+          <h4>Risk Assessment Model</h4>
+          <p>Predictive analytics estimates post-discharge readmission risk under defined validation controls.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step gold">
+          <h4>Risk Categories</h4>
+          <p>Low risk, moderate risk, and high risk cohorts provide a practical prioritization frame.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step visibility">
+          <h4>Care Management Actions</h4>
+          <p>Routine follow-up, targeted outreach, and intervention prioritization feed clinical decision support workflows.</p>
         </div>
       </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Healthcare organizations must determine which patients are most likely to benefit from follow-up intervention after discharge.</p></div>
+        <div><h4>Approach</h4><p>Use predictive analytics to estimate readmission risk and support prioritization decisions.</p></div>
+        <div><h4>Outcome</h4><p>Help care teams allocate attention and resources where they may have the greatest impact.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Technical Architecture</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Patient Data Preparation</h3><p>Cohorting, data quality checks, and structured clinical data assembly for analysis readiness.</p></div>
+      <div><span>02</span><h3>Feature Engineering</h3><p>Clinical, temporal, and operational features are prepared for risk modeling workflows.</p></div>
+      <div><span>03</span><h3>Model Development</h3><p>Multiple model families are evaluated for balanced performance and interpretability.</p></div>
+      <div><span>04</span><h3>Evaluation Workflows</h3><p>Validation and calibration checks establish reliability before use in planning workflows.</p></div>
+    </div>
+    <div class="card-grid one mt-4">
+      <div><h3>Risk Scoring Outputs</h3><p>Risk scores are treated as one component of a broader decision-support system that includes staffing, care pathways, and intervention coordination.</p></div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Operational Considerations</h2>
+      <ul>
+        <li>Workflow integration with discharge planning and care management is required for real impact.</li>
+        <li>Trust and explainability are essential for clinician adoption.</li>
+        <li>Human-in-the-loop review keeps interventions aligned with clinical context.</li>
+        <li>Intervention prioritization supports limited nursing and follow-up capacity.</li>
+        <li>Care management workflows must connect risk insights to concrete actions and ownership.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Organizational Impact</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Resource prioritization</h3>
+        <p>Supports allocation of limited care resources toward patients with higher intervention need.</p>
+      </div>
+      <div>
+        <h3>Intervention planning and coordination</h3>
+        <p>Improves planning discipline across care teams by connecting risk signals to operational actions.</p>
+      </div>
+      <div>
+        <h3>Operational efficiency</h3>
+        <p>Provides structured support for follow-up planning, care coordination, and readmission risk governance.</p>
+      </div>
+    </div>
+    <p class="small text-muted mt-3">Model metrics support implementation confidence, but operational decision quality remains the primary outcome.</p>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Why It Matters</h2>
+      <p>Although the case study is healthcare-specific, the core challenge is cross-industry: determining where limited resources can create the greatest operational impact.</p>
+      <p>The same pattern applies to maintenance planning, quality management, operational risk management, customer retention, and broader resource allocation decisions.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Demonstration Environment</h2>
+      <p>This project uses representative healthcare data structures to demonstrate predictive decision-support concepts and workflow design.</p>
+      <p>No patient information is represented. The focus is on risk stratification, intervention prioritization, and operational integration patterns.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>Repository</h2>
+    <p><a class="btn btn-outline-primary" href="https://github.com/cyranothebard/heart_failure_readmission" target="_blank" rel="noopener">View repository</a></p>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Related Projects</h2>
+    <div class="card-grid three">
+      <div><h3>Energy Recommendation System</h3><p>Decision support under utility demand and weather uncertainty.</p><a class="btn btn-outline-primary" href="/projects/energy-recommendation/">View case study</a></div>
+      <div><h3>Clinical Operations Data Platform</h3><p>Regulated data foundations for care operations and governance.</p><a class="btn btn-outline-primary" href="/projects/clinical-operations-data-platform/">View case study</a></div>
+      <div><h3>Predictive Maintenance Decision Intelligence</h3><p>Risk prioritization and intervention planning in industrial operations.</p><a class="btn btn-outline-primary" href="/projects/predictive-maintenance-platform-v2/">View case study</a></div>
+    </div>
+  </div>
+</section>

@@ -1,231 +1,170 @@
 ---
 layout: english
-title: "Energy Recommendation System - Brandon Lewis Portfolio"
+title: "Energy Recommendation System | BridgeOps AI"
+description: "Decision support for utility operations and customer energy management under competing constraints."
 lang: en
+alternate_url: /projekte/energie-empfehlungssystem/
+body_class: project-detail
 ---
-<div class="row">
-  <div class="col-lg-8">
-    <h1 class="mb-4">Energy Recommendation System</h1>
-    <p class="lead">Leading critical infrastructure innovation through production‑ready ML.</p>
-
-    <figure class="mb-4 text-center">
-      <img src="https://cyranothebard.github.io/assets/img/energy-recommendation/energy-recommender-architecture.png?v=2" class="img-fluid d-block mx-auto" alt="Solution architecture diagram" />
-      <figcaption class="mt-2 small text-muted">Solution architecture diagram</figcaption>
-    </figure>
-
-    <div class="mb-4">
-      <h5>My Role &amp; Impact</h5>
-      <p>I led the design and implementation of an intelligent energy recommendation system that prevents grid blackouts by coordinating energy usage across thousands of commercial buildings. As technical lead, I architected a production‑ready solution that <strong>achieves 5.4% grid demand reduction, representing $2–5M annual value</strong> for metropolitan utilities facing extreme weather challenges.</p>
-      <h6 class="mt-3">Key Leadership Decisions</h6>
-      <ul>
-        <li>Designed three‑stage ML pipeline balancing accuracy with operational constraints</li>
-        <li>Chose multi‑output LSTM architecture enabling cohort‑specific forecasting at scale</li>
-        <li>Established realistic compliance modeling (36.3% rate) based on industry research</li>
-        <li>Coordinated cross‑functional team development with clear interfaces and parallel workflows</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>The Business Challenge I Addressed</h5>
-      <p>Power grids across the US face increasing instability as demand patterns become unpredictable during extreme weather events. When thousands of buildings simultaneously spike energy consumption during heat waves or cold snaps, the result can be catastrophic grid failures and costly blackouts.</p>
-      <p><strong>The Strategic Opportunity</strong>: Demand response programs can reduce 6+ megawatts during peak periods—enough to power 1,500 homes—but existing solutions rely on generic, uncoordinated recommendations. I identified the core technical gap: <strong>no system could learn from building‑specific behavior patterns and optimize recommendations at the portfolio level.</strong></p>
-      <p><strong>Market Context</strong>: The demand response market is expanding at 14.3% CAGR toward $3.6B by 2034, driven by utility needs for real‑time grid management and automated demand coordination.</p>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>My Technical Approach &amp; Architecture Decisions</h5>
-      <h6 class="mt-2">Decision 1: Multi‑Stage Pipeline Architecture</h6>
-      <p>Rather than attempting end‑to‑end deep learning, I chose a modular three‑stage approach:</p>
-      <ul>
-        <li><strong>Stage 1: Multi‑Cohort Forecasting</strong> – LSTM neural network predicting 24‑hour demand for 15 building types</li>
-        <li><strong>Stage 2: Compliance Prediction</strong> – Realistic modeling of which buildings will actually follow recommendations</li>
-        <li><strong>Stage 3: Portfolio Optimization</strong> – Coordinated selection maximizing grid impact across building portfolio</li>
-      </ul>
-      <p><strong>Why This Architecture</strong>: Enables parallel development, allows individual stage optimization, and provides interpretable decision points for utility operators.</p>
-      <h6 class="mt-2">Decision 2: Production‑First Performance Requirements</h6>
-      <ul>
-        <li><strong>&lt;30 seconds</strong> end‑to‑end processing for 8,000+ buildings</li>
-        <li><strong>&lt;50MB</strong> memory usage for cost‑effective cloud deployment</li>
-        <li><strong>Real‑time inference</strong> capability for operational grid management</li>
-      </ul>
-      <p><strong>Implementation Strategy</strong>: PyTorch‑based LSTM with distributed computing architecture, avoiding complex ensemble methods that would compromise latency requirements.</p>
-      <h6 class="mt-2">Decision 3: Realistic vs. Theoretical Optimization</h6>
-      <ul>
-        <li>Modeled 36.3% average compliance rate based on industry research</li>
-        <li>Designed for 5.4% grid reduction (within 2–7% commercial demand response benchmarks)</li>
-        <li>Created multiple scenario planning (conservative 30%, emergency 70% participation)</li>
-      </ul>
-      <p><strong>Strategic Rationale</strong>: Utility operators need reliable, predictable results for critical infrastructure decisions rather than optimistic projections.</p>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Key Technical Innovations I Implemented</h5>
-      <h6 class="mt-2">Multi‑Output LSTM Architecture</h6>
-      <ul>
-        <li><strong>15 building cohort‑specific prediction heads</strong> covering &gt;94% of commercial building stock</li>
-        <li><strong>48‑hour weather lookback window</strong> capturing thermal lag effects</li>
-        <li><strong>Temporal validation splits</strong> preventing data leakage</li>
-      </ul>
-      <p><strong>Performance Achievement</strong>: 12.4% MAPE under normal conditions, 23–28% MAPE during extreme weather—within production‑viable range.</p>
-      <h6 class="mt-2">Portfolio Coordination Algorithm</h6>
-      <ul>
-        <li><strong>Constraint‑based optimization</strong> respecting building limitations</li>
-        <li><strong>Grid strain detection</strong> identifying critical intervention periods</li>
-        <li><strong>Coordinated response planning</strong> across diverse building types and sizes</li>
-      </ul>
-      <p><strong>Business Impact</strong>: Achieved 5.4% aggregate reduction through coordinated recommendations vs. 2–3% typical for uncoordinated approaches.</p>
-      <h6 class="mt-2">Production‑Ready Data Pipeline</h6>
-      <ul>
-        <li><strong>625 building characteristics</strong> with systematic missing data handling</li>
-        <li><strong>NREL Commercial Building Stock Data</strong> (8,111 buildings, 13 types, 34 HVAC configurations)</li>
-        <li><strong>Synthetic weather integration</strong> with realistic Massachusetts climate patterns</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Results &amp; Business Impact I Delivered</h5>
-      <h6 class="mt-2">Quantified Grid Performance</h6>
-      <ul>
-        <li><strong>Grid Reduction Capability</strong>: 5.4% aggregate demand reduction during extreme weather</li>
-        <li><strong>Processing Efficiency</strong>: 8,111 buildings in &lt;30 seconds with &lt;50MB memory</li>
-        <li><strong>Scalability Validation</strong>: Architecture tested for 100,000+ buildings</li>
-      </ul>
-      <h6 class="mt-2">Economic Value Created</h6>
-      <ul>
-        <li><strong>Peak demand reduction</strong>: 50–75 MW during critical periods</li>
-        <li><strong>Blackout prevention value</strong>: $2–5M annually in avoided outage costs</li>
-        <li><strong>Infrastructure deferment</strong>: $10–20M avoided upgrades over five years</li>
-      </ul>
-      <h6 class="mt-2">Technical Performance Benchmarks</h6>
-      <ul>
-        <li><strong>Industry Comparison</strong>: Aligns with FERC benchmarks (29 GW national savings potential)</li>
-        <li><strong>Academic Validation</strong>: 20–25% MAPE production range for commercial applications</li>
-        <li><strong>Commercial Viability</strong>: Meets utility deployment thresholds</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Project Management &amp; Team Leadership</h5>
-      <h6 class="mt-2">Strategic Coordination Approach</h6>
-      <ul>
-        <li><strong>Team Structure</strong>: Technical lead (ML pipeline), dashboard developer, documentation lead</li>
-        <li><strong>Integration Strategy</strong>: Weekly coordination; standardized data formats; clean interfaces</li>
-        <li><strong>Risk Management</strong>: Tiered deliverables (production baseline → advanced features → research)</li>
-      </ul>
-      <h6 class="mt-2">Stakeholder Communication Framework</h6>
-      <ul>
-        <li><strong>Utility Operators</strong>: Reliability, performance, operational integration</li>
-        <li><strong>Technical Teams</strong>: Architecture, performance, scalability</li>
-        <li><strong>Business Stakeholders</strong>: ROI, market opportunity, positioning</li>
-      </ul>
-      <h6 class="mt-2">Quality Assurance Implementation</h6>
-      <ul>
-        <li><strong>Production Engineering</strong>: Error handling, fallbacks, monitoring</li>
-        <li><strong>Performance Validation</strong>: Benchmarks vs. standards and literature</li>
-        <li><strong>Documentation Standards</strong>: Setup, deployment, operations</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Strategic Business Implications</h5>
-      <h6 class="mt-2">Market Positioning &amp; Competitive Advantage</h6>
-      <ul>
-        <li><strong>Differentiation</strong>: Portfolio‑level coordination vs. individual building optimization</li>
-        <li><strong>Technical Moat</strong>: Realistic compliance modeling grounded in operations</li>
-        <li><strong>Scalability</strong>: Production‑ready architecture for immediate deployment</li>
-      </ul>
-      <h6 class="mt-2">Future Enhancement Roadmap</h6>
-      <ul>
-        <li><strong>Advanced ML</strong>: Multi‑agent reinforcement learning for dynamic strategy</li>
-        <li><strong>Operational Expansion</strong>: Smart meter integration; automated control systems</li>
-        <li><strong>Geographic Scaling</strong>: Climate‑specific models; regulatory frameworks</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Professional Development &amp; Leadership Growth</h5>
-      <h6 class="mt-2">Technical Leadership Capabilities Demonstrated</h6>
-      <ul>
-        <li><strong>System Architecture</strong>: Scalable, modular ML pipeline</li>
-        <li><strong>Team Coordination</strong>: Parallel development with clear interfaces</li>
-        <li><strong>Risk Management</strong>: Tiered delivery with realistic fallbacks</li>
-        <li><strong>Stakeholder Management</strong>: Translating technical capability into business value</li>
-      </ul>
-      <h6 class="mt-2">Production Engineering Excellence</h6>
-      <ul>
-        <li><strong>Performance Optimization</strong>: Aggressive latency targets with accuracy</li>
-        <li><strong>Quality Engineering</strong>: Testing, validation, monitoring frameworks</li>
-        <li><strong>Deployment Readiness</strong>: Containerized, cloud‑ready, documented scaling</li>
-      </ul>
-      <h6 class="mt-2">Business Impact Quantification</h6>
-      <ul>
-        <li><strong>Economic Analysis</strong>: ROI with realistic deployment scenarios</li>
-        <li><strong>Competitive Assessment</strong>: Positioned within expanding DR market</li>
-        <li><strong>Value Communication</strong>: Clear link from innovation to utility value</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>View Detailed Analysis</h5>
-      <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-sm btn-primary" href="technical-deep-dive.html">Technical Deep‑Dive</a>
-        <a class="btn btn-sm btn-outline-primary" href="management-perspective.html">Management Perspective</a>
-        <a class="btn btn-sm btn-outline-primary" href="product-strategy.html">Product Strategy</a>
-      </div>
-      <div class="mt-3">
-        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/energy-recommendation-engine" target="_blank" rel="noopener">Repository</a>
-      </div>
-      <div class="mt-3">
-        <p class="mb-1"><strong>Related Articles</strong></p>
-        <ul>
-          <li><a href="https://cyranothebard.github.io/blog/en/2025-09-03-from-research-to-production">From Research to Production: Deploying ML Systems That Scale</a></li>
-          <li><a href="https://cyranothebard.github.io/blog/en/2025-09-03-ai-enhanced-technical-leadership-strategy">AI‑Enhanced Technical Leadership Strategy</a></li>
-        </ul>
-      </div>
-    </div>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Supporting Project</p>
+    <h1>Energy Recommendation System</h1>
+    <p class="lead">Decision Support for Utility Operations and Customer Energy Management.</p>
   </div>
+</section>
 
-  <div class="col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Perspectives</h5>
-        <p class="card-text">Choose a perspective for detailed insights:</p>
-        <div class="d-grid gap-2">
-          <a href="technical-deep-dive.html" class="btn btn-primary">Technical Deep-Dive</a>
-          <a href="management-perspective.html" class="btn btn-outline-primary">Management Perspective</a>
-          <a href="product-strategy.html" class="btn btn-outline-primary">Product Strategy</a>
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Project Overview</h2>
+      <p>This supporting case study shows how a utility-focused recommendation system can improve operational decision quality when demand volatility, weather disruption, customer behavior, and sustainability goals must all be balanced at the same time.</p>
+      <p>The objective is not full automation. The objective is to provide operators and customers with clearer options, tradeoffs, and timing guidance during high-pressure operating windows.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Problem</h2>
+      <p>Utility providers must balance customer needs, grid reliability, sustainability objectives, and operational constraints. During adverse weather and elevated demand periods, uncoordinated customer actions can increase strain and reduce resilience.</p>
+      <p>A practical challenge emerges: how to help customers make useful energy decisions while preserving system-level reliability.</p>
+
+      <h2>Approach</h2>
+      <p>The solution combines customer usage patterns, weather context, and energy-efficiency logic to generate ranked recommendations for demand-response periods.</p>
+      <p>Recommendations are presented as decision support guidance. Human operators remain accountable for final operational choices and customer communication strategy.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section decision-visuals">
+  <div class="container">
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Supporting Visual</p>
+          <h3>From Weather Conditions to Customer Recommendations</h3>
+        </div>
+        <p class="ops-answer">Executive question: How can utilities support customer decision-making during periods of uncertainty?</p>
+      </header>
+
+      <p class="ops-subtitle">This workflow shows how utility context is translated into practical customer guidance without removing human judgment from operational decisions.</p>
+
+      <div class="ops-flow" role="img" aria-label="Workflow from weather conditions and customer usage patterns to contextual recommendations">
+        <div class="ops-flow-step bronze">
+          <h4>Decision Inputs</h4>
+          <p><strong>Weather conditions:</strong> temperature, storms, grid stress indicators.</p>
+          <p><strong>Customer usage patterns:</strong> historical consumption, peak demand behavior, usage preferences.</p>
+          <p><strong>Operational constraints:</strong> grid reliability, efficiency objectives, sustainability goals.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step silver">
+          <h4>Recommendation Engine</h4>
+          <p>Contextual ranking logic combines conditions, behavior, and constraints to generate actionable options.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step gold">
+          <h4>Customer Guidance</h4>
+          <p>Reduce consumption, shift usage periods, improve efficiency, and prepare for adverse conditions.</p>
         </div>
       </div>
-    </div>
 
-    <div class="card mt-3">
-      <div class="card-body">
-        <h6 class="card-title">Technologies</h6>
-        <div class="d-flex flex-wrap gap-1">
-          <span class="badge bg-primary">Python</span>
-          <span class="badge bg-primary">PyTorch</span>
-          <span class="badge bg-primary">LSTM</span>
-          <span class="badge bg-primary">Docker</span>
-          <span class="badge bg-primary">AWS</span>
-          <span class="badge bg-primary">FastAPI</span>
-        </div>
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Utilities must balance customer needs, grid reliability, and operational constraints during elevated demand and adverse weather.</p></div>
+        <div><h4>Approach</h4><p>Combine weather data, customer behavior patterns, and operational objectives to generate contextual recommendations.</p></div>
+        <div><h4>Outcome</h4><p>Support more informed customer decisions while improving operational resilience.</p></div>
       </div>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Technical Architecture</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Customer Usage Data</h3><p>Historical consumption behavior and building-level context are organized for cohort-aware analysis.</p></div>
+      <div><span>02</span><h3>Weather Data</h3><p>Forecast signals and weather severity indicators provide situational context for demand periods.</p></div>
+      <div><span>03</span><h3>Data Preparation Workflows</h3><p>Data quality controls, feature preparation, and temporal validation workflows support reproducible model inputs.</p></div>
+      <div><span>04</span><h3>Recommendation Engine</h3><p>Forecasting and recommendation logic generate candidate actions for customer segments and demand windows.</p></div>
+    </div>
+    <div class="card-grid two mt-4">
+      <div><h3>Ranking Logic</h3><p>Recommendations are prioritized by expected impact, feasibility, and operating constraints instead of score-only outputs.</p></div>
+      <div><h3>User Recommendation Interface</h3><p>A decision interface presents ranked actions and rationale so operators can review and apply guidance consistently.</p></div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Operational Considerations</h2>
+      <p>Adoption and trust matter as much as model quality. The project emphasizes explainable recommendations, operator review, and customer-facing clarity so recommendations are understandable and actionable.</p>
+      <ul>
+        <li>Customer adoption depends on recommendation relevance, timing, and perceived fairness.</li>
+        <li>Explainability and rationale transparency improve operator confidence.</li>
+        <li>Operational integration requires workflow fit with planning and demand-response processes.</li>
+        <li>Behavioral responses are uncertain, so scenario planning and participation assumptions are explicit.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Business Impact</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Improved decision quality</h3>
+        <p>Operators get a structured basis for selecting interventions during constrained periods.</p>
+      </div>
+      <div>
+        <h3>Higher customer engagement potential</h3>
+        <p>Actionable and explainable guidance improves the chance that customers participate in demand-response actions.</p>
+      </div>
+      <div>
+        <h3>Operational resilience</h3>
+        <p>Modeled outcomes indicate stronger response coordination and sustainability-aware decision support during high-demand events.</p>
+      </div>
+    </div>
+    <p class="small text-muted mt-3">Impact statements are modeled scenario outcomes for decision-support evaluation. They are not claims of realized utility savings.</p>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Why It Matters</h2>
+      <p>Although this project is situated in utility operations, the underlying challenge appears across operational environments: making better decisions under uncertainty and competing constraints.</p>
+      <p>The same decision-support pattern transfers to resource allocation, equipment selection, maintenance prioritization, and operational planning contexts.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Demonstration Environment</h2>
+      <p>This project uses representative data and synthetic operating scenarios to demonstrate utility decision-support concepts.</p>
+      <p>No customer information is represented. The experience is designed to show decision workflows, recommendation logic, and operational tradeoff handling.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>Repository</h2>
+    <p><a class="btn btn-outline-primary" href="https://github.com/cyranothebard/energy-recommendation-engine" target="_blank" rel="noopener">View repository</a></p>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Related Projects</h2>
+    <div class="card-grid three">
+      <div><h3>Predictive Maintenance Decision Intelligence</h3><p>Decision intelligence patterns for risk-aware operational actions.</p><a class="btn btn-outline-primary" href="/projects/predictive-maintenance-platform-v2/">View case study</a></div>
+      <div><h3>Risk-Based Clinical Decision Support</h3><p>Risk stratification and intervention prioritization in healthcare operations.</p><a class="btn btn-outline-primary" href="/projects/heart-failure-readmission/">View case study</a></div>
+      <div><h3>Clinical Operations Data Platform</h3><p>Governed data foundations for regulated operational decisions.</p><a class="btn btn-outline-primary" href="/projects/clinical-operations-data-platform/">View case study</a></div>
+    </div>
+  </div>
+</section>

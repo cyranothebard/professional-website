@@ -1,213 +1,170 @@
 ---
 layout: default
-title: "Herzinsuffizienz Wiedereinweisung & Ressourcenoptimierung"
+title: "Risikobasierte klinische Entscheidungsunterstuetzung | BridgeOps AI"
 lang: de
+alternate_url: /projects/heart-failure-readmission/
+body_class: project-detail
 ---
-<div class="row">
-  <div class="col-lg-8">
-    <h1 class="mb-3">Herzinsuffizienz: Wiedereinweisung & Ressourcenoptimierung</h1>
-    <p class="lead">Ressourcenoptimierung im Gesundheitswesen durch klinische ML‑Verfahren.</p>
-
-    <div class="mb-4">
-      <h5>Rolle &amp; Wirkung</h5>
-      <p>Ich entwickelte eine umfassende ML‑Lösung, die das Management von Herzinsuffizienz‑Patienten und die Personaleinsatzplanung transformiert. Durch Vorhersage des 30‑Tage‑Wiedereinweisungsrisikos und Modellierung des Pflegebedarfs <strong>senkt das System Wiedereinweisungen, optimiert Ressourcen und vermeidet Medicare‑Strafzahlungen</strong> – bei einer Indikation mit &gt;$30&nbsp;Mrd. jährlichen Kosten in den USA.</p>
-      <h6 class="mt-2">Wesentliche Führungsentscheidungen</h6>
-      <ul>
-        <li>Dual‑Prediction‑Architektur: Verknüpfung klinischer Risiken mit operativer Personalplanung</li>
-        <li>Speichereffiziente Datenpipeline für MIMIC‑IV im Produktionsmaßstab</li>
-        <li>Umfassender Modellvergleich über mehrere ML‑Ansätze</li>
-        <li>Integration von Gesundheitsökonomie zur ROI‑Quantifizierung</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Die adressierte Herausforderung</h5>
-      <p>Herzinsuffizienz betrifft 6,2&nbsp;Mio. Erwachsene in den USA; <strong>25&nbsp;% 30‑Tage‑Wiedereinweisungen</strong> und &gt;1&nbsp;Mio. Hospitalisierungen pro Jahr. Klinische Outcomes und finanzielle Strafmechanismen erzeugen erheblichen Druck.</p>
-      <p><strong>Strategisches Problem</strong>: Wiedereinweisungsprognose und Ressourcenzuteilung werden häufig getrennt betrachtet. Risikoscores führen selten zu konkreten Personalplänen – es bleibt reaktiv.</p>
-      <p><strong>Marktbedarf</strong>: Verknüpfung klinischer Vorhersagen mit operativer Optimierung für proaktive Interventionen mit quantifiziertem Ressourcenbedarf.</p>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Technischer Ansatz &amp; Architektur</h5>
-      <h6 class="mt-2">Entscheidung 1: Dual‑Prediction‑Architektur</h6>
-      <ul>
-        <li><strong>Klinische Vorhersage</strong>: Modelle für 30‑Tage‑Wiedereinweisungsrisiko</li>
-        <li><strong>Ressourcenprognose</strong>: Regression der Pflegestunden je Versorgungsstufe</li>
-        <li><strong>Integrationsschicht</strong>: Übersetzung von Risikoscores in Personaleinsatzempfehlungen</li>
-      </ul>
-      <p><strong>Warum</strong>: Verwaltung benötigt umsetzbare Personalkonzepte, nicht nur Risikowerte.</p>
-      <h6 class="mt-2">Entscheidung 2: Reale klinische Datenbasis</h6>
-      <ul>
-        <li>Umfangreiche Variablen: ICD, Vitalparameter, Labore, Medikation, Prozeduren</li>
-        <li>Operative Daten: Station, Aufenthaltsdauer, Personalmuster</li>
-        <li>De‑identifiziert, HIPAA‑konform – skalierbare Implementierung</li>
-      </ul>
-      <p><strong>Implementierung</strong>: Speichereffizientes Chunking für schnelle, robuste MIMIC‑IV‑Verarbeitung.</p>
-      <h6 class="mt-2">Entscheidung 3: Gesundheitsökonomie integriert</h6>
-      <ul>
-        <li>Kosten‑Nutzen‑Analyse verhinderter Wiedereinweisungen</li>
-        <li>ROI‑Berechnung für Interventionsprogramme</li>
-        <li>Ressourcenoptimierung (Nurse‑Ratios) aus Prognosen abgeleitet</li>
-        <li>Regulatorische Aspekte (Penalty‑Avoidance) berücksichtigt</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Technische Innovationen</h5>
-      <h6 class="mt-2">Klinisches Feature‑Engineering</h6>
-      <ul>
-        <li>Komorbiditäten (ICD‑10), zeitliche Vitalverläufe, Labor‑Normalisierung</li>
-        <li>Medikationsanalyse; literaturgestützt plus datengetriebene Muster</li>
-      </ul>
-      <h6 class="mt-2">Multi‑Modell‑Vergleich</h6>
-      <ul>
-        <li>Logistische Regression, Random Forest, XGBoost</li>
-        <li>Temporale CV; Präzision/Recall‑Balance; Interpretierbarkeit</li>
-      </ul>
-      <h6 class="mt-2">Ressourcennutzungs‑Prognose</h6>
-      <ul>
-        <li>Versorgungsstufen‑Klassifikation, Pflegestunden‑Schätzung</li>
-        <li>Staffing‑Optimierung und Kostenquantifizierung</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Systemdesign &amp; Architekturwirkung</h5>
-      <h6 class="mt-2">Klinisches Vorhersage‑Framework</h6>
-      <ul>
-        <li>Modellarchitektur‑Vergleich für deploybare Varianten</li>
-        <li>Risikostratifizierung für gezielte Interventionen</li>
-        <li>Validierung: literaturbasiert plus datengetriebene Erkenntnisse</li>
-      </ul>
-      <h6 class="mt-2">Gesundheitsökonomie‑Framework</h6>
-      <ul>
-        <li>Proaktive Personaleinsatzplanung aus Risikoprofil und Schweregrad</li>
-        <li>Kosten‑ und ROI‑Analysen für Programmentscheidungen</li>
-      </ul>
-      <h6 class="mt-2">Produktionsreife Bereitstellung</h6>
-      <ul>
-        <li>Speichereffiziente Pipeline für klinische Datenbanken</li>
-        <li>HIPAA/GDPR‑fähig; Integration mit KIS/EHR vorgesehen</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Domänenkompetenz &amp; Stakeholder</h5>
-      <h6 class="mt-2">Klinische Zusammenarbeit</h6>
-      <ul>
-        <li>Interpretierbare Vorhersagen zur Unterstützung klinischer Entscheidungen</li>
-        <li>Management‑taugliche ROI‑Kennzahlen und Ressourcenvorschläge</li>
-        <li>IT‑kompatible Architektur</li>
-      </ul>
-      <h6 class="mt-2">Regulatorik &amp; Ethik</h6>
-      <ul>
-        <li>Datenschutz entlang der gesamten Pipeline</li>
-        <li>Patientensicherheit, Bias‑Minderung</li>
-        <li>Beachtung von FDA AI/ML‑Leitlinien</li>
-      </ul>
-      <h6 class="mt-2">Verständnis der Gesundheitsökonomie</h6>
-      <ul>
-        <li>Vermeidung von CMS‑Strafzahlungen</li>
-        <li>Pflegekosten‑Modelle und Budgetierung</li>
-        <li>Unterstützung Value‑Based‑Care</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Strategische Implikationen</h5>
-      <h6 class="mt-2">Marktpositionierung</h6>
-      <ul>
-        <li>Integrierter klinisch‑operativer Ansatz statt rein prädiktiver Lösungen</li>
-        <li>Skalierbar über Klinikverbünde; Compliance ab Werk</li>
-      </ul>
-      <h6 class="mt-2">Technologie‑Transfer</h6>
-      <ul>
-        <li>Übertragbar auf DE/CH‑Systeme mit regulatorischer Adaption</li>
-        <li>Chancen in Pharma und Medizingeräte‑Integration</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Professionelle Entwicklung</h5>
-      <h6 class="mt-2">Aufgebaute Domänenkompetenz</h6>
-      <ul>
-        <li>Klinische Datenstrukturen, Workflows, Regularien</li>
-        <li>Gesundheitsökonomie und Klinikbetrieb</li>
-        <li>Übersetzung Technik → klinischer/administrativer Mehrwert</li>
-      </ul>
-      <h6 class="mt-2">Technische Führung in regulierten Branchen</h6>
-      <ul>
-        <li>Compliance‑First‑Design von ML‑Systemen</li>
-        <li>Stakeholder‑ und Risikomanagement</li>
-      </ul>
-      <h6 class="mt-2">Business‑Impact‑Quantifizierung</h6>
-      <ul>
-        <li>ROI‑Analysen im Gesundheitswesen; Ressourcenoptimierung</li>
-        <li>Adoptionsmuster und Deploy‑Herausforderungen</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Wesentliche Learnings</h5>
-      <ul>
-        <li>Produktionsreife Entscheidungen vor reiner Forschungs‑Optimierung</li>
-        <li>Klare Schnittstellen ermöglichten verteilte Entwicklung</li>
-        <li>Realistische Ziele stärkten Glaubwürdigkeit bei Klinik‑Stakeholdern</li>
-        <li>Ökonomische Validierung ist entscheidend für Adoption</li>
-      </ul>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Analysen &amp; Ressourcen</h5>
-      <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-sm btn-primary" href="technisch.html">Technische Details</a>
-        <a class="btn btn-sm btn-outline-primary" href="projektfuehrung.html">Projektführung</a>
-        <a class="btn btn-sm btn-outline-primary" href="produktstrategie.html">Produktstrategie</a>
-      </div>
-      <div class="mt-3">
-        <a class="btn btn-sm btn-outline-secondary" href="https://github.com/cyranothebard/heart_failure_readmission" target="_blank" rel="noopener">Repository</a>
-      </div>
-    </div>
-
-    <hr/>
-
-    <div class="mb-4">
-      <h5>Verwandte Artikel</h5>
-      <ul>
-        <li><a href="/blog/2025-09-03-herzinsuffizienz-zusammenfassung">Projektzusammenfassung: Herzinsuffizienz</a></li>
-      </ul>
-    </div>
-    
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Ergaenzendes Projekt</p>
+    <h1>Risikobasierte klinische Entscheidungsunterstuetzung</h1>
+    <p class="lead">Case Study: Risk Stratification bei Herzinsuffizienz-Wiedereinweisungen.</p>
   </div>
+</section>
 
-  <div class="col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Schnellzugriff</h5>
-        <div class="d-grid gap-2">
-          <a href="/projects/heart-failure-readmission/" class="btn btn-outline-secondary">EN Overview</a>
-          <a href="https://github.com/cyranothebard/heart_failure_readmission" class="btn btn-outline-primary">Repository</a>
-          <a href="https://docs.google.com/presentation/d/1_dl7fGjbTNhiWKFbtGORN2V61KJQjh87kfE1NttkUAw/edit?slide=id.gcb9a0b074_1_0#slide=id.gcb9a0b074_1_0" class="btn btn-outline-primary">Präsentation</a>
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Projektueberblick</h2>
+      <p>Diese Fallstudie zeigt, wie praediktive Analytik die Priorisierung von Interventionen nach Entlassung unterstuetzen kann, waehrend klinische Entscheidungshoheit beim Behandlungsteam bleibt.</p>
+      <p>Modellausgaben werden als Input fuer operative Entscheidungsunterstuetzung in Care-Management-Prozessen genutzt.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Problem</h2>
+      <p>Gesundheitsorganisationen muessen erkennen, welche Patientinnen und Patienten nach Entlassung zusaetzliche Interventionen benoetigen. Ohne belastbare Risikostratifizierung werden knappe Ressourcen ineffizient verteilt und vermeidbare Wiedereinweisungen steigen.</p>
+
+      <h2>Ansatz</h2>
+      <p>Die Loesung entwickelt einen praediktiven Workflow zur Schaetzung des Wiedereinweisungsrisikos und zur Priorisierung von Interventionen.</p>
+      <p>Ziel ist die Unterstuetzung klinischer Entscheidungen, nicht deren Ersatz.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section decision-visuals">
+  <div class="container">
+    <article class="ops-card">
+      <header class="ops-card-header">
+        <div>
+          <p class="ops-kicker">Supporting Visual</p>
+          <h3>From Patient Data to Care Prioritization</h3>
+        </div>
+        <p class="ops-answer">Executive question: How can organizations prioritize limited intervention resources?</p>
+      </header>
+
+      <p class="ops-subtitle">Der Ablauf zeigt, wie praediktive Einsichten in priorisierte Care-Massnahmen fuer Teams mit begrenzter Kapazitaet uebersetzt werden.</p>
+
+      <div class="ops-flow" role="img" aria-label="Workflow von Patientendaten zu Risikokategorien und Care-Massnahmen">
+        <div class="ops-flow-step bronze">
+          <h4>Patient Information</h4>
+          <p>Demografie, klinische Historie und Entlassungsinformationen werden strukturiert aufbereitet.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step silver">
+          <h4>Risk Assessment Model</h4>
+          <p>Praediktive Analytik schaetzt das Wiedereinweisungsrisiko unter validierten Rahmenbedingungen.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step gold">
+          <h4>Risk Categories</h4>
+          <p>Low risk, moderate risk und high risk bilden einen praktischen Priorisierungsrahmen.</p>
+        </div>
+        <div class="ops-flow-arrow" aria-hidden="true">↓</div>
+        <div class="ops-flow-step visibility">
+          <h4>Care Management Actions</h4>
+          <p>Routine follow-up, targeted outreach und intervention prioritization fliessen in Clinical Decision Support ein.</p>
         </div>
       </div>
+
+      <div class="ops-caption-grid">
+        <div><h4>Problem</h4><p>Gesundheitsorganisationen muessen bestimmen, welche Patienten nach Entlassung am ehesten von Follow-up-Interventionen profitieren.</p></div>
+        <div><h4>Approach</h4><p>Praediktive Analytik schaetzt das Wiedereinweisungsrisiko und unterstuetzt Priorisierungsentscheidungen.</p></div>
+        <div><h4>Outcome</h4><p>Care-Teams koennen Aufmerksamkeit und Ressourcen dort einsetzen, wo der potenzielle Nutzen am groessten ist.</p></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Technische Architektur</h2>
+    <div class="process-grid four">
+      <div><span>01</span><h3>Patientendaten-Aufbereitung</h3><p>Kohortierung, Datenqualitaetspruefungen und strukturierte Aufbereitung klinischer Daten.</p></div>
+      <div><span>02</span><h3>Feature Engineering</h3><p>Klinische, zeitliche und operative Merkmale werden fuer die Modellierung vorbereitet.</p></div>
+      <div><span>03</span><h3>Modellentwicklung</h3><p>Mehrere Modelltypen werden mit Fokus auf Interpretierbarkeit und Robustheit bewertet.</p></div>
+      <div><span>04</span><h3>Evaluations-Workflows</h3><p>Validierung und Kalibrierung schaffen belastbare Grundlagen fuer den operativen Einsatz.</p></div>
+    </div>
+    <div class="card-grid one mt-4">
+      <div><h3>Risk-Scoring-Outputs</h3><p>Risikoscores sind ein Baustein eines groesseren Entscheidungsunterstuetzungssystems inklusive Personalplanung und Interventionssteuerung.</p></div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Operative Aspekte</h2>
+      <ul>
+        <li>Workflow-Integration in Entlassungsplanung und Care Management ist zentral.</li>
+        <li>Vertrauen und Erklaerbarkeit sind entscheidend fuer klinische Adoption.</li>
+        <li>Human-in-the-loop-Pruefung sichert Kontextbezug und Verantwortung.</li>
+        <li>Interventionspriorisierung unterstuetzt den Umgang mit knappen Pflegekapazitaeten.</li>
+        <li>Care-Workflows muessen Risikoeinsichten in konkrete Massnahmen uebersetzen.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Organisationaler Impact</h2>
+    <div class="card-grid three">
+      <div>
+        <h3>Priorisierung knapper Ressourcen</h3>
+        <p>Unterstuetzt die gezielte Zuteilung von Kapazitaet auf Faelle mit hoeherem Interventionsbedarf.</p>
+      </div>
+      <div>
+        <h3>Interventionsplanung und Koordination</h3>
+        <p>Verknuepft Risikosignale mit konkreten Massnahmen in den Versorgungsprozessen.</p>
+      </div>
+      <div>
+        <h3>Operative Effizienz</h3>
+        <p>Foerdert strukturierte Follow-up-Planung und bessere bereichsuebergreifende Koordination.</p>
+      </div>
+    </div>
+    <p class="small text-muted mt-3">Modellmetriken unterstuetzen die Einfuehrung, sind aber nicht die Primaerwirkung der Fallstudie.</p>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Warum es relevant ist</h2>
+      <p>Obwohl die Fallstudie im Gesundheitswesen verortet ist, ist das Grundproblem universell: wo begrenzte Ressourcen den groessten operativen Nutzen erzeugen.</p>
+      <p>Das Muster ist auf Wartungsplanung, Qualitaetsmanagement, operatives Risikomanagement, Kundenbindung und Ressourcenallokation uebertragbar.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section project-intro-section">
+  <div class="container narrow">
+    <article class="project-intro-card">
+      <h2>Demonstrationsumgebung</h2>
+      <p>Das Projekt nutzt repraesentative Gesundheitsdatenstrukturen, um praediktive Entscheidungsunterstuetzung und Workflow-Design zu demonstrieren.</p>
+      <p>Es werden keine Patientendaten dargestellt. Im Fokus stehen Risikostratifizierung, Interventionspriorisierung und operative Einbettung.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>Repository</h2>
+    <p><a class="btn btn-outline-primary" href="https://github.com/cyranothebard/heart_failure_readmission" target="_blank" rel="noopener">Repository ansehen</a></p>
+  </div>
+</section>
+
+<section class="section bg-light">
+  <div class="container">
+    <h2>Verwandte Projekte</h2>
+    <div class="card-grid three">
+      <div><h3>Energie-Empfehlungssystem</h3><p>Entscheidungsunterstuetzung unter Nachfrage- und Wetterunsicherheit im Utility-Betrieb.</p><a class="btn btn-outline-primary" href="/projekte/energie-empfehlungssystem/">Case Study ansehen</a></div>
+      <div><h3>Clinical Operations Data Platform</h3><p>Governance-faehige Datenbasis fuer regulierte Care-Operations.</p><a class="btn btn-outline-primary" href="/projekte/clinical-operations-data-platform/">Case Study ansehen</a></div>
+      <div><h3>Predictive Maintenance Decision Intelligence</h3><p>Risikoorientierte Priorisierung und Interventionsplanung in der Industrie.</p><a class="btn btn-outline-primary" href="/projekte/predictive-maintenance-platform-v2/">Case Study ansehen</a></div>
+    </div>
+  </div>
+</section>
