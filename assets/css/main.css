@@ -16,6 +16,7 @@
   --surface:#f5f8fb;
   --line:#dce4ec;
   --accent:#0b6b62;
+  --main-card-max:1140px;
 }
 
 body{
@@ -57,8 +58,24 @@ button:focus-visible{
   color:var(--primary-color)!important;
 }
 
+.navbar-brand.brand-identity{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.12rem;
+  line-height:1.05;
+}
+
 .navbar-brand strong{
   letter-spacing:.3px;
+}
+
+.brand-subtitle{
+  font-size:.62rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  white-space:nowrap;
 }
 
 .navbar-nav .nav-link{
@@ -346,6 +363,8 @@ button:focus-visible{
   padding:1.5rem;
   box-shadow:0 10px 30px rgba(16,34,53,.05);
   width:100%;
+  max-width:var(--main-card-max);
+  margin-inline:auto;
   box-sizing:border-box;
   min-width:0;
   overflow:hidden;
@@ -382,7 +401,14 @@ button:focus-visible{
 
 .hero-intro-secondary{
   font-size:1rem;
+  margin-bottom:.85rem;
+}
+
+.hero-intro-mission{
+  margin-top:.85rem;
   margin-bottom:2rem;
+  font-size:1.06rem;
+  font-weight:400;
 }
 
 .process-step-number{
@@ -438,7 +464,7 @@ button:focus-visible{
 }
 
 .home-card-section{
-  margin-inline:max(calc((100vw - 1140px)/2),1.5rem);
+  margin-inline:0;
 }
 
 .home-card-section > .container{
@@ -525,6 +551,35 @@ button:focus-visible{
   letter-spacing:-.04em;
 }
 
+.hero-identity{
+  --hero-text-inset:1rem;
+  --hero-photo-inset:1.65rem;
+  display:grid;
+  grid-template-columns:72% 28%;
+  grid-template-areas:"copy photo";
+  align-items:start;
+  gap:1.25rem;
+  margin-bottom:0;
+  padding-left:var(--hero-text-inset);
+  padding-right:var(--hero-photo-inset);
+}
+
+.hero-identity-copy{
+  grid-area:copy;
+  max-width:36rem;
+  text-align:left;
+}
+
+.hero-avatar{
+  grid-area:photo;
+  width:min(100%,170px);
+  aspect-ratio:1/1;
+  border-radius:22px;
+  object-fit:cover;
+  box-shadow:0 14px 34px rgba(16,34,53,.14);
+  justify-self:end;
+}
+
 .eyebrow,
 .project-stage{
   color:var(--brand);
@@ -545,7 +600,7 @@ button:focus-visible{
 
 .framework-flow{
   padding-right:0;
-  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   gap:.85rem;
 }
 
@@ -770,6 +825,9 @@ button:focus-visible{
   align-items:center;
   gap:2rem;
   padding:2.5rem;
+  width:100%;
+  max-width:var(--main-card-max);
+  margin-inline:auto;
   border-radius:1.25rem;
   background:#eef4ff;
 }
@@ -809,6 +867,10 @@ button:focus-visible{
 }
 
 @media (max-width:1100px){
+  .brand-subtitle{
+    display:none;
+  }
+
   .home-shell-card.split-summary{
     grid-template-columns:1fr;
   }
@@ -916,6 +978,27 @@ button:focus-visible{
 
   .hero-copy h1{
     font-size:clamp(2.75rem,14vw,4.25rem);
+  }
+
+  .hero-identity{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "copy"
+      "photo";
+    align-items:flex-start;
+    gap:1rem;
+    padding-left:0;
+    padding-right:0;
+  }
+
+  .hero-identity-copy{
+    max-width:none;
+  }
+
+  .hero-avatar{
+    width:110px;
+    border-radius:18px;
+    justify-self:start;
   }
 
   .about-strip,
@@ -1179,6 +1262,10 @@ button:focus-visible{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 }
 
+.process-grid.five{
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+
 .card-grid>div,
 .bridge-grid>div,
 .service-list article,
@@ -1211,12 +1298,16 @@ button:focus-visible{
   font-size:1.7rem;
   color:var(--ink);
   margin-bottom:.25rem;
+  overflow-wrap:anywhere;
+  hyphens:auto;
 }
 
 .credibility-grid span{
   display:block;
   color:var(--muted);
   font-size:.95rem;
+  overflow-wrap:anywhere;
+  hyphens:auto;
 }
 
 .service-list{
